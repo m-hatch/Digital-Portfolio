@@ -29,7 +29,8 @@
   }
   /* nav expand full */
   .nav-wrapper{
-    position:absolute;
+    top:20px;
+    right:4%;
   }
   .btn {
     display: none;
@@ -75,6 +76,11 @@
   }
   header h2{
     font-size:25px;
+  }
+  .nav-wrapper{
+    position:absolute;
+    top:0;
+    right:0;
   }
 }
 
