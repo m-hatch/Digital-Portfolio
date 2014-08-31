@@ -3,20 +3,29 @@
   .wrapper{
     width:80%;
   }
+  #nav {
+    width: 285px;
+  }
 }
 
 @media screen and (min-width: 768px) {
+  header{
+    height:auto;
+  }
   header h1{
     font-size: 4.6vw;
   }
   /* nav expand full */
+  .nav-wrapper{
+    position:absolute;
+  }
   .btn {
     display: none;
   }
   #toggle:checked ~ nav #nav,
   #nav {
-    top: 25px;
-    right:5%;
+    top: 5px;
+    right:0;
     border-top-width:0;
   }
   #toggle:checked ~ nav #nav li,
@@ -55,8 +64,5 @@
 }
 
 @media screen and (min-width: 1280px){
-  #toggle:checked ~ nav #nav,
-  #nav {
-    right:10%;
-  }
+  
 }
