@@ -46,7 +46,7 @@ html{
 }
 .wrapper{
 	position:relative;
-	width:90%;
+	width:86%;
 	max-width:1024px;
 	margin:0 auto;
 }
@@ -68,31 +68,32 @@ a{
 header, footer{
 	width:100%;
 	background-color: rgba(0,0,0,0.7);
-	padding: 20px 0;
 }
 header{
   position:fixed;
   height:110px;
+  padding: 20px 0;
 }
 footer{
 	position:absolute;
 	bottom:0;
+  padding: 12px 0;
 }
 header h1{
 	font-size:24px;
 }
 header h2{
-	font-size: 20px;
+	font-size: 14px;
 	padding: 10px 0;
 }
 footer span{
 	margin-right:10px;
 	color:#E41B17;
-	font-size: 18px;
+	font-size: 16px;
 }
 footer a{
 	padding:0 10px;
-	font-size: 16px;
+	font-size: 14px;
 }
 footer a:hover{
 	text-decoration: underline;
