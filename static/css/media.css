@@ -45,10 +45,6 @@
   #nav li {
     display: inline; float: left;
   }
-  #toggle:checked ~ nav #nav li.current a,
-  #nav li.current a {
-    color: #E41B17;
-  }
   #toggle:checked ~ nav #nav li a:hover,
   #nav li a:hover {
     color: #E41B17;
