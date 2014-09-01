@@ -32,8 +32,9 @@ html, body{
 	color:#fff;
 	font-weight: 300;
   -webkit-font-smoothing: antialiased;
+  background-color:#B6B6B4;
 }
-html{
+html .landing{
 	background: url(../img/macbook-new.png) no-repeat 10% 60% fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -44,6 +45,10 @@ html{
 	position:relative;
 	width:100%;
 	height:100%;
+}
+.container{
+  position:relative;
+  padding: 150px 0 60px 0;
 }
 .wrapper{
 	position:relative;
@@ -69,6 +74,7 @@ a{
 header, footer{
 	width:100%;
 	background-color: rgba(0,0,0,0.7);
+  z-index:100;
 }
 header{
   position:fixed;
