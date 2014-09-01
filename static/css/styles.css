@@ -109,7 +109,7 @@ footer a{
 footer a:hover{
 	text-decoration: underline;
 }
-.center {
+.center-link {
   position: absolute;
   width: 200px;
   height: 36px;
@@ -121,7 +121,7 @@ footer a:hover{
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
-.center h3{
+.center-link h3{
   font-size:24px;
   line-height: 32px;
 }
