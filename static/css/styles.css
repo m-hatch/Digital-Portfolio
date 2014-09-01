@@ -31,7 +31,6 @@ html, body{
 	font-family: Helvetica, Arial, sans-serif;
 	color:#fff;
 	font-weight: 300;
-  -webkit-font-smoothing: antialiased;
 }
 html .landing{
 	background: url(../img/macbook-new.png) no-repeat 10% 60% fixed; 
@@ -70,6 +69,10 @@ h1, #nav li{
 a{
 	text-decoration:none;
 	color:#fff;
+}
+header, footer, .center-link{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 header, footer{
 	width:100%;
@@ -269,6 +272,12 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+}
+/* moz bug fix */
+@-moz-document url-prefix() { 
+  .flipper {
+     backface-visibility: hidden;
+  }
 }
 /* front pane, placed above back */
 .front {
