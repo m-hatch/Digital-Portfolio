@@ -32,7 +32,6 @@ html, body{
 	color:#fff;
 	font-weight: 300;
   -webkit-font-smoothing: antialiased;
-  background-color:#B6B6B4;
 }
 html .landing{
 	background: url(../img/macbook-new.png) no-repeat 10% 60% fixed; 
@@ -49,6 +48,7 @@ html .landing{
 .container{
   position:relative;
   padding: 150px 0 60px 0;
+  background-color:#B6B6B4;
 }
 .wrapper{
 	position:relative;
@@ -94,17 +94,17 @@ header h2{
 	padding: 10px 0;
 }
 footer span{
-	margin-right:10px;
-	color:#E41B17;
-	font-size: 16px;
-  font-weight:600;
   line-height:20px;
-  -webkit-font-smoothing: antialiased;
 }
-footer a{
-	padding:0 10px;
-	font-size: 14px;
-  line-height:20px;
+footer .label{
+  margin-right:10px;
+  font-size: 16px;
+  color:#E41B17;
+  font-weight:600;
+}
+footer a span{
+  padding:0 10px;
+  font-size: 14px;
 }
 footer a:hover{
 	text-decoration: underline;
@@ -126,7 +126,7 @@ footer a:hover{
   line-height: 32px;
 }
 
-/* nav */
+/* =========== navigation styles ============ */
 .nav-wrapper{
   position:fixed;
   top:0;
@@ -147,7 +147,6 @@ footer a:hover{
   background-image: -o-linear-gradient(top, #6b6766, #5b5756);
   background-image: linear-gradient(top, #6b6766, #5b5756);
 }
-
 .btn:hover {
   background-color: #7b7776;
   background-image: -webkit-linear-gradient(top, #8b8786, #7b7776);
@@ -156,13 +155,11 @@ footer a:hover{
   background-image: -o-linear-gradient(top, #8b8786, #7b7776);
   background-image: linear-gradient(top, #8b8786, #7b7776);
 }
-
 #toggle {
   position: absolute;
   top: -9999px;
   left: -9999px;
 }
-
 #nav {
   position: absolute;
   z-index: 10;
@@ -173,7 +170,6 @@ footer a:hover{
   text-align: left;
   border-top-width: 0;
 }
-
 #nav a {
   height: 0;
   line-height: 0;
@@ -194,7 +190,6 @@ footer a:hover{
   z-index: 101;
   border-top: 1px solid #7b7776;
 }
-
 #toggle:checked ~ nav #nav a {
   line-height: 3em;
   height: 3em;
@@ -205,12 +200,10 @@ footer a:hover{
 #toggle:checked ~ nav #nav a:hover {
   background: #555;
 }
-
 #toggle:checked ~ nav #nav #close {
   position: relative;
   z-index: 0;
 }
-
 #toggle:checked ~ nav #nav #close label {
   background: transparent;
   border-bottom: 0;
@@ -233,7 +226,7 @@ body {
 }
 /* end nav styles */
 
-/* flip animation */
+/* =========== flip animation ============ */
 .flip-container {
   position: relative;
   -webkit-perspective: 1000px;
@@ -253,6 +246,9 @@ body {
   height: 32px;
 }
 .flip-container .flipper {
+  -webkit-transform-origin: 100% 16px;
+  -moz-transform-origin: 100% 16px;
+  -o-transform-origin: 100% 16px;
   transform-origin: 100% 16px; /* half of height */
 }
 /* flip speed goes here */
@@ -268,6 +264,7 @@ body {
 }
 /* hide back of pane during swap */
 .front, .back {
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   position: absolute;
   top: 0;
