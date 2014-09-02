@@ -1,11 +1,11 @@
 /* grid */
 .panel{
   background:#fff;
-  padding:10px;
-  margin:20px auto;
+  margin:0 auto;
 }
 .image, .text{
-  width:280px;
+  width:100%;
+  max-width:380px;
   height:210px;
   margin:20px auto;
 }
@@ -18,8 +18,7 @@
 
 @media screen and (min-width: 568px){
   .image, .text{
-  	width:380px;
-  	height:333px;
+  	height:280px;
   }
 }
 
@@ -32,43 +31,35 @@
 		-moz-column-gap: 50px;
 		column-gap: 50px;*/
   	padding: 20px;
+    margin: 20px auto;
+    width:614px;
+    height: 215px;
   }
   .image, .text{
-  	width: 284px;
-  	height: 255px;
+  	width: 260px;
+  	height: 168px;
   	display: inline-block;
+    margin:0 auto;
   }
   .image{
   	float:right;
   }
 }
 
-@media screen and (min-width: 920px){
-	.panel{
-		margin:20px;
-	}
-	.image, .text{
-		width:320px;
-	}
-}
-
 @media screen and (min-width: 1024px){
   .panel{
-		margin:20px 40px;
-		padding: 20px 40px;
+		width:740px;
   }
   .image, .text{
-		width: 366px;
-		height: 289.5px;
+		width: 320px;
   }
 }
 
 @media screen and (min-width: 1280px){
 	.panel{
-	
+	 width:886px;
   }
   .image, .text{
-		width: 408px;
-		height: 289.5px;
+		width: 396px;
   }
 }
