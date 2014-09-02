@@ -35,7 +35,7 @@ html, body{
 html .landing{
 	background: url(../img/macbook-new.png) no-repeat 10% 60% fixed; 
 	-webkit-background-size: cover;
-	-moz-background-size: cover;
+  -moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 }
@@ -46,7 +46,7 @@ html .landing{
 }
 .container{
   position:relative;
-  padding: 150px 0 60px 0;
+  padding: 110px 0 50px 0;
   background-color:#B6B6B4;
 }
 .wrapper{
@@ -127,6 +127,9 @@ footer a:hover{
 .center-link h3{
   font-size:24px;
   line-height: 32px;
+}
+.heading{
+  font-size:40px;
 }
 
 /* =========== navigation styles ============ */

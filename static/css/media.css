@@ -20,12 +20,16 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px){
   header{
     height:auto;
   }
   footer{
     padding: 18px 0;
+  }
+  .container{
+    padding-top: 150px;
+    padding-bottom: 60px;
   }
   /* nav expand full */
   .nav-wrapper{
