@@ -138,6 +138,24 @@ footer a:hover{
 .project h2 span{
   font-size:18px;
 }
+/* portfolio grid */
+.project{
+  background:#fff;
+  margin:0 auto;
+}
+.image, .text{
+  width:100%;
+  max-width:408px;
+  height:210px; /* will be auto */
+  margin:20px auto;
+}
+.image{
+  background-color:red;
+}
+.text{
+  padding:16px 20px;
+  background-color:blue;
+}
 
 /* =========== navigation styles ============ */
 .nav-wrapper{
