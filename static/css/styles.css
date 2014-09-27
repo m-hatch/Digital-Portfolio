@@ -29,20 +29,18 @@ html { height: 100%; }
 /* =========== custom styles ============== */
 html, body{
 	font-family: Helvetica, Arial, sans-serif;
-	color:#fff;
+	color:#000;
 	font-weight: 300;
-}
-html .landing{
-	background: url(../img/macbook-new.png) no-repeat 10% 60% fixed; 
-	-webkit-background-size: cover;
-  -moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
 }
 .landing{
 	position:relative;
 	width:100%;
 	height:100%;
+  background: url(../img/macbook-new.png) no-repeat 10% 60% fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 .container{
   position:relative;
@@ -67,10 +65,14 @@ h1, #nav li{
 	font-weight: 400;
 }
 a{
+  color:blue;
+}
+header a, footer a, .center-link a{
 	text-decoration:none;
 	color:#fff;
 }
 header, footer, .center-link{
+  color:#fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -145,18 +147,25 @@ footer a:hover{
 }
 .text{
   position:relative;
-  background-color:blue;
   border: 1px solid #000;
 }
 .heading{
   font-size:28px;
 }
 .project h2{
-  font-size:22px;
+  font-size:23px;
+  font-weight:bold;
   margin-bottom:10px;
 }
 .project h2 .parens{
   font-size:18px;
+}
+.project h4{
+  font-weight: bold;
+  margin-top: 20px;
+}
+.project p{
+  font-size:16px;
 }
 
 /* ============= tabs styles =============== */
@@ -195,10 +204,13 @@ footer a:hover{
 .tabs a:hover,
 .tabs a.active {
   background-color: #E9E9E9;
-  text-decoration: underline;
+  /*text-decoration: underline;*/
 }
 .tabgroup div {
-  padding: 30px;
+  padding: 4px 30px 30px 30px;
+}
+.inner-link{
+  margin-bottom:6px;
 }
 
 /* =========== navigation styles ============ */
