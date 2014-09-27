@@ -167,6 +167,18 @@ footer a:hover{
 .project p{
   font-size:16px;
 }
+.project-list h4{
+  margin-top: 0;
+}
+.project-list ul{
+  list-style-type:disc;
+}
+.project-list li{
+  margin-left:20px;
+}
+#tally-tab1 h4, #hl-tab1 h4, #jones-tab1 h4{
+  margin-top:16px;
+}
 
 /* ============= tabs styles =============== */
 .tabs{
@@ -207,7 +219,7 @@ footer a:hover{
   /*text-decoration: underline;*/
 }
 .tabgroup div {
-  padding: 4px 30px 30px 30px;
+  padding: 4px 30px 40px 30px;
 }
 .inner-link{
   margin-bottom:6px;
