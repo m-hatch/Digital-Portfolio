@@ -176,8 +176,11 @@ footer a:hover{
 .project-list li{
   margin-left:20px;
 }
-#tally-tab1 h4, #hl-tab1 h4, #jones-tab1 h4{
+/*#tally-tab1 h4, #hl-tab1 h4, #jones-tab1 h4{
   margin-top:16px;
+}*/
+#parallax-tab2 h4, #vidlaunch-tab2 h4{
+  margin-top:15px;
 }
 
 /* ============= tabs styles =============== */
