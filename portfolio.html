@@ -29,9 +29,9 @@
 
           <nav>
             <ul id="nav">
-              <li><a href="/">Websites</a></li>
-              <li><a href="/">Demos</a></li>
-              <li><a href="/">Android</a></li>
+              <li><a href="#websites">Websites</a></li>
+              <li><a href="#demos">Demos</a></li>
+              <li><a href="#android">Android</a></li>
               <li id="close"><label for="toggle">&nbsp;</label></li>
             </ul>
           </nav>
@@ -46,107 +46,320 @@
     
       <div class="wrapper">
 
-        <div class="heading">
+        <div id="websites" class="heading">
           <h1>Websites</h1>
         </div>
 
-        <div class="project">
+        <!-- Tally Expense App -->
+        <div class="project websites">
           <div class="image"></div>
           <div class="text">
-          	<h2>Tally Expense App</h2>
-            <h4>Uses:</h4>
-            <p>HTML, CSS, JavaScript, GreenSock</p>
-          </div>
-          <!--<div class="text">
-            <h2>Tally Expense App</h2>
-            <h4>Primary Developer</h4>
-            <ul>
-              <li>HTML and CSS markup</li>
-              <li>Scroll animations, phone animations, text transformations, wipe transitions, background color changes...</li>
+            <ul class="tabs" data-tabgroup="tally-web">
+              <li><a href="#tally-tab1" class="active">Details</a></li>
+              <li><a href="#tally-tab2">Contributions</a></li>
+              <li><a href="#tally-tab3">Links</a></li>
             </ul>
+            <section id="tally-web" class="tabgroup">
+              <div id="tally-tab1">
+                <h2>Tally Expense App</h2>
+                <h4>Uses:</h4>
+                <p>HTML, CSS, JavaScript, GreenSock</p>
+              </div>
+              <div id="tally-tab2">
+                <h2>Tally Expense App</h2>
+                <h4>Primary Developer</h4>
+                <ul>
+                  <li>HTML and CSS markup</li>
+                  <li>Scroll animations, phone animations, text transformations, wipe transitions, background color changes...</li>
+                </ul>
+              </div>
+              <div id="tally-tab3">
+                <h2>Tally Expense App</h2>
+                <h4>URL:</h4>
+                <a href="#" target="_blank">http://...</a>
+              </div>
+            </section>
           </div>
-          <div class="text">
-            <h2>Tally Expense App</h2>
-            <h4>URL:</h4>
-            <a href="#">http://...</a>
-          </div>-->
-        </div>
+        </div><!-- end .project -->
 
-        <div class="project">
+        <!-- Hook & Loop -->
+        <div class="project websites">
           <div class="image"></div>
           <div class="text">
-            <h2>Hook &amp; Loop</h2>
-            <h4>Uses:</h4>
-            <p>HTML, CSS, JavaScript, PHP, Wordpress</p>
+           <ul class="tabs" data-tabgroup="hl-web">
+              <li><a href="#hl-tab1" class="active">Details</a></li>
+              <li><a href="#hl-tab2">Contributions</a></li>
+              <li><a href="#hl-tab3">Links</a></li>
+            </ul>
+            <section id="hl-web" class="tabgroup">
+              <div id="hl-tab1">
+                <h2>Hook &amp; Loop</h2>
+                <h4>Uses:</h4>
+                <p>HTML, CSS, JavaScript, PHP, Wordpress</p>
+              </div>
+              <div id="hl-tab2">
+                <h2>Hook &amp; Loop</h2>
+                <h4>Contributor</h4>
+                <ul>
+                  <li>HTML and CSS markup</li>
+                  <li>Scroll animations, phone animations, text transformations, wipe transitions, background color changes...</li>
+                </ul>
+              </div>
+              <div id="hl-tab3">
+                <h2>Hook &amp; Loop</h2>
+                <h4>URL:</h4>
+                <a href="#" target="_blank">http://...</a>
+              </div>
+            </section>
           </div>
-        </div>
+        </div><!-- end .project -->
 
-        <div class="project">
+        <!-- Chuck Jones -->
+        <div class="project websites">
           <div class="image"></div>
           <div class="text">
-            <h2>Chuck Jones</h2>
-            <h4>Uses:</h4>
-            <p>HTML, CSS, JavaScript, PHP, Wordpress</p>
+            <ul class="tabs" data-tabgroup="jones-web">
+              <li><a href="#jones-tab1" class="active">Details</a></li>
+              <li><a href="#jones-tab2">Contributions</a></li>
+              <li><a href="#jones-tab3">Links</a></li>
+            </ul>
+            <section id="jones-web" class="tabgroup">
+              <div id="jones-tab1">
+                <h2>Chuck Jones</h2>
+                <h4>Uses:</h4>
+                <p>HTML, CSS, JavaScript, PHP, Wordpress</p>
+              </div>
+              <div id="jones-tab2">
+                <h2>Chuck Jones</h2>
+                <h4>Contributor</h4>
+                <ul>
+                  <li>HTML and CSS markup</li>
+                  <li>Scroll animations, phone animations, text transformations, wipe transitions, background color changes...</li>
+                </ul>
+              </div>
+              <div id="jones-tab3">
+                <h2>Chuck Jones</h2>
+                <h4>URL:</h4>
+                <a href="#" target="_blank">http://...</a>
+              </div>
+            </section>
           </div>
-        </div>
+        </div><!-- end .project -->
 
-        <div class="heading">
+        <div id="demos" class="heading">
           <h1>Demos</h1>
         </div>
 
-        <div class="project">
+        <!-- Pronto -->
+        <div class="project demos">
           <div class="image"></div>
           <div class="text">
-            <h2>Pronto <span>(renamed Tally)</span></h2>
-            <h4>Uses:</h4>
-            <p>HTML, CSS, JavaScript, GreenSock</p>
+            <ul class="tabs" data-tabgroup="pronto-demo">
+              <li><a href="#pronto-tab1" class="active">Details</a></li>
+              <li><a href="#pronto-tab2">Links</a></li>
+            </ul>
+            <section id="pronto-demo" class="tabgroup">
+              <div id="pronto-tab1">
+                <h2>Pronto <span class="parens">(renamed Tally)</span></h2>
+                <h4>Uses:</h4>
+                <p>HTML, CSS, JavaScript, GreenSock</p>
+              </div>
+              <div id="pronto-tab2">
+                <h2>Pronto <span class="parens">(renamed Tally)</span></h2>
+                <h4>URL:</h4>
+                <a href="#" target="_blank">http://...</a>
+              </div>
+            </section>
           </div>
-        </div>
+        </div><!-- end .project -->
 
-        <div class="project">
+        <!-- Xparallax -->
+        <div class="project demos">
           <div class="image"></div>
           <div class="text">
-            <h2>Xparallax</h2>
-            <h4>Uses:</h4>
-            <p>JavaScript</p>
+            <ul class="tabs" data-tabgroup="parallax-demo">
+              <li><a href="#parallax-tab1" class="active">Details</a></li>
+              <li><a href="#parallax-tab2">Links</a></li>
+            </ul>
+            <section id="parallax-demo" class="tabgroup">
+              <div id="parallax-tab1">
+                <h2>Xparallax</h2>
+                <h4>Uses:</h4>
+                <p>JavaScript</p>
+              </div>
+              <div id="parallax-tab2">
+                <h2>Xparallax</h2>
+                <h4>URL:</h4>
+                <a href="#" target="_blank">http://...</a>
+              </div>
+            </section>
           </div>
-        </div>
+        </div><!-- end .project -->
 
-        <div class="project">
+        <!-- vidLaunch -->
+        <div class="project demos">
           <div class="image"></div>
           <div class="text">
-            <h2>vidLaunch</h2>
-            <h4>Uses:</h4>
-            <p>JavaScript, PHP, SSI(optional)</p>
+            <ul class="tabs" data-tabgroup="vidlaunch-demo">
+              <li><a href="#vidlaunch-tab1" class="active">Details</a></li>
+              <li><a href="#vidlaunch-tab2">Links</a></li>
+            </ul>
+            <section id="vidlaunch-demo" class="tabgroup">
+              <div id="vidlaunch-tab1">
+                <h2>vidLaunch</h2>
+                <h4>Uses:</h4>
+                <p>JavaScript, PHP, SSI(optional)</p>
+              </div>
+              <div id="vidlaunch-tab2">
+                <h2>vidLaunch</h2>
+                <h4>URL:</h4>
+                <a href="#" target="_blank">http://...</a>
+              </div>
+            </section>
           </div>
-        </div>
+        </div><!-- end .project -->
 
-        <div class="project">
+        <!-- Countdown -->
+        <div class="project demos">
           <div class="image"></div>
           <div class="text">
-            <h2>Countdown to Inforum</h2>
-            <h4>Uses:</h4>
-            <p>HTML, CSS, JavaScript</p>
+            <ul class="tabs" data-tabgroup="countdown-demo">
+              <li><a href="#countdown-tab1" class="active">Details</a></li>
+              <li><a href="#countdown-tab2">Links</a></li>
+            </ul>
+            <section id="countdown-demo" class="tabgroup">
+              <div id="countdown-tab1">
+                <h2>Countdown to Inforum</h2>
+                <h4>Uses:</h4>
+                <p>HTML, CSS, JavaScript</p>
+              </div>
+              <div id="countdown-tab2">
+                <h2>Countdown to Inforum</h2>
+                <h4>URL:</h4>
+                <a href="#" target="_blank">http://...</a>
+              </div>
+            </section>
           </div>
-        </div>
+        </div><!-- end .project -->
 
-        <div class="project">
+        <!-- Toons -->
+        <div class="project demos">
           <div class="image"></div>
           <div class="text">
-            <h2>Tweening Toons</h2>
-            <h4>Uses:</h4>
-            <p>HTML, CSS, JavaScript</p>
+            <ul class="tabs" data-tabgroup="toons-demo">
+              <li><a href="#toons-tab1" class="active">Details</a></li>
+              <li><a href="#toons-tab2">Links</a></li>
+            </ul>
+            <section id="toons-demo" class="tabgroup">
+              <div id="toons-tab1">
+                <h2>Tweening Toons</h2>
+                <h4>Uses:</h4>
+                <p>HTML, CSS, JavaScript</p>
+              </div>
+              <div id="toons-tab2">
+                <h2>Tweening Toons</h2>
+                <h4>URL:</h4>
+                <a href="#" target="_blank">http://...</a>
+              </div>
+            </section>
           </div>
-        </div>
+        </div><!-- end .project -->
 
-        <div class="heading">
+        <div id="android" class="heading">
           <h1>Android</h1>
         </div>
 
-        <div class="project">
+        <!-- LaScala -->
+        <div class="project droid">
           <div class="image"></div>
-          <div class="text"></div>
-        </div>
+          <div class="text">
+            <ul class="tabs" data-tabgroup="lascala-droid">
+              <li><a href="#lascala-tab1" class="active">Details</a></li>
+              <li><a href="#lascala-tab2">Links</a></li>
+            </ul>
+            <section id="lascala-droid" class="tabgroup">
+              <div id="lascala-tab1">
+                <h2>La Scala Ristorante</h2>
+                <h4>Uses:</h4>
+                <p>Java, XML, Android SDK</p>
+              </div>
+              <div id="lascala-tab2">
+                <h2>La Scala Ristorante</h2>
+                <h4>URL:</h4>
+                <a href="#" target="_blank">http://...</a>
+              </div>
+            </section>
+          </div>
+        </div><!-- end .project -->
+
+        <!-- Serenity -->
+        <div class="project droid">
+          <div class="image"></div>
+          <div class="text">
+            <ul class="tabs" data-tabgroup="serenity-droid">
+              <li><a href="#serenity-tab1" class="active">Details</a></li>
+              <li><a href="#serenity-tab2">Links</a></li>
+            </ul>
+            <section id="serenity-droid" class="tabgroup">
+              <div id="serenity-tab1">
+                <h2>Serenity Sounds</h2>
+                <h4>Uses:</h4>
+                <p>Java, XML, Android SDK</p>
+              </div>
+              <div id="serenity-tab2">
+                <h2>Serenity Sounds</h2>
+                <h4>URL:</h4>
+                <a href="#" target="_blank">http://...</a>
+              </div>
+            </section>
+          </div>
+        </div><!-- end .project -->
+
+        <!-- Awesomesauce -->
+        <div class="project droid">
+          <div class="image"></div>
+          <div class="text">
+            <ul class="tabs" data-tabgroup="awesomesauce-droid">
+              <li><a href="#awesomesauce-tab1" class="active">Details</a></li>
+              <li><a href="#awesomesauce-tab2">Links</a></li>
+            </ul>
+            <section id="awesomesauce-droid" class="tabgroup">
+              <div id="awesomesauce-tab1">
+                <h2>Awesomesauce</h2>
+                <h4>Uses:</h4>
+                <p>Java, XML, Android SDK</p>
+              </div>
+              <div id="awesomesauce-tab2">
+                <h2>Awesomesauce</h2>
+                <h4>URL:</h4>
+                <a href="#" target="_blank">http://...</a>
+              </div>
+            </section>
+          </div>
+        </div><!-- end .project -->
+
+        <!-- NYC DJ -->
+        <div class="project droid">
+          <div class="image"></div>
+          <div class="text">
+            <ul class="tabs" data-tabgroup="nycdj-droid">
+              <li><a href="#nycdj-tab1" class="active">Details</a></li>
+              <li><a href="#nycdj-tab2">Links</a></li>
+            </ul>
+            <section id="nycdj-droid" class="tabgroup">
+              <div id="nycdj-tab1">
+                <h2>NYC DJ</h2>
+                <h4>Uses:</h4>
+                <p>Java, XML, Android SDK</p>
+              </div>
+              <div id="nycdj-tab2">
+                <h2>NYC DJ</h2>
+                <h4>URL:</h4>
+                <a href="#" target="_blank">http://...</a>
+              </div>
+            </section>
+          </div>
+        </div><!-- end .project -->
 
       </div><!-- end .wrapper -->
 
@@ -164,6 +377,6 @@
 
     <!-- JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!--<script src="static/js/bootstrap.min.js"></script>-->
+    <script src="static/js/tabGroups.js"></script>
   </body>
 </html>

@@ -128,17 +128,8 @@ footer a:hover{
   font-size:24px;
   line-height: 32px;
 }
-.heading{
-  font-size:28px;
-}
-.project h2{
-  font-size:22px;
-  margin-bottom:10px;
-}
-.project h2 span{
-  font-size:18px;
-}
-/* portfolio grid */
+
+/* ============= portfolio ============= */
 .project{
   background:#fff;
   margin:0 auto;
@@ -153,8 +144,61 @@ footer a:hover{
   background-color:red;
 }
 .text{
-  padding:16px 20px;
+  position:relative;
   background-color:blue;
+  border: 1px solid #000;
+}
+.heading{
+  font-size:28px;
+}
+.project h2{
+  font-size:22px;
+  margin-bottom:10px;
+}
+.project h2 .parens{
+  font-size:18px;
+}
+
+/* ============= tabs styles =============== */
+.tabs{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  padding:0;
+  margin:0;
+}
+.websites .tabs li {
+  float: left;
+  width:33.33333333%;
+  list-style-type:none;
+}
+.demos .tabs li, .droid .tabs li {
+  float: left;
+  width:50%;
+  list-style-type:none;
+}
+.tabs a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  font-size:13px;
+  width:90%;
+  margin:0 auto;
+  padding:5px 0;
+  background-color: #D0D0D0;
+  border: 1px solid #C3C3C3;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.tabs a:hover,
+.tabs a.active {
+  background-color: #E9E9E9;
+  text-decoration: underline;
+}
+.tabgroup div {
+  padding: 30px;
 }
 
 /* =========== navigation styles ============ */
