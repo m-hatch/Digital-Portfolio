@@ -76,8 +76,11 @@ header, footer, .center-link{
 }
 header, footer{
 	width:100%;
-	background-color: rgba(0,0,0,0.7);
+	background-color: rgba(0,0,0,0.83);
   z-index:100;
+}
+.landing header, .landing footer{
+  background-color: rgba(0,0,0,0.72);
 }
 header{
   position:fixed;
