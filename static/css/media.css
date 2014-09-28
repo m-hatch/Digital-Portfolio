@@ -20,8 +20,9 @@
   }
   .heading{
     font-size:36px;
+    margin:0;
   }
-  .image, .text{
+  .image{
     height:280px; /* will be auto */
   }
 }
@@ -36,6 +37,7 @@
   .container{
     padding-top: 170px;
     padding-bottom: 60px;
+    background-color:#fdfdfd;
   }
   /* nav expand full */
   .nav-wrapper{
@@ -74,6 +76,7 @@
     display: none;
   }
   /* end nav expand */
+
   .heading{
     font-size:40px;
   }
@@ -88,7 +91,7 @@
     margin: 20px auto;
     width:614px;
     height:246px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   }
   .image, .text{
     width: 280px;
@@ -98,6 +101,12 @@
   }
   .image{
     float:right;
+  }
+  .tabgroup div {
+    padding-left: 30px;
+  }
+  #jones-tab1 h4{
+    margin-top:16px;
   }
 }
 
@@ -122,6 +131,22 @@
     width:340px;
     height:255px;
   }
+  .project h2{
+    font-size:26px;
+    margin-bottom:18px;
+  }
+  .project h2 .parens{
+    font-size:20px;
+  }
+  .tabgroup div {
+    padding-top: 18px;
+  }
+  .project h4, #jones-tab1 h4{
+    margin-top: 26px;
+  }
+  .inner-link, #jones-tab2 h4{
+    margin-top: 0 !important;
+  }
 }
 
 @media screen and (min-width: 1280px){
@@ -133,5 +158,11 @@
   .image, .text{
     width:408px;
     height:306px;
+  }
+  .project h2{
+    font-size:30px;
+  }
+  .project p, .project h4, .project-list li, .tabgroup a{
+    font-size:18px;
   }
 }

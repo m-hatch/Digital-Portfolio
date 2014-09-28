@@ -29,7 +29,7 @@ html { height: 100%; }
 /* =========== custom styles ============== */
 html, body{
 	font-family: Helvetica, Arial, sans-serif;
-	color:#000;
+	color:#2A2A2A;
 	font-weight: 300;
 }
 .landing{
@@ -45,7 +45,8 @@ html, body{
 .container{
   position:relative;
   padding: 130px 0 50px 0;
-  background-color:#B6B6B4;
+  /*background-color:#B6B6B4;*/
+  background-color:#fff;
 }
 .wrapper{
 	position:relative;
@@ -63,9 +64,6 @@ html, body{
 }
 h1, #nav li{
 	font-weight: 400;
-}
-a{
-  color:blue;
 }
 header a, footer a, .center-link a{
 	text-decoration:none;
@@ -137,20 +135,20 @@ footer a:hover{
   margin:0 auto;
 }
 .image, .text{
+  position:relative;
   width:100%;
   max-width:408px;
-  height:210px; /* will be auto */
+  height:200px; /* will be auto */
   margin:20px auto;
 }
 .image{
   background-color:red;
 }
-.text{
-  position:relative;
-  border: 1px solid #000;
-}
 .heading{
   font-size:28px;
+  width: 100%;
+  max-width: 408px;
+  margin: 0 auto;
 }
 .project h2{
   font-size:23px;
@@ -163,22 +161,21 @@ footer a:hover{
 .project h4{
   font-weight: bold;
   margin-top: 20px;
+  font-size:16px;
 }
 .project p{
   font-size:16px;
 }
 .project-list h4{
-  margin-top: 0;
+  margin-top: 0 !important;
 }
 .project-list ul{
   list-style-type:disc;
 }
 .project-list li{
   margin-left:20px;
+  font-size:16px;
 }
-/*#tally-tab1 h4, #hl-tab1 h4, #jones-tab1 h4{
-  margin-top:16px;
-}*/
 #parallax-tab2 h4, #vidlaunch-tab2 h4{
   margin-top:15px;
 }
@@ -222,7 +219,15 @@ footer a:hover{
   /*text-decoration: underline;*/
 }
 .tabgroup div {
-  padding: 4px 30px 40px 30px;
+  padding: 8px 30px 40px 4px;
+}
+.tabgroup a{
+  text-decoration: none;
+  color:blue;
+  font-size:16px;
+}
+.tabgroup a:hover{
+  text-decoration: underline;
 }
 .inner-link{
   margin-bottom:6px;
