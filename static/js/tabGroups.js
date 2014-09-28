@@ -14,4 +14,8 @@
 	    $(target).show();
 
 	});
+	// prevent links from navigating on click
+	$('.tabs a').click(function(e){
+		e.preventDefault();
+	});
 })(jQuery);
