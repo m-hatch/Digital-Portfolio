@@ -36,7 +36,7 @@ html, body{
 	position:relative;
 	width:100%;
 	height:100%;
-  background: url(../img/macbook-new.png) no-repeat 10% 60% fixed; 
+  background: url(../img/macbook.png) no-repeat 10% 60% fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -141,11 +141,18 @@ footer a:hover{
   position:relative;
   width:100%;
   max-width:408px;
-  height:200px; /* will be auto */
   margin:20px auto;
 }
-.image{
-  background-color:red;
+.image img{
+  width:100%;
+  height:auto;
+}
+.image .droid-img{
+  width: auto;
+  margin: 0 auto;
+}
+.text{
+  height:200px;
 }
 .heading{
   font-size:28px;
