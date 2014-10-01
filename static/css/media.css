@@ -1,4 +1,10 @@
 /* mobile first */
+@media screen and (min-width: 300px){
+  .line-xs{
+    display:inline-block;
+  }
+}
+
 @media screen and (min-width: 568px){
   .wrapper{
     width:80%;
@@ -55,7 +61,7 @@
     display: inline; float: left;
   }
   #toggle:checked ~ nav #nav li a:hover,
-  #nav li a:hover {
+  #nav li a:hover, #nav li a:focus {
     color: #E41B17;
   }
   #toggle:checked ~ nav #nav a,
@@ -111,7 +117,7 @@
   .tabgroup div {
     padding-left: 30px;
   }
-  .line-sm{
+  .line-sm, .line-xs{
     display:block;
   }
 }
@@ -147,13 +153,10 @@
   .tabgroup div {
     padding-top: 18px;
   }
-  .project h4, #parallax-tab2 h4, #vidlaunch-tab2 h4{
+  .project h4{
     margin-top: 20px;
   }
-  .inner-link, #jones-tab2 h4{
-    margin-top: 0 !important;
-  }
-  .line-sm{
+  .line-sm, .line-xs{
     display:inline-block;
   }
 }
@@ -172,7 +175,7 @@
     font-size:30px;
     margin-bottom:28px;
   }
-  .project h4, #parallax-tab2 h4, #vidlaunch-tab2 h4{
+  .project h4{
     margin-top: 28px;
   }
   .project p, .project h4, .project-list li, .tabgroup a{

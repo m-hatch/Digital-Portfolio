@@ -36,7 +36,7 @@ html, body{
 	position:relative;
 	width:100%;
 	height:100%;
-  background: url(../img/macbook.png) no-repeat 10% 60% fixed; 
+  background: url(../img/macbook.jpg) no-repeat 10% 60% fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -112,7 +112,7 @@ footer a span{
   padding:0 10px;
   font-size: 14px;
 }
-footer a:hover{
+footer a:hover, footer a:focus{
 	text-decoration: underline;
 }
 .center-link {
@@ -170,14 +170,11 @@ footer a:hover{
 }
 .project h4{
   font-weight: bold;
-  margin-top: 20px;
+  margin-top: 10px;
   font-size:16px;
 }
 .project p{
   font-size:16px;
-}
-.project-list h4{
-  margin-top: 0 !important;
 }
 .project-list ul{
   list-style-type:disc;
@@ -186,8 +183,8 @@ footer a:hover{
   margin-left:20px;
   font-size:16px;
 }
-#parallax-tab2 h4, #vidlaunch-tab2 h4{
-  margin-top:16px;
+.line-xs{
+  display:block;
 }
 
 /* ============= tabs styles =============== */
@@ -236,7 +233,8 @@ footer a:hover{
   color:blue;
   font-size:16px;
 }
-.tabgroup a:hover{
+.tabgroup a:hover,
+.tabs a.active{
   text-decoration: underline;
 }
 .inner-link{
@@ -264,7 +262,7 @@ footer a:hover{
   background-image: -o-linear-gradient(top, #6b6766, #5b5756);
   background-image: linear-gradient(top, #6b6766, #5b5756);
 }
-.btn:hover {
+.btn:hover, .btn:focus {
   background-color: #7b7776;
   background-image: -webkit-linear-gradient(top, #8b8786, #7b7776);
   background-image: -moz-linear-gradient(top, #8b8786, #7b7776);
@@ -292,7 +290,7 @@ footer a:hover{
   line-height: 0;
   display: block;
   border-bottom-width: 0;
-  background:rgba(0,0,0,0.7);
+  background:rgba(0,0,0,0.83);
   padding: 0 0 0 5%;
   overflow: hidden;
   color:#fff;
@@ -302,6 +300,9 @@ footer a:hover{
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+}
+.landing #nav a {
+  background:rgba(0,0,0,0.72);
 }
 #toggle:checked ~ nav #nav {
   z-index: 101;
