@@ -102,11 +102,17 @@
   .image img{
     height:100%;
   }
+  .project h2{
+    margin-bottom:16px;
+  }
+  .project h4{
+    margin-top:16px;
+  }
   .tabgroup div {
     padding-left: 30px;
   }
-  #jones-tab1 h4{
-    margin-top:16px;
+  .line-sm{
+    display:block;
   }
 }
 
@@ -133,7 +139,7 @@
   }
   .project h2{
     font-size:26px;
-    margin-bottom:18px;
+    margin-bottom:20px;
   }
   .project h2 .parens{
     font-size:20px;
@@ -141,11 +147,14 @@
   .tabgroup div {
     padding-top: 18px;
   }
-  .project h4, #jones-tab1 h4{
-    margin-top: 26px;
+  .project h4, #parallax-tab2 h4, #vidlaunch-tab2 h4{
+    margin-top: 20px;
   }
   .inner-link, #jones-tab2 h4{
     margin-top: 0 !important;
+  }
+  .line-sm{
+    display:inline-block;
   }
 }
 
@@ -161,6 +170,10 @@
   }
   .project h2{
     font-size:30px;
+    margin-bottom:28px;
+  }
+  .project h4, #parallax-tab2 h4, #vidlaunch-tab2 h4{
+    margin-top: 28px;
   }
   .project p, .project h4, .project-list li, .tabgroup a{
     font-size:18px;

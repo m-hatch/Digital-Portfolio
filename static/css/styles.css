@@ -187,7 +187,7 @@ footer a:hover{
   font-size:16px;
 }
 #parallax-tab2 h4, #vidlaunch-tab2 h4{
-  margin-top:15px;
+  margin-top:16px;
 }
 
 /* ============= tabs styles =============== */
@@ -229,7 +229,7 @@ footer a:hover{
   /*text-decoration: underline;*/
 }
 .tabgroup div {
-  padding: 8px 30px 40px 4px;
+  padding: 8px 0 40px 4px;
 }
 .tabgroup a{
   text-decoration: none;
