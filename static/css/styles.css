@@ -233,8 +233,7 @@ footer a:hover, footer a:focus{
   color:blue;
   font-size:16px;
 }
-.tabgroup a:hover,
-.tabs a.active{
+.tabgroup a:hover{
   text-decoration: underline;
 }
 .inner-link{
@@ -331,6 +330,9 @@ footer a:hover, footer a:focus{
   left: 0;
   right: 0;
   z-index: 0;
+}
+#nav .active {
+  color: #E41B17;
 }
 
 /* Android bug fix */
