@@ -1,4 +1,4 @@
-(function($){
+$(document).ready(function () {
     $(document).on("scroll", onScroll);
     
     //smoothscroll
@@ -13,20 +13,20 @@
       
         var target = this.hash,
             menu = target,
-            padding = 145;
+            padding = 120;
         $target = $(target);
 
-        //var padding = $('header').outerHeight;
-        //console.log(padding);
+        //var navHeight = $('header');
+        //console.log(navHeight.height);
 
         $('html, body').stop().animate({
-            'scrollTop': $target.offset().top - padding
+            'scrollTop': $target.offset().top //- padding
         }, 200, 'swing', function () {
             window.location.hash = target;
             $(document).on("scroll", onScroll);
         });
     });
-})(jQuery);
+});
 
 function onScroll(event){
     var scrollPos = $(document).scrollTop();

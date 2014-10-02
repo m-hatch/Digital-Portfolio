@@ -84,6 +84,7 @@ header, footer{
 }
 header{
   position:fixed;
+  top:0;
   height:110px;
   padding: 20px 0;
 }
@@ -159,6 +160,14 @@ footer a:hover, footer a:focus{
   width: 100%;
   max-width: 408px;
   margin: 0 auto;
+}
+.nav-tag:before{
+  display:block;
+  content:"";
+  margin-top:-130px;
+  height:130px;
+  visibility:hidden;
+  z-index:-100;
 }
 .project h2{
   font-size:23px;

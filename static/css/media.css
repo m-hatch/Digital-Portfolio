@@ -38,10 +38,15 @@
     padding: 18px 0;
   }
   .container{
-    padding-top: 170px;
+    padding-top: 164px;
     padding-bottom: 60px;
     background-color:#fdfdfd;
   }
+  .nav-tag:before{
+    margin-top:-164px;
+    height:164px;
+  }
+
   /* nav expand full */
   .nav-wrapper{
     top:20px;
