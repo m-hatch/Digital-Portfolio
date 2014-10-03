@@ -1,7 +1,7 @@
 /* mobile first */
 @media screen and (min-width: 300px){
   .line-xs{
-    display:inline-block;
+    display:inline;
   }
 }
 
@@ -162,7 +162,7 @@
     margin-top: 20px;
   }
   .line-sm, .line-xs{
-    display:inline-block;
+    display:inline;
   }
 }
 
