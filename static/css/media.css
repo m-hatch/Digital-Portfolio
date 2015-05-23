@@ -164,6 +164,9 @@
   .line-sm, .line-xs{
     display:inline;
   }
+  .line-adjust{
+    display:block;
+  }
 }
 
 @media screen and (min-width: 1280px){
@@ -185,5 +188,8 @@
   }
   .project p, .project h4, .project-list li, .tabgroup a{
     font-size:18px;
+  }
+  .line-adjust{
+    display:inline;
   }
 }
