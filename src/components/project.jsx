@@ -6,14 +6,14 @@ export default React.createClass({
   },
   render: function() {console.log(this.getProject().name);
     return (
-      <div className="project websites">
-        <div className="image">
+      <div className="project">
+        <div className="project__image">
           <a href={ this.getProject().img } target="_blank">
             <img src="static/img/bmp.png" alt={ this.getProject().img_alt }/>
           </a>
         </div>
-        <div className="text">
-          <h3>{ this.getProject().name }</h3>
+        <div className="project__text">
+          <h2>{ this.getProject().name }</h2>
           <p>{ this.getProject().description }</p>
         </div>
       </div>
