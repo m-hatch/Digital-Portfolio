@@ -1,0 +1,37 @@
+/* clearfixes */
+.clear:after,
+.wrapper:after { clear: both; content: ""; display: block; height: 0; visibility: hidden; }
+
+html, body{
+  font-family: Helvetica, Arial, sans-serif;
+  color:#2A2A2A;
+  font-weight: 300;
+}
+
+.container{
+  position:relative;
+  padding: 130px 0 50px 0;
+  /*background-color:#B6B6B4;*/
+  background-color:#fff;
+}
+
+@media screen and (min-width: 768px){
+  .container{
+    padding-top: 164px;
+    padding-bottom: 60px;
+    background-color:#F2F2F2;
+  }
+}
+
+.wrapper{
+  position:relative;
+  width:86%;
+  max-width:1024px;
+  margin:0 auto;
+}
+
+@media screen and (min-width: 568px){
+  .wrapper{
+    width:80%;
+  }
+}
