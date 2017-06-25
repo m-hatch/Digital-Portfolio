@@ -6,7 +6,7 @@ module.exports = {
     'webpack-dev-server/client?http://localhost:8081',
     'webpack/hot/only-dev-server',
     './src/index.jsx',
-    './styles/main.scss'
+    './src/styles/main.scss'
   ],
   module: {
     rules: [
