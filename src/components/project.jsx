@@ -4,7 +4,7 @@ export default React.createClass({
   getProject: function() {
     return this.props.json || {};
   },
-  render: function() {console.log(this.getProject().name);
+  render: function() {
     return (
       <div className="project">
         <div className="project__image">

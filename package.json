@@ -25,7 +25,7 @@
     "chai-immutable": "^1.6.0",
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^2.1.2",
-    "jsdom": "^11.0.0",
+    "jsdom": "^8.0.4",
     "json-loader": "^0.5.4",
     "mocha": "^3.4.2",
     "node-sass": "^4.5.3",
@@ -37,6 +37,7 @@
   "dependencies": {
     "immutable": "^3.8.1",
     "react": "^15.6.1",
+    "react-addons-test-utils": "^15.6.0",
     "react-dom": "^15.6.1"
   }
 }
