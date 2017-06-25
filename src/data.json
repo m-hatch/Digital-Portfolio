@@ -1,0 +1,32 @@
+{
+  "projects": [
+    {
+      "name": "Demo",
+      "img": "path.jpg",
+      "img_alt": "alt desc",
+      "description": "lorem ipsum",
+      "github": "repository",
+      "link": "website"
+    },
+    {
+      "name": "Demo2",
+      "img": "another/path.jpg",
+      "img-alt": "alt desc 2",
+      "description": "lorem ipsum again",
+      "github": "my/repository",
+      "link": "website2"
+    }
+  ],
+  "modal": {
+    "name": "Demo",
+    "img": "path.jpg",
+    "description": "lorem ipsum",
+    "github": "repository",
+    "link": "website"
+  },
+  "myinfo": {
+    "tagline": "Web Developer",
+    "linkedin": "url",
+    "github": "mhatch"
+  }
+}
