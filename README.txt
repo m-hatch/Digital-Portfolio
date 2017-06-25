@@ -10,3 +10,6 @@ npm install --save-dev react-hot-loader
 npm install --save-dev json-loader
 npm install --save-dev css-loader node-sass sass-loader
 npm install --save-dev extract-text-webpack-plugin
+
+## Run the Development Server
+webpack-dev-server
