@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Project from './components/Project';
+import ProjectsContainer from './components/ProjectsContainer';
 import myData from './data.json';
 
 ReactDOM.render(
-  <Project json={myData.projects[0]} />,
+  <ProjectsContainer projects={myData.projects} />,
   document.getElementById('app')
 );

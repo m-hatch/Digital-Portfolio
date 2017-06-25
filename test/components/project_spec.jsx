@@ -1,13 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { renderIntoDocument } from 'react-addons-test-utils';
+import { 
+  renderIntoDocument,
+  scryRenderedDOMComponentsWithTag
+} from 'react-addons-test-utils';
+import ProjectsContainer from '../../src/components/ProjectsContainer';
 import Project from '../../src/components/Project';
+import {expect} from 'chai';
 
 describe('Project', () => {
 
   it('renders a project json into a div', () => {
     const component = renderIntoDocument(
-      <Project json={
+      <Project project={
         {
           "name": "Demo",
           "img": "path.jpg",
@@ -18,6 +23,9 @@ describe('Project', () => {
         }
       } />
     );
+
+    //const projectName = scryRenderedDOMComponentsWithTag(component, 'h2');
+    //expect(projectName.textContent).to.equal('Demo');
   });
 
 });

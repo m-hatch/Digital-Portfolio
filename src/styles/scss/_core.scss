@@ -15,14 +15,6 @@ html, body{
   background-color:#fff;
 }
 
-@media screen and (min-width: 768px){
-  .container{
-    padding-top: 164px;
-    padding-bottom: 60px;
-    background-color:#F2F2F2;
-  }
-}
-
 .wrapper{
   position:relative;
   width:86%;
@@ -30,8 +22,32 @@ html, body{
   margin:0 auto;
 }
 
+.heading{
+  font-size:28px;
+  width: 100%;
+  max-width: 408px;
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 568px){
   .wrapper{
     width:80%;
+  }
+
+  .heading{
+    font-size:36px;
+    margin:0;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .container{
+    padding-top: 164px;
+    padding-bottom: 60px;
+    background-color:#F2F2F2;
+  }
+
+  .heading{
+    font-size:40px;
   }
 }

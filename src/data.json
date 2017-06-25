@@ -11,7 +11,7 @@
     {
       "name": "Demo2",
       "img": "another/path.jpg",
-      "img-alt": "alt desc 2",
+      "img_alt": "alt desc 2",
       "description": "lorem ipsum again",
       "github": "my/repository",
       "link": "website2"

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default React.createClass({
   getProject: function() {
-    return this.props.json || {};
+    return this.props.project || {};
   },
   render: function() {
     return (
