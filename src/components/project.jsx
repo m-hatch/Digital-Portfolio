@@ -14,7 +14,13 @@ export default React.createClass({
         </div>
         <div className="project__text">
           <h2>{ this.getProject().name }</h2>
-          <p>{ this.getProject().description }</p>
+          <button>Description</button>
+          <ul>
+            { 
+              this.getProject().github && <li><a href={this.getProject().github}>GitHub</a></li> 
+            }
+            <li><a href={this.getProject().link}>Link</a></li>
+          </ul>
         </div>
       </div>
     );
