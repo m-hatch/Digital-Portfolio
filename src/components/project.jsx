@@ -14,13 +14,14 @@ export default React.createClass({
         </div>
         <div className="project__text">
           <h2>{ this.getProject().name }</h2>
-          <button>Description</button>
+          <p>{ this.getProject().tagline }</p>
           <ul>
             { 
               this.getProject().github && <li><a href={this.getProject().github}>GitHub</a></li> 
             }
-            <li><a href={this.getProject().link}>Link</a></li>
+            <li><a href={ this.getProject().link }>Link</a></li>
           </ul>
+          <button>Description</button>
         </div>
       </div>
     );
