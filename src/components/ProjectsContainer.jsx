@@ -14,7 +14,7 @@ export default React.createClass({
   },
   render: function() {
     return (
-      <div>
+      <div className="wrapper">
         <div className="heading">
           <h1>Projects</h1>
         </div>
