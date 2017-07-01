@@ -4,7 +4,7 @@ export default React.createClass({
   
   render: function() {
     return (
-      <div className="container">
+      <div className="l-container">
         { this.props.children }
       </div>
     );

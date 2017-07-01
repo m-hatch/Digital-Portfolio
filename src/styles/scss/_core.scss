@@ -1,6 +1,6 @@
 /* clearfixes */
-.clear:after,
-.wrapper:after { clear: both; content: ""; display: block; height: 0; visibility: hidden; }
+.l-clear:after,
+.l-wrapper:after { clear: both; content: ""; display: block; height: 0; visibility: hidden; }
 
 html, body{
   font-family: Helvetica, Arial, sans-serif;
@@ -8,21 +8,20 @@ html, body{
   font-weight: 300;
 }
 
-.container{
+.l-container{
   position:relative;
   padding: 130px 0 50px 0;
-  /*background-color:#B6B6B4;*/
   background-color:#fff;
 }
 
-.wrapper{
+.l-wrapper{
   position:relative;
   width:86%;
   max-width:1024px;
   margin:0 auto;
 }
 
-.heading{
+.l-sub-heading{
   font-size:28px;
   width: 100%;
   max-width: 408px;
@@ -30,24 +29,24 @@ html, body{
 }
 
 @media screen and (min-width: 568px){
-  .wrapper{
+  .l-wrapper{
     width:80%;
   }
 
-  .heading{
+  .l-sub-heading{
     font-size:36px;
     margin:0;
   }
 }
 
 @media screen and (min-width: 768px){
-  .container{
+  .l-container{
     padding-top: 164px;
     padding-bottom: 60px;
     background-color:#F2F2F2;
   }
 
-  .heading{
+  .l-sub-heading{
     font-size:40px;
   }
 }

@@ -14,8 +14,8 @@ export default React.createClass({
   },
   render: function() {
     return (
-      <div className="wrapper">
-        <div className="heading">
+      <div className="l-wrapper">
+        <div className="l-sub-heading">
           <h1>Projects</h1>
         </div>
           { this.getProjects() }
