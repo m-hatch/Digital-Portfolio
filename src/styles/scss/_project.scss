@@ -19,12 +19,9 @@
     margin:20px auto;
   }
 
-  &__image{
-
-    img{
-      width:100%;
-      height:auto;
-    }
+  &__img{
+    width:100%;
+    height:auto;
   }
 
   &__text{
@@ -83,10 +80,10 @@
  
     &__image{
       float:right;
+    }
 
-      img{
-        height:100%;
-      }
+    &__img{
+      height:100%;
     }
 
     &__text{

@@ -1,4 +1,5 @@
 import React from 'react';
+import ProjectImage from './ProjectImage';
 
 export default React.createClass({
   getProject: function() {
@@ -7,11 +8,7 @@ export default React.createClass({
   render: function() {
     return (
       <div className="project">
-        <div className="project__image">
-          <a href={ this.getProject().img } target="_blank">
-            <img src="static/img/bmp.png" alt={ this.getProject().img_alt }/>
-          </a>
-        </div>
+        <ProjectImage img={ this.getProject().img } imgAlt={ this.getProject().img_alt } />
         <div className="project__text">
           <h2>{ this.getProject().name }</h2>
           <p>{ this.getProject().tagline }</p>
