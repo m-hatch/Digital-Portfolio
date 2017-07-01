@@ -21,7 +21,7 @@ export default React.createClass({
             }
             <li><a href={ this.getProject().link }>Link</a></li>
           </ul>
-          <button>Description</button>
+          <button className="button">Description</button>
         </div>
       </div>
     );
