@@ -1,4 +1,21 @@
 {
+  "navigation": {
+    "title": "MONTGOMERY HATCH",
+    "links": [
+      {
+        "name": "About",
+        "url": "#About"
+      },
+      {
+        "name": "Projects",
+        "url": "#Projects"
+      },
+      {
+        "name": "Contact",
+        "url": "#Contact"
+      }
+    ]
+  },
   "projects": [
     {
       "name": "Bachovich Music Publications",

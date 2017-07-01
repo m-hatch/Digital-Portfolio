@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Main from './components/Main';
+import NavbarContainer from './components/NavbarContainer';
 import ProjectsContainer from './components/ProjectsContainer';
-import myData from './data.json';
+import appData from './data.json';
 
 ReactDOM.render(
   <Main>
-    <ProjectsContainer projects={myData.projects} />
+    <NavbarContainer nav={ appData.navigation }/>
+    <ProjectsContainer projects={ appData.projects } />
   </Main>,
   document.getElementById('app')
 );
