@@ -23,6 +23,14 @@ export default React.createClass({
     return elements;
   },
 
+  requestAnimationFrame: function() {
+    return window.requestAnimationFrame
+      || window.mozRequestAnimationFrame
+      || window.webkitRequestAnimationFrame
+      || window.msRequestAnimationFrame
+      || function(f){ setTimeout(f, 1000/60) };
+  },
+
   toggleNav: function() {
     Array.from(this.getDomElements().listElems).forEach(function(elem) {
       elem.classList.toggle('topnav_list-item--open');
@@ -34,13 +42,15 @@ export default React.createClass({
   },
 
   handleScroll: function(event) {
-    var delta = (event.wheelDelta) ? event.wheelDelta : -1 * event.deltaY;
+    requestAnimationFrame(() => {
+      var delta = (event.wheelDelta) ? event.wheelDelta : -1 * event.deltaY;
     
-    if (delta < 0) {
-      this.getDomElements().nav_inner.classList.add('nav__inner--hide');
-    } else {
-      this.getDomElements().nav_inner.classList.remove('nav__inner--hide');
-    }
+      if (delta < 0) {
+        this.getDomElements().nav_inner.classList.add('nav__inner--hide');
+      } else {
+        this.getDomElements().nav_inner.classList.remove('nav__inner--hide');
+      }
+    })
   },
 
   handleHover: function(mouseEvent) {
