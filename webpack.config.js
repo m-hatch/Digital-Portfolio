@@ -10,34 +10,38 @@ module.exports = {
   ],
   module: {
     rules: [
-    {
-      test: /\.jsx?$/,
-      exclude: /node_modules/,
-      use: [
-        {
-          loader: 'react-hot-loader'
-        },
-        {
-          loader: 'babel-loader'
-        }
-      ]
-    },
-    {
-      test: /\.css$/,
-      use: ExtractTextPlugin.extract({
-        loader: 'css-loader?importLoaders=1',
-      }),
-    },
-    {
-      test: /\.(sass|scss)$/,
-      use: ExtractTextPlugin.extract([
-        'css-loader', 'sass-loader'
-      ])
-    },
-    {
-      test: /\.json$/,
-      use: 'json-loader'
-    }
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'react-hot-loader'
+          },
+          {
+            loader: 'babel-loader'
+          }
+        ]
+      },
+      {
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+          loader: 'css-loader?importLoaders=1',
+        }),
+      },
+      {
+        test: /\.(sass|scss)$/,
+        use: ExtractTextPlugin.extract([
+          'css-loader', 'sass-loader'
+        ])
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loader: 'url-loader'
+      },
+      {
+        test: /\.json$/,
+        use: 'json-loader'
+      }
     ]
   },
   resolve: {

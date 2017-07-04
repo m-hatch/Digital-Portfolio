@@ -3,8 +3,8 @@ import Navbar from './Navbar';
 
 export default React.createClass({
 
-  getTitle: function() {
-    return this.props.nav.title || '';
+  getName: function() {
+    return this.props.nav.name || '';
   },
 
   getLinks: function() {
@@ -24,11 +24,7 @@ export default React.createClass({
   },
 
   requestAnimationFrame: function() {
-    return window.requestAnimationFrame
-      || window.mozRequestAnimationFrame
-      || window.webkitRequestAnimationFrame
-      || window.msRequestAnimationFrame
-      || function(f){ setTimeout(f, 1000/60) };
+    return this.props.animationFrame;
   },
 
   toggleNav: function() {
@@ -80,7 +76,7 @@ export default React.createClass({
     return (
       <div className="nav">
         <Navbar 
-          navTitle={ this.getTitle() } 
+          navTitle={ this.getName() } 
           navLinks={ this.getLinks() } />
       </div>
     );

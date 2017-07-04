@@ -1,6 +1,11 @@
 {
+  "splash": {
+    "name": "Montgomery Hatch",
+    "title": "Digital Portfolio",
+    "position_title": "Web Developer and Front-End Engineer"
+  },
   "navigation": {
-    "title": "MONTGOMERY HATCH",
+    "name": "MONTGOMERY HATCH",
     "links": [
       {
         "name": "About",

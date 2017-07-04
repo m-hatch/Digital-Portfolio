@@ -1,0 +1,145 @@
+.splash {
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  min-height: 500px;
+  background: url(img/macbook.jpg) no-repeat 10% 60%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.splash__wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.splash__text {
+  text-align: center;
+  color: #fff;
+  font-weight: 400;
+  padding-bottom: 5vh;
+}
+
+.splash__title {
+  width: 280px; 
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+.splash__heading {
+  font-size: 38px;
+}
+
+.splash__portfolio {
+  font-size: 16px;
+}
+
+.splash__portfolio:before {
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  background-color: #fff;
+  height: 2px;
+  width: 52px;
+  -webkit-transition: width 0.2s;
+  -moz-transition: width 0.2s;
+  -ms-transition: width 0.2s;
+  -o-transition: width 0.2s;
+  transition: width 0.2s;
+}
+
+.splash__portfolio:hover:before { 
+  width: 90px;
+}
+
+.splash__title__text {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding-top: 1px;
+  padding-bottom: 4px;
+  font-size: 28px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+.splash__filter {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.247059);
+}
+
+@media screen and (min-width: 568px) {
+  .splash__title {
+    width: 520px; 
+    margin-top: 100px;
+  }
+
+  .splash__text {
+    padding-bottom: 0;
+  }
+
+  .splash__heading {
+    font-size: 46px;
+  }
+
+  .splash__portfolio {
+    font-size: 18px;
+  }
+
+  .splash__title__text {
+    font-size: 32px;
+    font-weight: 300;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .splash__title {
+    width: 560px; 
+  }
+
+  .splash__heading {
+    font-size: 48px;
+  }
+
+  .splash__portfolio {
+    font-size: 20px;
+  }
+
+  .splash__title__text {
+    font-size: 37px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .splash__heading {
+    font-size: 56px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .splash__title {
+    width: 700px; 
+  }
+
+  .splash__heading {
+    font-size: 66px;
+  }
+
+  .splash__portfolio {
+    font-size: 22px;
+  }
+
+  .splash__title__text {
+    font-size: 44px;
+  }
+}
