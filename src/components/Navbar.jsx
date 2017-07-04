@@ -14,7 +14,7 @@ export default React.createClass({
     });
 
     return (
-      <nav className="nav__inner">
+      <nav className="nav__inner l-font-smoothing">
         <div className="l-wrapper">
           <span className="nav__title">
             <a className="nav__link" href="">{ this.props.navTitle }</a>
