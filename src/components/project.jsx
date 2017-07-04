@@ -3,9 +3,11 @@ import ProjectImage from './ProjectImage';
 import ProjectText from './ProjectText';
 
 export default React.createClass({
+
   getProject: function() {
     return this.props.project || {};
   },
+
   render: function() {
     return (
       <div className="project">
@@ -23,4 +25,5 @@ export default React.createClass({
       </div>
     );
   }
+  
 });

@@ -2,6 +2,7 @@ import React from 'react';
 import Project from './Project';
 
 export default React.createClass({
+
   getProjects: function() {
     var myData = this.props.projects;
     var projects = [];
@@ -12,6 +13,7 @@ export default React.createClass({
     
     return projects;
   },
+
   render: function() {
     return (
       <div className="l-wrapper">
@@ -22,4 +24,5 @@ export default React.createClass({
       </div>
     );
   }
+  
 });
