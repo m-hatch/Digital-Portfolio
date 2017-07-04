@@ -46,7 +46,7 @@ export default React.createClass({
       } else {
         this.getDomElements().nav_inner.classList.remove('nav__inner--hide');
       }
-    })
+    });
   },
 
   handleHover: function(mouseEvent) {
