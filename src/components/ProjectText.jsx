@@ -6,7 +6,7 @@ export default React.createClass({
     return (
       <div className="project__text">
 
-        <h2 className="project__heading">{ this.props.projectName }</h2>
+        <h3 className="project__heading">{ this.props.projectName }</h3>
         <p className="project__tagline">{ this.props.tagline }</p>
 
         <ul>
