@@ -3,6 +3,12 @@ import Navbar from './Navbar';
 
 export default React.createClass({
 
+  getInitialState: function () {
+      return {
+         showNav: true
+      };
+   },
+
   getName: function() {
     return this.props.nav.name || '';
   },
@@ -11,20 +17,19 @@ export default React.createClass({
     return this.props.nav.links || [];
   },
 
+  requestAnimationFrame: function() {
+    return this.props.animationFrame;
+  },
+
   getDomElements: function() {
     var elements = {};
     var nav = document.getElementById("topNav");
     elements.listElems = nav.getElementsByTagName('li');
     elements.links = nav.getElementsByTagName('a');
     elements.nav_outer = document.getElementsByClassName('nav')[0];
-    elements.nav_inner = document.getElementsByClassName('nav__inner')[0];
     elements.icon = document.getElementById('icon');
 
     return elements;
-  },
-
-  requestAnimationFrame: function() {
-    return this.props.animationFrame;
   },
 
   toggleNav: function() {
@@ -40,21 +45,16 @@ export default React.createClass({
   handleScroll: function(event) {
     requestAnimationFrame(() => {
       var delta = (event.wheelDelta) ? event.wheelDelta : -1 * event.deltaY;
-    
-      if (delta < 0) {
-        this.getDomElements().nav_inner.classList.add('nav__inner--hide');
-      } else {
-        this.getDomElements().nav_inner.classList.remove('nav__inner--hide');
-      }
+      (delta < 0) ? this.setState({showNav: false}) : this.setState({showNav: true});
     });
   },
 
   handleHover: function(mouseEvent) {
     if (mouseEvent.type === 'mouseover') {
-      this.getDomElements().nav_inner.classList.remove('nav__inner--hide');
+      this.setState({showNav: true});
     }
     if (mouseEvent.type === 'mouseout') {
-      this.getDomElements().nav_inner.classList.add('nav__inner--hide');
+      this.setState({showNav: false});
     }
   },
 
@@ -74,11 +74,10 @@ export default React.createClass({
 
   render: function() {
     return (
-      <div className="nav">
         <Navbar 
           navTitle={ this.getName() } 
-          navLinks={ this.getLinks() } />
-      </div>
+          navLinks={ this.getLinks() } 
+          showNav={ this.state.showNav } />
     );
   }
 
