@@ -5,7 +5,8 @@ export default React.createClass({
 
   getInitialState: function () {
       return {
-         showNav: true
+         showNav: true,
+         toggleNav: false
       };
    },
 
@@ -22,24 +23,16 @@ export default React.createClass({
   },
 
   getDomElements: function() {
-    var elements = {};
-    var nav = document.getElementById("topNav");
-    elements.listElems = nav.getElementsByTagName('li');
-    elements.links = nav.getElementsByTagName('a');
-    elements.nav_outer = document.getElementsByClassName('nav')[0];
-    elements.icon = document.getElementById('icon');
-
-    return elements;
+    return {
+      "nav_outer" : document.getElementsByClassName('nav')[0],
+      "icon" : document.getElementById('icon')
+    };
   },
 
   toggleNav: function() {
-    Array.from(this.getDomElements().listElems).forEach(function(elem) {
-      elem.classList.toggle('topnav_list-item--open');
-    });
-
-    Array.from(this.getDomElements().links).forEach(function(link) {
-      link.classList.toggle('topnav__link--open');
-    });
+    this.setState(prevState => ({
+      toggleNav: !prevState.toggleNav
+    }));
   },
 
   handleScroll: function(event) {
@@ -77,7 +70,8 @@ export default React.createClass({
         <Navbar 
           navTitle={ this.getName() } 
           navLinks={ this.getLinks() } 
-          showNav={ this.state.showNav } />
+          showNav={ this.state.showNav } 
+          toggleNav={ this.state.toggleNav } />
     );
   }
 
