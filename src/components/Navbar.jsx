@@ -8,9 +8,9 @@ export default React.createClass({
     var linksList = links.map(link => {
       return (
         <li className={"topnav_list-item" + (this.props.toggleNav ? " topnav_list-item--open" : "")} 
-        		key={ link.name }>
+            key={ link.name }>
           <a className={"nav__link topnav__link" + (this.props.toggleNav ? " topnav__link--open" : "")} 
-          	href={ link.url }>{ link.name }</a>
+            href={ link.url }>{ link.name }</a>
         </li>
       )
     });

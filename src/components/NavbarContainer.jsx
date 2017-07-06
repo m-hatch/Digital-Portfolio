@@ -14,7 +14,7 @@ export default React.createClass({
     return this.props.nav.name || '';
   },
 
-  getLinks: function() {
+  getLinks: function () {
     return this.props.nav.links || [];
   },
 
