@@ -12,7 +12,7 @@ export default React.createClass({
    },
 
   getName: function() {
-    return this.props.nav.name || '';
+    return this.props.name || '';
   },
 
   getLinks: function () {

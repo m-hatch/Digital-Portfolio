@@ -14,8 +14,11 @@ export default React.createClass({
     return (
       <div> 
 
-        <NavbarContainer nav={ this.getData().navigation } />
-        <Splash text={ this.getData().splash } />
+        <NavbarContainer 
+          name={ this.getData().myinfo.name } 
+          nav={ this.getData().navigation } />
+
+        <Splash text={ this.getData().myinfo } />
 
         <div className="l-container">
           <About description={ this.getData().about.description }/>

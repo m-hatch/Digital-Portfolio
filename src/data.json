@@ -1,11 +1,14 @@
 {
-  "splash": {
+  "myinfo": {
     "name": "Montgomery Hatch",
     "title": "Digital Portfolio",
-    "position_title": "Web Developer and Front-End Engineer"
+    "position_title": "Web Developer and Front-End Engineer",
+    "links": {
+      "linkedin": "http://www.linkedin.com/pub/montgomery-hatch/10/a4/72a",
+      "github": "https://github.com/m-hatch"
+    }
   },
   "navigation": {
-    "name": "MONTGOMERY HATCH",
     "links": [
       {
         "name": "About",
@@ -50,10 +53,5 @@
     "description": "lorem ipsum",
     "github": "repository",
     "link": "website"
-  },
-  "myinfo": {
-    "tagline": "Web Developer",
-    "linkedin": "url",
-    "github": "mhatch"
   }
 }
