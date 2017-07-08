@@ -10,7 +10,7 @@ html, body{
 
 .l-container{
   position:relative;
-  padding: 130px 0 50px 0;
+  padding: 20px 0 50px 0;
   background-color:#fff;
   z-index: 99;
 }
@@ -22,7 +22,11 @@ html, body{
   margin:0 auto;
 }
 
-.l-section-heading{
+.l-section{
+  padding: 20px 0;
+}
+
+.l-section__heading{
   font-size:28px;
   width: 100%;
   max-width: 408px;
@@ -39,7 +43,7 @@ html, body{
     width:80%;
   }
 
-  .l-section-heading{
+  .l-section__heading{
     font-size:36px;
     margin:0;
   }
@@ -47,12 +51,14 @@ html, body{
 
 @media screen and (min-width: 768px){
   .l-container{
-    padding-top: 164px;
     padding-bottom: 60px;
+  }
+
+  .l-section__bg{
     background-color:#F2F2F2;
   }
 
-  .l-section-heading{
+  .l-section__heading{
     font-size:40px;
   }
 }

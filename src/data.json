@@ -21,6 +21,9 @@
       }
     ]
   },
+  "about": {
+    "description": "<p>Lorem ipsum dolor sit amet, ipsum animal delenit et quo. Mei ad justo vidisse necessitatibus, ea vix adipiscing voluptatibus. Perpetua vulputate ei eos. Vel ex clita nusquam eligendi. Est putent aperiam ad, at saepe nostro vel. Quo an numquam repudiandae.</p><p>Adhuc dissentiunt ius an, vis putent nemore vituperatoribus cu. Graeci sensibus est at. Stet iuvaret cu sit, quem habeo meliore vel et, alia euismod albucius te his. Quot ullum iudico cu has, vivendum adipisci eum ad, nonumy audiam appetere duo ad.</p>"
+  },
   "projects": [
     {
       "name": "Bachovich Music Publications",

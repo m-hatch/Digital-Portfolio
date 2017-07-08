@@ -1,6 +1,7 @@
 import React from 'react';
 import NavbarContainer from './NavbarContainer';
 import Splash from './Splash';
+import About from './About';
 import ProjectsContainer from './ProjectsContainer';
 
 export default React.createClass({
@@ -14,10 +15,10 @@ export default React.createClass({
       <div> 
 
         <NavbarContainer nav={ this.getData().navigation } />
-
         <Splash text={ this.getData().splash } />
 
         <div className="l-container">
+          <About description={ this.getData().about.description }/>
           <ProjectsContainer projects={ this.getData().projects } />
         </div>
 

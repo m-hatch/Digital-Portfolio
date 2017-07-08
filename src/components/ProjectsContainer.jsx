@@ -16,11 +16,11 @@ export default React.createClass({
 
   render: function() {
     return (
-      <div className="l-wrapper">
-        <div className="l-section-heading">
-          <h2>Projects</h2>
-        </div>
+      <div className="l-section l-section__bg">
+        <div className="l-wrapper">
+          <h2 className="l-section__heading">Projects</h2>
           { this.getProjects() }
+        </div>
       </div>
     );
   }
