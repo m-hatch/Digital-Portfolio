@@ -13,7 +13,7 @@ export default React.createClass({
     var scrollTop = window.pageYOffset;
     var elementHeight = window.innerHeight;
 
-    this.setState({ top: scrollTop * .8 + 'px' });
+    this.setState({ top: scrollTop * .7 + 'px' });
     this.setState({ opacity: (elementHeight - scrollTop) / elementHeight });
   },
 
