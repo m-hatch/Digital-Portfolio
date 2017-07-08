@@ -18,10 +18,6 @@ export default React.createClass({
     return this.props.nav.links || [];
   },
 
-  requestAnimationFrame: function() {
-    return this.props.animationFrame;
-  },
-
   getDomElements: function() {
     return {
       "nav_outer" : document.getElementsByClassName('nav')[0],
@@ -36,10 +32,8 @@ export default React.createClass({
   },
 
   handleScroll: function(event) {
-    requestAnimationFrame(() => {
-      var delta = (event.wheelDelta) ? event.wheelDelta : -1 * event.deltaY;
-      (delta < 0) ? this.setState({showNav: false}) : this.setState({showNav: true});
-    });
+    var delta = (event.wheelDelta) ? event.wheelDelta : -1 * event.deltaY;
+    (delta < 0) ? this.setState({showNav: false}) : this.setState({showNav: true});
   },
 
   handleHover: function(mouseEvent) {

@@ -9,26 +9,20 @@ export default React.createClass({
     };
   },
 
-  requestAnimationFrame: function() {
-    return this.props.animationFrame;
-  },
-
   parallax: function(event) {
     var scrollTop = window.pageYOffset;
     var elementHeight = window.innerHeight;
 
-    requestAnimationFrame(() => {
-      this.setState({ top: scrollTop * .8 + 'px' });
-      this.setState({ opacity: (elementHeight - scrollTop) / elementHeight });
-    });
+    this.setState({ top: scrollTop * .8 + 'px' });
+    this.setState({ opacity: (elementHeight - scrollTop) / elementHeight });
   },
 
   componentDidMount: function() {
-    //window.addEventListener('scroll', this.parallax);
+    window.addEventListener('scroll', this.parallax);
   },
 
   componentWillUnmount: function() {
-    //window.removeEventListener('scroll', this.parallax);
+    window.removeEventListener('scroll', this.parallax);
   },
 
   render: function() {

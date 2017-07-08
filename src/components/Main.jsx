@@ -9,25 +9,13 @@ export default React.createClass({
     return this.props.appData;
   },
 
-  requestAnimationFrame: function() {
-    return window.requestAnimationFrame
-      || window.mozRequestAnimationFrame
-      || window.webkitRequestAnimationFrame
-      || window.msRequestAnimationFrame
-      || function(f){ setTimeout(f, 1000/60) };
-  },
-  
   render: function() {
     return (
       <div> 
 
-        <NavbarContainer 
-          nav={ this.getData().navigation } 
-          animationFrame={ this.requestAnimationFrame } />
+        <NavbarContainer nav={ this.getData().navigation } />
 
-        <Splash 
-          text={ this.getData().splash } 
-          animationFrame={ this.requestAnimationFrame } />
+        <Splash text={ this.getData().splash } />
 
         <div className="l-container">
           <ProjectsContainer projects={ this.getData().projects } />
