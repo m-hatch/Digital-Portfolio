@@ -4,12 +4,15 @@ export default React.createClass({
   
   render: function() {
 
-    var links =  this.props.navLinks ;
-    var linksList = links.map(link => {
+    const links =  this.props.navLinks ;
+    const linksList = links.map(link => {
       return (
-        <li className={"topnav_list-item" + (this.props.toggleNav ? " topnav_list-item--open" : "")} 
+        <li className={"topnav_list-item" 
+            + ( this.props.toggleNav ? " topnav_list-item--open" : "" )} 
             key={ link.name }>
-          <a className={"nav__link topnav__link" + (this.props.toggleNav ? " topnav__link--open" : "")} 
+          <a className={"nav__link topnav__link" 
+            + ( this.props.animate ? " topnav__link--animate" : "" )  
+            + ( this.props.toggleNav ? " topnav__link--open" : "" )} 
             href={ link.url }>{ link.name }</a>
         </li>
       )

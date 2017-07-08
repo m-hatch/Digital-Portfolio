@@ -6,7 +6,8 @@ export default React.createClass({
   getInitialState: function () {
       return {
          showNav: true,
-         toggleNav: false
+         toggleNav: false,
+         animate: false
       };
    },
 
@@ -27,8 +28,15 @@ export default React.createClass({
 
   toggleNav: function() {
     this.setState(prevState => ({
+      animate: true, 
       toggleNav: !prevState.toggleNav
     }));
+  },
+
+  handleResize: function(event) {
+    this.setState({
+      animate: false
+    });
   },
 
   handleScroll: function(event) {
@@ -47,6 +55,7 @@ export default React.createClass({
 
   componentDidMount: function() {
     window.addEventListener('wheel', this.handleScroll);
+    window.addEventListener('resize', this.handleResize);
     this.getDomElements().icon.addEventListener('click', this.toggleNav);
     this.getDomElements().nav_outer.addEventListener('mouseover', this.handleHover);
     this.getDomElements().nav_outer.addEventListener('mouseout', this.handleHover);
@@ -54,6 +63,7 @@ export default React.createClass({
 
   componentWillUnmount: function() {
     window.removeEventListener('wheel', this.handleScroll);
+    window.removeEventListener('resize', this.handleResize);
     this.getDomElements().icon.removeEventListener('click', this.toggleNav);
     this.getDomElements().nav_outer.removeEventListener('mouseover', this.handleHover);
     this.getDomElements().nav_outer.removeEventListener('mouseout', this.handleHover);
@@ -65,7 +75,8 @@ export default React.createClass({
           navTitle={ this.getName() } 
           navLinks={ this.getLinks() } 
           showNav={ this.state.showNav } 
-          toggleNav={ this.state.toggleNav } />
+          toggleNav={ this.state.toggleNav } 
+          animate={ this.state.animate } />
     );
   }
 
