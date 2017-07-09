@@ -11,7 +11,7 @@ export default React.createClass({
 
   parallax: function(event) {
     var scrollTop = window.pageYOffset;
-    var elementHeight = window.innerHeight;
+    var elementHeight = document.getElementsByClassName('splash')[0].innerHeight;
 
     this.setState({ top: scrollTop * .7 + 'px' });
     this.setState({ opacity: (elementHeight - scrollTop) / elementHeight });
@@ -27,8 +27,8 @@ export default React.createClass({
 
   render: function() {
     const splashStyle = { 
-      top: this.state.top,
-      opacity: this.state.opacity
+      transform: 'translateY(' + this.state.top +')',
+      opacity: this.state.opacity ? this.state.opacity : 1
     };
 
     return (
@@ -36,8 +36,8 @@ export default React.createClass({
 
         <div className="splash__filter"></div>
 
-        <div id="splash-wrapper"  className="splash__wrapper " style={ splashStyle }>
-          <div className="wrapper splash__text">
+        <div className="splash__wrapper " style={ splashStyle }>
+          <div className="l-wrapper splash__text">
 
             <h1 className="splash__heading">{ this.props.text.name }</h1>
             <p className="splash__portfolio">{ this.props.text.title }</p>
