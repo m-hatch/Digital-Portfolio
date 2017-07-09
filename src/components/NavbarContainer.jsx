@@ -45,11 +45,13 @@ export default React.createClass({
   },
 
   handleHover: function(mouseEvent) {
-    if (mouseEvent.type === 'mouseover') {
+    if (mouseEvent.type === 'mouseenter') {
       this.setState({showNav: true});
     }
-    if (mouseEvent.type === 'mouseout') {
-      this.setState({showNav: false});
+    if (mouseEvent.type === 'mouseleave') {
+      setTimeout( () => {
+        this.setState({showNav: false});
+      }, 400);
     }
   },
 
@@ -57,16 +59,16 @@ export default React.createClass({
     window.addEventListener('wheel', this.handleScroll);
     window.addEventListener('resize', this.handleResize);
     this.getDomElements().icon.addEventListener('click', this.toggleNav);
-    this.getDomElements().nav_outer.addEventListener('mouseover', this.handleHover);
-    this.getDomElements().nav_outer.addEventListener('mouseout', this.handleHover);
+    this.getDomElements().nav_outer.addEventListener('mouseenter', this.handleHover);
+    this.getDomElements().nav_outer.addEventListener('mouseleave', this.handleHover);
   },
 
   componentWillUnmount: function() {
     window.removeEventListener('wheel', this.handleScroll);
     window.removeEventListener('resize', this.handleResize);
     this.getDomElements().icon.removeEventListener('click', this.toggleNav);
-    this.getDomElements().nav_outer.removeEventListener('mouseover', this.handleHover);
-    this.getDomElements().nav_outer.removeEventListener('mouseout', this.handleHover);
+    this.getDomElements().nav_outer.removeEventListener('mouseenter', this.handleHover);
+    this.getDomElements().nav_outer.removeEventListener('mouseleave', this.handleHover);
   },
 
   render: function() {
