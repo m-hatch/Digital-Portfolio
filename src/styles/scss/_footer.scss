@@ -1,0 +1,41 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0,0,0,0.83);
+  z-index: 100;
+  font-size: 16px;
+
+  &__title {
+    display: inline-block;
+    color: #E41B17;
+    font-weight: 700;
+    margin-right: 10px;
+    padding: 16px 0;
+  }
+
+  &__list, 
+  &__list-item {
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+  }
+
+  &__link {
+    text-decoration:none;
+    color:#fff;
+    padding: 16px 10px;
+  }
+
+  &__link:hover:after, 
+  &__link:focus:after {
+    position: absolute;
+    content: '';
+    display: block;
+    background: #fff;
+    height: 2px;
+    width: 90%;
+    top: 21px;
+    left: 5%;
+  }
+}

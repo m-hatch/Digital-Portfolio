@@ -3,6 +3,7 @@ import NavbarContainer from './NavbarContainer';
 import Splash from './Splash';
 import About from './About';
 import ProjectsContainer from './ProjectsContainer';
+import Footer from './Footer';
 
 export default React.createClass({
 
@@ -24,6 +25,8 @@ export default React.createClass({
           <About description={ this.getData().about.description }/>
           <ProjectsContainer projects={ this.getData().projects } />
         </div>
+
+        <Footer content={ this.getData().myinfo } />
 
       </div>
     );

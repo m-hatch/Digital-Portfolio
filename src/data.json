@@ -3,10 +3,16 @@
     "name": "Montgomery Hatch",
     "title": "Digital Portfolio",
     "position_title": "Web Developer and Front-End Engineer",
-    "links": {
-      "linkedin": "http://www.linkedin.com/pub/montgomery-hatch/10/a4/72a",
-      "github": "https://github.com/m-hatch"
-    }
+    "links": [
+      {
+        "name": "LinkedIn",
+        "url": "http://www.linkedin.com/pub/montgomery-hatch/10/a4/72a"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/m-hatch"
+      }
+    ]
   },
   "navigation": {
     "links": [
@@ -39,6 +45,24 @@
     },
     {
       "name": "Hook & Loop",
+      "img": "another/path.jpg",
+      "img_alt": "alt desc 2",
+      "tagline": "Website for Hook & Loop, the creative agency of Infor.",
+      "description": "lorem ipsum again",
+      "github": "my/repository",
+      "link": "website2"
+    },
+    {
+      "name": "Bachovich Music Publications2",
+      "img": "path.jpg",
+      "img_alt": "alt desc",
+      "tagline": "E-commerce website for Bachovich Music Publications.",
+      "description": "lorem ipsum",
+      "github": "repository",
+      "link": "website"
+    },
+    {
+      "name": "Hook & Loop2",
       "img": "another/path.jpg",
       "img_alt": "alt desc 2",
       "tagline": "Website for Hook & Loop, the creative agency of Infor.",
