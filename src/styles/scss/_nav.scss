@@ -109,6 +109,7 @@
   }
 
   .topnav_list-item {
+    position: relative;
     display: block;
     float: left;
     text-align: center;
@@ -123,5 +124,17 @@
   
   .topnav__link:hover{
     color: #E41B17;
+  }
+
+  .topnav__link:hover:before, 
+  .topnav__link.active:before {
+    position: absolute;
+    content: '';
+    display: block;
+    background: #E41B17;
+    height: 2px;
+    width: 80%;
+    top: 9px;
+    left: 10%;
   }
 }
