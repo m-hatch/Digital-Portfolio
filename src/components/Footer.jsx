@@ -7,7 +7,7 @@ export default React.createClass({
     const links =  this.props.content.links ;
     const linksList = links.map(link => {
       return (
-        <li className="footer__list-item">
+        <li className="footer__list-item" key={ link.name }>
           <a className="footer__link" href={ link.url } target="_blank">{ link.name }</a>
         </li>
       )
