@@ -19,13 +19,6 @@ export default React.createClass({
     return this.props.nav.links || [];
   },
 
-  getDomElements: function() {
-    return {
-      "nav_outer" : document.getElementsByClassName('nav')[0],
-      "icon" : document.getElementById('icon')
-    };
-  },
-
   toggleNav: function() {
     this.setState(prevState => ({
       animate: true, 
@@ -34,13 +27,14 @@ export default React.createClass({
   },
 
   handleResize: function(event) {
+    // prevent animating nav change on window resize
     this.setState({
       animate: false
     });
   },
 
   handleScroll: function(event) {
-    var delta = (event.wheelDelta) ? event.wheelDelta : -1 * event.deltaY;
+    const delta = (event.wheelDelta) ? event.wheelDelta : -1 * event.deltaY;
     (delta < 0) ? this.setState({showNav: false}) : this.setState({showNav: true});
   },
 
@@ -58,17 +52,17 @@ export default React.createClass({
   componentDidMount: function() {
     window.addEventListener('wheel', this.handleScroll);
     window.addEventListener('resize', this.handleResize);
-    this.getDomElements().icon.addEventListener('click', this.toggleNav);
-    this.getDomElements().nav_outer.addEventListener('mouseenter', this.handleHover);
-    this.getDomElements().nav_outer.addEventListener('mouseleave', this.handleHover);
+    this.icon.addEventListener('click', this.toggleNav);
+    this.nav.addEventListener('mouseenter', this.handleHover);
+    this.nav.addEventListener('mouseleave', this.handleHover);
   },
 
   componentWillUnmount: function() {
     window.removeEventListener('wheel', this.handleScroll);
     window.removeEventListener('resize', this.handleResize);
-    this.getDomElements().icon.removeEventListener('click', this.toggleNav);
-    this.getDomElements().nav_outer.removeEventListener('mouseenter', this.handleHover);
-    this.getDomElements().nav_outer.removeEventListener('mouseleave', this.handleHover);
+    this.icon.removeEventListener('click', this.toggleNav);
+    this.nav.removeEventListener('mouseenter', this.handleHover);
+    this.nav.removeEventListener('mouseleave', this.handleHover);
   },
 
   render: function() {
@@ -76,6 +70,8 @@ export default React.createClass({
         <Navbar 
           navTitle={ this.getName() } 
           navLinks={ this.getLinks() } 
+          navRef={ el => this.nav = el } 
+          iconRef={ el => this.icon = el } 
           showNav={ this.state.showNav } 
           toggleNav={ this.state.toggleNav } 
           animate={ this.state.animate } />
