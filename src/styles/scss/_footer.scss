@@ -22,20 +22,19 @@
   }
 
   &__link {
-    text-decoration:none;
-    color:#fff;
+    text-decoration: none;
+    color: #fff;
     padding: 16px 10px;
-  }
 
-  &__link:hover:after, 
-  &__link:focus:after {
-    position: absolute;
-    content: '';
-    display: block;
-    background: #fff;
-    height: 2px;
-    width: 90%;
-    bottom: -5px;
-    left: 5%;
+    &:hover::after {
+      position: absolute;
+      content: '';
+      display: block;
+      background: #fff;
+      height: 2px;
+      width: 90%;
+      bottom: -5px;
+      left: 5%;
+    }
   }
 }

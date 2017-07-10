@@ -1,36 +1,42 @@
 /* clearfixes */
 .l-clear:after,
-.l-wrapper:after { clear: both; content: ""; display: block; height: 0; visibility: hidden; }
+.l-wrapper:after { 
+  clear: both; 
+  content: ""; 
+  display: block; 
+  height: 0; 
+  visibility: hidden; 
+}
 
-html, body{
+html, body {
   font-family: Helvetica, Arial, sans-serif;
-  color:#2A2A2A;
+  color: #2A2A2A;
   font-weight: 300;
 }
 
-.l-container{
-  position:relative;
+.l-container {
+  position: relative;
   padding: 20px 0 50px 0;
   background-color:#fff;
   z-index: 99;
 }
 
-.l-wrapper{
-  position:relative;
-  width:86%;
-  max-width:1024px;
-  margin:0 auto;
-}
-
-.l-section{
-  padding: 20px 0;
-}
-
-.l-section__heading{
-  font-size:28px;
-  width: 100%;
-  max-width: 408px;
+.l-wrapper {
+  position: relative;
+  width: 86%;
+  max-width: 1024px;
   margin: 0 auto;
+}
+
+.l-section {
+  padding: 20px 0;
+
+  &__heading {
+    font-size: 28px;
+    width: 100%;
+    max-width: 408px;
+    margin: 0 auto;
+  }
 }
 
 .l-font-smoothing {
@@ -39,22 +45,26 @@ html, body{
 }
 
 @media screen and (min-width: 568px){
-  .l-wrapper{
-    width:80%;
+  .l-wrapper {
+    width: 80%;
   }
 
-  .l-section__heading{
-    font-size:36px;
-    margin:0;
+  .l-section {
+    &__heading {
+      font-size: 36px;
+      margin: 0;
+    }
   }
 }
 
-@media screen and (min-width: 768px){
-  .l-section__bg{
-    background-color:#F2F2F2;
-  }
+@media screen and (min-width: 768px) {
+  .l-section {
+    &__bg {
+      background-color: #F2F2F2;
+    }
 
-  .l-section__heading{
-    font-size:40px;
+    &__heading {
+      font-size: 40px;
+    }
   }
 }

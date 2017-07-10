@@ -1,6 +1,8 @@
-.about__description {
-  max-width: 408px;
-  margin: 0 auto;
+.about {
+  &__description {
+    max-width: 408px;
+    margin: 0 auto;
+  }
 
   p{
     margin: 1em 0;
@@ -8,7 +10,9 @@
 } 
 
 @media screen and (min-width: 768px){
-  .about__description {
-    max-width: initial;
+  .about {
+    &__description {
+      max-width: initial;
+    }
   }
 }
