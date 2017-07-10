@@ -13,8 +13,11 @@ export default React.createClass({
     const scrollTop = window.pageYOffset;
     const elementHeight = this.refs.splash.clientHeight;
 
-    this.setState({ top: scrollTop * .7 + 'px' });
-    this.setState({ opacity: (elementHeight - scrollTop) / elementHeight });
+    // only call when element is in view
+    if (scrollTop < elementHeight) {
+      this.setState({ top: scrollTop * .7 + 'px' });
+      this.setState({ opacity: (elementHeight - scrollTop) / elementHeight });
+    }
   },
 
   componentDidMount: function() {
