@@ -4,11 +4,9 @@ import Project from './Project';
 export default React.createClass({
 
   getProjects: function() {
-    var myData = this.props.projects;
-    var projects = [];
-
-    myData.forEach((project, index) => {
-      projects.push(<Project project={project} key={project.name}/>);
+    const myData = this.props.projects;
+    const projects = myData.map((project, index) => {
+      return <Project project={ project } key={ project.name } />;
     });
     
     return projects;
