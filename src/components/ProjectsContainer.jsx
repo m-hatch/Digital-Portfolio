@@ -1,5 +1,6 @@
 import React from 'react';
 import Project from './Project';
+import Section from './Section';
 
 export default React.createClass({
 
@@ -14,12 +15,9 @@ export default React.createClass({
 
   render: function() {
     return (
-      <div className="l-section l-section__bg">
-        <div className="l-wrapper">
-          <h2 className="l-section__heading">Projects</h2>
+      <Section heading="Projects" bg="grey">
           { this.getProjects() }
-        </div>
-      </div>
+      </Section>
     );
   }
   

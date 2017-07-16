@@ -1,17 +1,15 @@
 import React from 'react';
+import Section from './Section';
 
 export default React.createClass({
 
-  getRichText(markup){
+  getRichText(markup) {
     return { __html: markup };
   },
 
   render: function() {
     return (
-      <div className="l-section">
-        <div className="l-wrapper">
-
-          <h2 className="l-section__heading">About</h2>
+      <Section heading="About" bg="white">
 
           <div className="about">
             <div className="about__image">
@@ -23,8 +21,7 @@ export default React.createClass({
             </div>
           </div>
 
-        </div>
-      </div>
+      </Section>
     );
   }
   
