@@ -13,8 +13,14 @@ export default React.createClass({
 
           <h2 className="l-section__heading">About</h2>
 
-          <div className="about__description"
-            dangerouslySetInnerHTML={ this.getRichText(this.props.description) }>
+          <div className="about">
+            <div className="about__image">
+              <img className="about__img" src="img/profile.png" alt="profile pic"/>
+            </div>
+
+            <div className="about__description"
+              dangerouslySetInnerHTML={ this.getRichText(this.props.description) }>
+            </div>
           </div>
 
         </div>

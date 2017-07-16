@@ -1,7 +1,15 @@
 .about {
-  &__description {
-    max-width: 408px;
-    margin: 0 auto;
+  max-width: 408px;
+  margin: 0 auto;
+
+  &__image {
+    width: 33%;
+    max-width: 225px;
+    margin: 20px 0;
+  }
+
+  &__img {
+    border-radius: 50%;
   }
 
   p{
@@ -11,8 +19,16 @@
 
 @media screen and (min-width: 768px){
   .about {
+    max-width: initial;
+    display: flex;
+
+    &__image {
+      margin-right: 20px;
+      flex: 0 0 25%;
+    }
+
     &__description {
-      max-width: initial;
+      margin: auto;
     }
   }
 }
