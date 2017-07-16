@@ -9,14 +9,14 @@ export default React.createClass({
         <h3 className="project__heading">{ this.props.projectName }</h3>
         <p className="project__tagline">{ this.props.tagline }</p>
 
-        <ul>
+        <ul className="project__list">
           { this.props.github && 
-            <li className="project__list">
+            <li className="project__list-item">
               <a className="project__link" href={this.props.github}>GitHub</a>
             </li> 
           }
           { this.props.webLink && 
-            <li className="project__list">
+            <li className="project__list-item">
               <a className="project__link" href={ this.props.webLink }>Link</a>
             </li> 
           }

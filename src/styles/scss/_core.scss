@@ -9,9 +9,13 @@
 }
 
 html, body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
   color: #2A2A2A;
   font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', Helvetica, sans-serif;
 }
 
 .l-container {
@@ -19,6 +23,11 @@ html, body {
   padding: 20px 0 50px 0;
   background-color:#fff;
   z-index: 99;
+
+  p {
+    font-family: 'Raleway', Helvetica, sans-serif;
+    color: #737373;
+  }
 }
 
 .l-wrapper {
@@ -32,6 +41,7 @@ html, body {
   padding: 20px 0;
 
   &__heading {
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
     font-size: 28px;
     width: 100%;
     max-width: 408px;
