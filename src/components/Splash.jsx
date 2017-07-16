@@ -10,11 +10,14 @@ export default React.createClass({
   },
 
   parallax: function(event) {
-    var scrollTop = window.pageYOffset;
-    var elementHeight = document.getElementsByClassName('splash')[0].innerHeight;
+    const scrollTop = window.pageYOffset;
+    const elementHeight = this.refs.splash.clientHeight;
 
-    this.setState({ top: scrollTop * .7 + 'px' });
-    this.setState({ opacity: (elementHeight - scrollTop) / elementHeight });
+    // only call when element is in view
+    if (scrollTop < elementHeight) {
+      this.setState({ top: scrollTop * .7 + 'px' });
+      this.setState({ opacity: (elementHeight - scrollTop) / elementHeight });
+    }
   },
 
   componentDidMount: function() {
@@ -32,7 +35,7 @@ export default React.createClass({
     };
 
     return (
-      <div className="splash l-font-smoothing">
+      <div ref="splash" className="splash l-font-smoothing">
 
         <div className="splash__filter"></div>
 

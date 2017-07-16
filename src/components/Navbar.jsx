@@ -19,13 +19,16 @@ export default React.createClass({
     });
 
     return (
-      <div className="nav">
+      <div className="nav" 
+        ref={ this.props.navRef }>
+
         <nav className={"nav__inner l-font-smoothing" + (!this.props.showNav ? " nav__inner--hide" : "")}>
+
           <div className="l-wrapper">
             <span className="nav__title">
               <a className="nav__link" href="">{ this.props.navTitle }</a>
             </span>
-            <span id="icon" className="nav__icon">&#9776;</span>
+            <span ref={ this.props.iconRef } className="nav__icon">&#9776;</span>
           </div>
 
           <div className="nav__wrapper">
@@ -33,7 +36,9 @@ export default React.createClass({
               { linksList }
             </ul>
           </div>
+
         </nav>
+
       </div>
     );
   }
