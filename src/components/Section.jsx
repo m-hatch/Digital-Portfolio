@@ -7,13 +7,13 @@ export default React.createClass({
   },
 
   getBackground() {
-    return (this.props.bg === 'grey') ? "l-section__bg" : "";
+    return (this.props.bg === 'grey') ? " l-section__bg" : "";
   },
 
   render: function() {
     return (
-      <div className="l-section">
-        <div className={ "l-wrapper" + this.getBackground() }>
+      <div className={ "l-section" + this.getBackground() }>
+        <div className="l-wrapper">
 
           <h2 className="l-section__heading">{ this.getHeading() }</h2>
 
