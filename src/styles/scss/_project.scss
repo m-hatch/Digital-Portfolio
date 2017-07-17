@@ -1,4 +1,5 @@
 .project {
+  position: relative;
   background: #fff;
   margin: 0 auto;
 
@@ -30,10 +31,6 @@
     padding: 8px;
   }
 
-  &__list {
-    margin-top: 10px;
-  }
-
   &__list-item {
     margin: 6px 0;
   }
@@ -45,7 +42,7 @@
     text-decoration: none;
   
     &:hover {
-      color: #545454;
+      color: #808080;
       text-decoration: underline;
     }
   }
@@ -93,6 +90,14 @@
       padding-top: 20px;
       padding-left: 20px;
     }
+
+    &__tagline {
+      margin-bottom: 18px;
+    }
+
+    &__button {
+      display: none;
+    }
   }
 }
 
@@ -107,14 +112,14 @@
       margin-bottom: 20px;
     }
 
-    &__tagline {
-      margin-bottom: 20px;
-    }
-
     &__image, 
     &__text {
       width: 340px;
       height: 255px;
+    }
+
+    &__tagline {
+      margin-bottom: 20px;
     }
   }
 }
@@ -127,12 +132,11 @@
 
     &__heading {
       font-size: 30px;
-      margin-bottom: 28px;
     }
 
     &__tagline {
       font-size: 18px;
-      margin-bottom: 28px;
+      margin-bottom: 30px;
     }
 
     &__image, 

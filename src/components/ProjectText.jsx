@@ -1,4 +1,5 @@
 import React from 'react';
+import VerticalButton from './VerticalButton';
 
 export default React.createClass({
 
@@ -9,7 +10,7 @@ export default React.createClass({
         <h3 className="project__heading">{ this.props.projectName }</h3>
         <p className="project__tagline">{ this.props.tagline }</p>
 
-        <ul className="project__list">
+        <ul>
           { this.props.github && 
             <li className="project__list-item">
               <a className="project__link" href={this.props.github}>GitHub</a>
@@ -23,6 +24,7 @@ export default React.createClass({
         </ul>
 
         <button className="button project__button">Description</button>
+        <VerticalButton label="Description" />
 
       </div>
     );
