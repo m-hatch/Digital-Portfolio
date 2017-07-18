@@ -1,0 +1,62 @@
+.vertical-button {
+  width: 1px;
+  height: 20px;
+  background: #000;
+  position: absolute;
+  right: -68px;
+  top: calc(50% - 10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__btn,
+  &__btn:focus,
+  &__btn:active {
+    /* Remove all decorations to look like normal text */
+    background: none;
+    border: none;
+    display: inline;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    outline-offset: 0;
+    /* Additional styles */
+    position: absolute;
+    transform-origin: left top;
+    transform: rotate(90deg) translateX(-32%);
+    float: right;
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  &__btn::-moz-focus-inner {
+    /* Remove extra space inside buttons in Firefox */
+    border: none;
+    padding: 0;
+  }
+
+  &__stroke {
+    width: 1000px;
+    height: 1px;
+    background: #000;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .vertical-button {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .vertical-button {
+    right: -100px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .vertical-button {
+    right: -136px;
+  }
+}
