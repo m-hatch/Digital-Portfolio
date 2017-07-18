@@ -11,7 +11,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.83);
+    background-color: $black-veil;
     z-index: 100;
     color: #fff; 
     font-weight: 400;
@@ -49,7 +49,7 @@
 
   &__link {
     text-decoration: none;
-    color: #fff;  
+    color: $white;  
     font-size: 17px;
   }
 }
@@ -74,14 +74,14 @@
 @media screen and (max-width: 767px) {
   .topnav {
     &__list-item:hover {
-      background: #555;
+      background: $emperor;
     }
 
     &__list-item--open {
-      border-bottom: 1px solid #7b7776;
+      border-bottom: 1px solid $boulder;
 
       &:first-child {
-        border-top: 1px solid #7b7776;
+        border-top: 1px solid $boulder;
       }
     }
 
@@ -130,13 +130,13 @@
     }
 
     &__link:hover {
-      color: #E41B17;
+      color: $crimson;
 
       &::before {
         position: absolute;
         content: '';
         display: block;
-        background: #E41B17;
+        background: $crimson;
         height: 2px;
         width: 80%;
         top: 10px;

@@ -2,13 +2,13 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: rgba(0,0,0,0.83);
+  background-color: $black-veil;
   z-index: 100;
   font-size: 16px;
 
   &__title {
     display: inline-block;
-    color: #E41B17;
+    color: $crimson;
     font-weight: 700;
     margin-right: 10px;
     padding: 16px 0;
@@ -23,14 +23,14 @@
 
   &__link {
     text-decoration: none;
-    color: #fff;
+    color: $white;
     padding: 16px 10px;
 
     &:hover::after {
       position: absolute;
       content: '';
       display: block;
-      background: #fff;
+      background: $white;
       height: 2px;
       width: 90%;
       bottom: -5px;

@@ -10,24 +10,26 @@
 
 html, body {
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
-  color: #2A2A2A;
+  color: $mine-shaft;
   font-weight: 300;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', Helvetica, sans-serif;
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-family: 'Montserrat', Helvetica, sans-serif;
+  }
 }
 
 .l-container {
   position: relative;
   padding: 20px 0 50px 0;
-  background-color:#fff;
   overflow: hidden;
+  background-color:$white;
   z-index: 99;
 
   p {
     font-family: 'Raleway', Helvetica, sans-serif;
-    color: #737373;
+    color: $pigeon-grey;
   }
 }
 
@@ -71,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (min-width: 768px) {
   .l-section {
     &__bg {
-      background-color: #F2F2F2;
+      background-color: $concrete;
     }
 
     &__heading {
