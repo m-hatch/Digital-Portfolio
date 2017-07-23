@@ -2,22 +2,23 @@ import React from 'react';
 import ScrollAnchor from './ScrollAnchor';
 
 export default React.createClass({
-  
-  render: function() {
 
-    // prepare links list
-    const classList = "nav__link topnav__link"
+  getClassList: function() {
+    return "nav__link topnav__link"
       + ( this.props.animate ? " topnav__link--animate" : "" )  
       + ( this.props.toggleNav ? " topnav__link--open" : "" );
+  },
+
+  getLinks: function() {
     const links =  this.props.navLinks ;
-    const linksList = links.map(link => {
+    return links.map(link => {
       return (
         <li className={"topnav__list-item" 
             + ( this.props.toggleNav ? " topnav__list-item--open" : "" )} 
             key={ link.name }>
 
           <ScrollAnchor  
-            className={ classList } 
+            className={ this.getClassList() } 
             to={ link.url } 
             animate={{ offset: -57, duration: 400 }} >
             { link.name }
@@ -26,7 +27,9 @@ export default React.createClass({
         </li>
       )
     });
-
+  },
+  
+  render: function() {
     return (
       <div ref={ this.props.navRef } className="nav">
         <nav className={"nav__inner l-font-smoothing" + (!this.props.showNav ? " nav__inner--hide" : "")}>
@@ -45,7 +48,7 @@ export default React.createClass({
 
           <div className="nav__wrapper">
             <ul className="topnav" id="topNav">
-              { linksList }
+              { this.getLinks() }
             </ul>
           </div>
 

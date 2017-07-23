@@ -35,8 +35,7 @@ export default React.createClass({
       const position = self.easeOutQuad(null, elapsed, start, change, duration);
       self.setScrollTop(position);
 
-      elapsed < duration &&
-      setTimeout(function() {
+      elapsed < duration && setTimeout(function() {
         animate(elapsed, self);
       }, increment);
     }
