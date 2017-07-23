@@ -98,6 +98,13 @@
     &__button {
       display: none;
     }
+
+    &--active {
+      // show vertical button when project in view
+      .vertical-button {
+        opacity: 1;
+      }
+    }
   }
 }
 
