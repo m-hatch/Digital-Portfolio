@@ -1,5 +1,4 @@
 import React from 'react';
-const smoothScroll = require('smoothscroll');
 import Navbar from './Navbar';
 
 export default React.createClass({
