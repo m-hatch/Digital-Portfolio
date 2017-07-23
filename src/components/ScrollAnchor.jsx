@@ -29,18 +29,18 @@ export default React.createClass({
     const change = pos - start;
     const duration = props.animate.duration;
 
-    function animate(elapsedTime = 0, self) {
+    function animate(elapsedTime = 0) {
       const increment = 20;
       const elapsed = elapsedTime + increment;
       const position = self.easeOutQuad(null, elapsed, start, change, duration);
       self.setScrollTop(position);
 
       elapsed < duration && setTimeout(function() {
-        animate(elapsed, self);
+        animate(elapsed);
       }, increment);
     }
     
-    animate(0, self);
+    animate();
     window.location.hash = id;
   },
 

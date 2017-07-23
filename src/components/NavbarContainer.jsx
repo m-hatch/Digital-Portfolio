@@ -19,6 +19,18 @@ export default React.createClass({
     return this.props.nav.links || [];
   },
 
+  getScrollTop: function() {
+    return document.documentElement.scrollTop || document.body.scrollTop;
+  },
+
+  getScrollBottom: function(padding) {
+    return this.getScrollTop() + window.innerHeight - padding;
+  },
+
+  getOffsetTop: function(element) {
+    return this.getScrollTop() + element.getBoundingClientRect().top;
+  },
+
   toggleNav: function() {
     this.setState(prevState => ({
       animate: true, 
@@ -32,17 +44,18 @@ export default React.createClass({
   },
 
   handleScroll: function(event) {
-    const scrollPos = document.documentElement.scrollTop || document.body.scrollTop;
+    const self = this;
+    const padding = 50; // for footer
+    const scrollBottom = this.getScrollBottom(padding);
     const navLinks = document.querySelectorAll('#topNav a');
 
     Array.prototype.forEach.call(navLinks, function(el){
       const refElement = document.getElementById(el.innerHTML);
-      const padding = 50; // for footer
-      const refPos = refElement.getBoundingClientRect().top + window.scrollY - window.innerHeight + padding;
+      const refPos = self.getOffsetTop(refElement);
 
       // add active class when section in view
-      ((refPos <= scrollPos) 
-        && (refPos + refElement.clientHeight > scrollPos || refPos + window.innerHeight > scrollPos)) 
+      ((refPos <= scrollBottom) 
+        && (refPos + refElement.clientHeight > scrollBottom || refPos + window.innerHeight > scrollBottom)) 
         ? el.classList.add('topnav__link--active') : el.classList.remove('topnav__link--active');
     });
   },
