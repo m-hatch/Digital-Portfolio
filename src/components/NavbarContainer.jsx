@@ -7,8 +7,7 @@ export default React.createClass({
       return {
          showNav: true,
          toggleNav: false,
-         animate: false,
-         lastScrollPos: window.pageYOffset || document.documentElement.scrollTop
+         animate: false
       };
    },
 
@@ -27,15 +26,12 @@ export default React.createClass({
     }));
   },
 
-  navHide: function(event) {
-    const currentPos = window.pageYOffset || document.documentElement.scrollTop;
-
-    // if scroll direction is down, hide nav
-    (currentPos > this.state.lastScrollPos) ? this.setState({showNav: false}) : this.setState({showNav: true});
-    this.setState({lastScrollPos: currentPos});
+  handleWheel: function(event) {
+    const delta = (event.wheelDelta) ? event.wheelDelta : -1 * event.deltaY;
+    (delta < 0) ? this.setState({showNav: false}) : this.setState({showNav: true});
   },
 
-  navHighlight: function(event) {
+  handleScroll: function(event) {
     const scrollPos = document.documentElement.scrollTop || document.body.scrollTop;
     const navLinks = document.querySelectorAll('#topNav a');
 
@@ -49,11 +45,6 @@ export default React.createClass({
         && (refPos + refElement.clientHeight > scrollPos || refPos + window.innerHeight > scrollPos)) 
         ? el.classList.add('topnav__link--active') : el.classList.remove('topnav__link--active');
     });
-  },
-
-  handleScroll: function(event) {
-    this.navHide(event);
-    this.navHighlight(event);
   },
 
   handleResize: function(event) {
@@ -75,6 +66,7 @@ export default React.createClass({
   },
 
   componentDidMount: function() {
+    window.addEventListener('wheel', this.handleWheel);
     window.addEventListener('scroll', this.handleScroll);
     window.addEventListener('resize', this.handleResize);
     this.nav.addEventListener('mouseenter', this.handleHover);
@@ -82,6 +74,7 @@ export default React.createClass({
   },
 
   componentWillUnmount: function() {
+    window.removeEventListener('wheel', this.handleWheel);
     window.removeEventListener('scroll', this.handleScroll);
     window.removeEventListener('resize', this.handleResize);
     this.nav.removeEventListener('mouseenter', this.handleHover);
