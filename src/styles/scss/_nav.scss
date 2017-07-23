@@ -127,6 +127,15 @@
       height: auto;
       line-height: 1;
       margin-left: 0;
+      -webkit-transition: 0.5s;
+      -moz-transition: 0.5s;
+      -ms-transition: 0.5s;
+      -o-transition: 0.5s;
+      transition: 0.5s;
+
+      &--active {
+        color: $crimson;
+      }
     }
 
     &__link:hover {

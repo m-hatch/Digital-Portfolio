@@ -8,7 +8,8 @@ export default React.createClass({
       return {
          showNav: true,
          toggleNav: false,
-         animate: false
+         animate: false,
+         winHeight: window.innerHeight
       };
    },
 
@@ -27,16 +28,32 @@ export default React.createClass({
     }));
   },
 
-  handleResize: function(event) {
-    // prevent animating nav change on window resize
-    this.setState({
-      animate: false
+  navHide: function(event) {
+    const delta = (event.wheelDelta) ? event.wheelDelta : -1 * event.deltaY;
+    (delta < 0) ? this.setState({showNav: false}) : this.setState({showNav: true});
+  },
+
+  navHighlight: function(event) {
+    const scrollPos = document.documentElement.scrollTop || document.body.scrollTop;
+    const navLinks = document.querySelectorAll('#topNav a');
+
+    Array.prototype.forEach.call(navLinks, function(el){
+      const refElement = document.getElementById(el.innerHTML);
+      const padding = 50; // for footer
+      const refPos = refElement.getBoundingClientRect().top + window.scrollY - window.innerHeight + padding;
+
+      ((refPos <= scrollPos) 
+        && (refPos + refElement.clientHeight > scrollPos || refPos + window.innerHeight > scrollPos)) 
+        ? el.classList.add('topnav__link--active') : el.classList.remove('topnav__link--active');
     });
   },
 
-  handleScroll: function(event) {
-    const delta = (event.wheelDelta) ? event.wheelDelta : -1 * event.deltaY;
-    (delta < 0) ? this.setState({showNav: false}) : this.setState({showNav: true});
+  handleResize: function(event) {
+    // prevent animating nav change on window resize
+    this.setState({
+      animate: false,
+      winHeight: window.innerHeight
+    });
   },
 
   handleHover: function(mouseEvent) {
@@ -50,14 +67,9 @@ export default React.createClass({
     }
   },
 
-  handleClick: function(event) {
-    event.preventDefault();
-    console.log(event.target);
-    smoothScroll(event.target);
-  },
-
   componentDidMount: function() {
-    window.addEventListener('wheel', this.handleScroll);
+    window.addEventListener('scroll', this.navHighlight);
+    window.addEventListener('wheel', this.navHide);
     window.addEventListener('resize', this.handleResize);
     this.icon.addEventListener('click', this.toggleNav);
     this.nav.addEventListener('mouseenter', this.handleHover);
@@ -65,7 +77,8 @@ export default React.createClass({
   },
 
   componentWillUnmount: function() {
-    window.removeEventListener('wheel', this.handleScroll);
+    window.removeEventListener('scroll', this.navHighlight);
+    window.removeEventListener('wheel', this.navHide);
     window.removeEventListener('resize', this.handleResize);
     this.icon.removeEventListener('click', this.toggleNav);
     this.nav.removeEventListener('mouseenter', this.handleHover);
@@ -81,8 +94,7 @@ export default React.createClass({
           iconRef={ el => this.icon = el } 
           showNav={ this.state.showNav } 
           toggleNav={ this.state.toggleNav } 
-          animate={ this.state.animate }
-          onClick={ this.handleClick } />
+          animate={ this.state.animate } />
     );
   }
 
