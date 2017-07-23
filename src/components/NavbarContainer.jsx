@@ -9,7 +9,7 @@ export default React.createClass({
          showNav: true,
          toggleNav: false,
          animate: false,
-         winHeight: window.innerHeight
+         lastScrollPos: window.pageYOffset || document.documentElement.scrollTop
       };
    },
 
@@ -29,8 +29,9 @@ export default React.createClass({
   },
 
   navHide: function(event) {
-    const delta = (event.wheelDelta) ? event.wheelDelta : -1 * event.deltaY;
-    (delta < 0) ? this.setState({showNav: false}) : this.setState({showNav: true});
+    const currentPos = window.pageYOffset || document.documentElement.scrollTop;
+    (currentPos > this.state.lastScrollPos) ? this.setState({showNav: false}) : this.setState({showNav: true});
+    this.setState({lastScrollPos: currentPos});
   },
 
   navHighlight: function(event) {
@@ -46,6 +47,11 @@ export default React.createClass({
         && (refPos + refElement.clientHeight > scrollPos || refPos + window.innerHeight > scrollPos)) 
         ? el.classList.add('topnav__link--active') : el.classList.remove('topnav__link--active');
     });
+  },
+
+  handleScroll: function(event) {
+    this.navHide(event);
+    this.navHighlight(event);
   },
 
   handleResize: function(event) {
@@ -68,8 +74,7 @@ export default React.createClass({
   },
 
   componentDidMount: function() {
-    window.addEventListener('scroll', this.navHighlight);
-    window.addEventListener('wheel', this.navHide);
+    window.addEventListener('scroll', this.handleScroll);
     window.addEventListener('resize', this.handleResize);
     this.icon.addEventListener('click', this.toggleNav);
     this.nav.addEventListener('mouseenter', this.handleHover);
@@ -77,8 +82,7 @@ export default React.createClass({
   },
 
   componentWillUnmount: function() {
-    window.removeEventListener('scroll', this.navHighlight);
-    window.removeEventListener('wheel', this.navHide);
+    window.removeEventListener('scroll', this.handleScroll);
     window.removeEventListener('resize', this.handleResize);
     this.icon.removeEventListener('click', this.toggleNav);
     this.nav.removeEventListener('mouseenter', this.handleHover);
