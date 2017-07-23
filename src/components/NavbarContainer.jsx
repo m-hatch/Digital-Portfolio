@@ -29,6 +29,8 @@ export default React.createClass({
 
   navHide: function(event) {
     const currentPos = window.pageYOffset || document.documentElement.scrollTop;
+
+    // if scroll direction is down, hide nav
     (currentPos > this.state.lastScrollPos) ? this.setState({showNav: false}) : this.setState({showNav: true});
     this.setState({lastScrollPos: currentPos});
   },
@@ -42,6 +44,7 @@ export default React.createClass({
       const padding = 50; // for footer
       const refPos = refElement.getBoundingClientRect().top + window.scrollY - window.innerHeight + padding;
 
+      // add active class when section in view
       ((refPos <= scrollPos) 
         && (refPos + refElement.clientHeight > scrollPos || refPos + window.innerHeight > scrollPos)) 
         ? el.classList.add('topnav__link--active') : el.classList.remove('topnav__link--active');
@@ -57,7 +60,6 @@ export default React.createClass({
     // prevent animating nav change on window resize
     this.setState({
       animate: false,
-      winHeight: window.innerHeight
     });
   },
 
@@ -75,7 +77,6 @@ export default React.createClass({
   componentDidMount: function() {
     window.addEventListener('scroll', this.handleScroll);
     window.addEventListener('resize', this.handleResize);
-    this.icon.addEventListener('click', this.toggleNav);
     this.nav.addEventListener('mouseenter', this.handleHover);
     this.nav.addEventListener('mouseleave', this.handleHover);
   },
@@ -83,7 +84,6 @@ export default React.createClass({
   componentWillUnmount: function() {
     window.removeEventListener('scroll', this.handleScroll);
     window.removeEventListener('resize', this.handleResize);
-    this.icon.removeEventListener('click', this.toggleNav);
     this.nav.removeEventListener('mouseenter', this.handleHover);
     this.nav.removeEventListener('mouseleave', this.handleHover);
   },
@@ -94,7 +94,7 @@ export default React.createClass({
           navTitle={ this.getName() } 
           navLinks={ this.getLinks() } 
           navRef={ el => this.nav = el } 
-          iconRef={ el => this.icon = el } 
+          onBtnClick={ this.toggleNav } 
           showNav={ this.state.showNav } 
           toggleNav={ this.state.toggleNav } 
           animate={ this.state.animate } />

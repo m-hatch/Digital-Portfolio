@@ -5,6 +5,7 @@ export default React.createClass({
   
   render: function() {
 
+    // prepare links list
     const classList = "nav__link topnav__link"
       + ( this.props.animate ? " topnav__link--animate" : "" )  
       + ( this.props.toggleNav ? " topnav__link--open" : "" );
@@ -27,9 +28,7 @@ export default React.createClass({
     });
 
     return (
-      <div className="nav" 
-        ref={ this.props.navRef }>
-
+      <div ref={ this.props.navRef } className="nav">
         <nav className={"nav__inner l-font-smoothing" + (!this.props.showNav ? " nav__inner--hide" : "")}>
 
           <div className="l-wrapper">
@@ -41,7 +40,7 @@ export default React.createClass({
                 { this.props.navTitle }
               </ScrollAnchor>
             </span>
-            <span ref={ this.props.iconRef } className="nav__icon">&#9776;</span>
+            <span className="nav__icon" onClick={ this.props.onBtnClick }>&#9776;</span>
           </div>
 
           <div className="nav__wrapper">
@@ -51,7 +50,6 @@ export default React.createClass({
           </div>
 
         </nav>
-
       </div>
     );
   }
