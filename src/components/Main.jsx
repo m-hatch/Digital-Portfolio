@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import NavbarContainer from './NavbarContainer';
 import Splash from './Splash';
 import About from './About';

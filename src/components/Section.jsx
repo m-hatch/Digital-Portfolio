@@ -12,7 +12,7 @@ export default React.createClass({
 
   render: function() {
     return (
-      <div className={ "l-section" + this.getBackground() }>
+      <div id={ this.getHeading() } className={ "l-section" + this.getBackground() }>
         <div className="l-wrapper">
 
           <h2 className="l-section__heading">{ this.getHeading() }</h2>

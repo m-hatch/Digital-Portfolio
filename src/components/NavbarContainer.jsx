@@ -1,4 +1,5 @@
 import React from 'react';
+const smoothScroll = require('smoothscroll');
 import Navbar from './Navbar';
 
 export default React.createClass({
@@ -49,6 +50,12 @@ export default React.createClass({
     }
   },
 
+  handleClick: function(event) {
+    event.preventDefault();
+    console.log(event.target);
+    smoothScroll(event.target);
+  },
+
   componentDidMount: function() {
     window.addEventListener('wheel', this.handleScroll);
     window.addEventListener('resize', this.handleResize);
@@ -74,7 +81,8 @@ export default React.createClass({
           iconRef={ el => this.icon = el } 
           showNav={ this.state.showNav } 
           toggleNav={ this.state.toggleNav } 
-          animate={ this.state.animate } />
+          animate={ this.state.animate }
+          onClick={ this.handleClick } />
     );
   }
 
