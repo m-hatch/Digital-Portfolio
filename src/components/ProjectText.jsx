@@ -23,8 +23,11 @@ export default React.createClass({
           }
         </ul>
 
-        <button className="button project__button">Description</button>
-        <VerticalButton label="Description" />
+        <button className="button project__button" onClick={ this.props.openModal }>
+          Description
+        </button>
+
+        <VerticalButton label="Description" openModal={ this.props.openModal } />
 
       </div>
     );

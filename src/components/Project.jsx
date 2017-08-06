@@ -8,6 +8,10 @@ export default React.createClass({
     return this.props.project || {};
   },
 
+  handleClick: function(event) {
+    this.props.openModal(event, this.getProject());
+  },
+
   render: function() {
     return (
       <div className="project">
@@ -19,8 +23,10 @@ export default React.createClass({
         <ProjectText 
           projectName={ this.getProject().name } 
           tagline={ this.getProject().tagline } 
+          description={ this.getProject.description }
           github={ this.getProject().github }
-          webLink={ this.getProject().link }/>
+          webLink={ this.getProject().link } 
+          openModal={ this.handleClick } />
 
       </div>
     );

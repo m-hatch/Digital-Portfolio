@@ -6,7 +6,9 @@ export default React.createClass({
 
   getProjects: function() {
     const projects = this.props.projects.map((project, index) => {
-      return <Project project={ project } key={ project.name } />;
+      return <Project project={ project } 
+              key={ project.name } 
+              openModal={ this.props.openModal } />;
     });
     
     return projects;
