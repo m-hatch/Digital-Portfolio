@@ -36,7 +36,7 @@
   "projects": [
     {
       "name": "Bachovich Music Publications",
-      "img": "path.jpg",
+      "img": "bmp.png",
       "img_alt": "alt desc",
       "tagline": "E-commerce website for Bachovich Music Publications.",
       "description": "lorem ipsum",
@@ -45,7 +45,7 @@
     },
     {
       "name": "Hook & Loop",
-      "img": "another/path.jpg",
+      "img": "hl.jpg",
       "img_alt": "alt desc 2",
       "tagline": "Website for Hook & Loop, the creative agency of Infor.",
       "description": "lorem ipsum again",
@@ -53,19 +53,19 @@
       "link": "website2"
     },
     {
-      "name": "Bachovich Music Publications2",
-      "img": "path.jpg",
+      "name": "Pronto",
+      "img": "pronto.jpg",
       "img_alt": "alt desc",
-      "tagline": "E-commerce website for Bachovich Music Publications.",
+      "tagline": "Demo for the Pronto/Tally mobile expense app.",
       "description": "lorem ipsum",
       "github": "repository",
       "link": "website"
     },
     {
-      "name": "Hook & Loop2",
-      "img": "another/path.jpg",
+      "name": "Promiscuities",
+      "img": "promiscuities.png",
       "img_alt": "alt desc 2",
-      "tagline": "Website for Hook & Loop, the creative agency of Infor.",
+      "tagline": "Demo for the independent film Promiscuities.",
       "description": "lorem ipsum again",
       "github": "my/repository",
       "link": "website2"
