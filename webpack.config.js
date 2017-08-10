@@ -36,7 +36,7 @@ module.exports = {
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
-        loader: 'url-loader'
+        use: 'url-loader?limit=8192'
       },
       {
         test: /\.json$/,
