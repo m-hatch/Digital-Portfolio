@@ -32,7 +32,7 @@ export default React.createClass({
 
         <ModalContainer />
 
-        <Footer content={ this.getData().myinfo } />
+        <Footer links={ this.getData().myinfo.links } />
 
       </div>
     );
