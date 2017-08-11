@@ -1,14 +1,9 @@
 import React from 'react';
 import { getScrollTop } from '../util/utilities';
+import { connect } from 'react-redux';
+import * as actions from '../actions/actions';
 
-export default React.createClass({
-
-  getInitialState: function () {
-    return {
-      top: 0,
-      opacity: 1
-    };
-  },
+export const Splash = React.createClass({
 
   parallax: function(event) {
     const scrollTop = getScrollTop();
@@ -16,8 +11,8 @@ export default React.createClass({
 
     // only call when element is in view
     if (scrollTop < elementHeight) {
-      this.setState({ top: scrollTop * .7 + 'px' });
-      this.setState({ opacity: (elementHeight - scrollTop) / elementHeight });
+      this.props.dispatch(actions.parallax(scrollTop * .7));
+      this.props.dispatch(actions.setSplashOpacity((elementHeight - scrollTop) / elementHeight));
     }
   },
 
@@ -31,8 +26,8 @@ export default React.createClass({
 
   render: function() {
     const splashStyle = { 
-      transform: 'translateY(' + this.state.top +')',
-      opacity: this.state.opacity ? this.state.opacity : 1
+      transform: 'translateY(' + this.props.top +'px)',
+      opacity: this.props.opacity ? this.props.opacity : 1
     };
 
     return (
@@ -58,3 +53,14 @@ export default React.createClass({
   }
 
 });
+
+const mapStateToProps = (state) => {
+  return {
+    top: state.splash.top,
+    opacity: state.splash.opacity
+  };
+}
+
+export default connect(
+  mapStateToProps
+)(Splash);
