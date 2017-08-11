@@ -37,8 +37,24 @@ function navbar(state = init.navbar, action) {
   }
 }
 
+function modal(state = init.modal, action) {
+  switch(action.type) {
+    case types.SHOW_MODAL:
+      let temp = Object.assign(
+        {}, state, { showModal: action.isVisible }
+      );console.log(state); return temp;
+    case types.SET_MODAL_CONTENT:
+      return Object.assign(
+        {}, state, { content: action.project }
+      );
+    default:
+      return state;
+  }
+}
+
 // combine reducers
 export default combineReducers({
   splash,
-  navbar
+  navbar,
+  modal
 })

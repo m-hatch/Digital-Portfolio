@@ -9,3 +9,8 @@ export const navbar = {
   toggleNav: false,
   animate: false
 };
+
+export const modal = {
+  showModal: false,
+  content: {}
+};
