@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from './Navbar';
+import * as util from '../util/utilities';
 
 export default React.createClass({
 
@@ -19,18 +20,6 @@ export default React.createClass({
     return this.props.nav.links || [];
   },
 
-  getScrollTop: function() {
-    return document.documentElement.scrollTop || document.body.scrollTop;
-  },
-
-  getScrollBottom: function(padding) {
-    return this.getScrollTop() + window.innerHeight - padding;
-  },
-
-  getOffsetTop: function(element) {
-    return this.getScrollTop() + element.getBoundingClientRect().top;
-  },
-
   toggleNav: function() {
     this.setState(prevState => ({
       animate: true, 
@@ -44,14 +33,13 @@ export default React.createClass({
   },
 
   handleScroll: function(event) {
-    const self = this;
     const padding = 50; // for footer
-    const scrollBottom = this.getScrollBottom(padding);
+    const scrollBottom = util.getScrollBottom(padding);
     const navLinks = document.querySelectorAll('#topNav a');
 
     Array.prototype.forEach.call(navLinks, function(el){
       const refElement = document.getElementById(el.innerHTML);
-      const refPos = self.getOffsetTop(refElement);
+      const refPos = util.getOffsetTop(refElement);
 
       // add active class when section in view
       ((refPos <= scrollBottom) 

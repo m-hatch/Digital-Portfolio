@@ -1,6 +1,7 @@
 import React from 'react';
 import Project from './Project';
 import Section from './Section';
+import * as util from '../util/utilities';
 
 export default React.createClass({
 
@@ -14,25 +15,12 @@ export default React.createClass({
     return projects;
   },
 
-  getScrollTop: function() {
-    return document.documentElement.scrollTop || document.body.scrollTop;
-  },
-
-  getScrollCenter: function() {
-    return this.getScrollTop() + (window.innerHeight/2);
-  },
-
-  getOffsetTop: function(element) {
-    return this.getScrollTop() + element.getBoundingClientRect().top;
-  },
-
   handleScroll: function(event) {
-    const self = this;
-    const scrollCenter = this.getScrollCenter();
+    const scrollCenter = util.getScrollCenter();
     const projects = document.querySelectorAll('.project');
 
     Array.prototype.forEach.call(projects, function(el){
-      const elemPos = self.getOffsetTop(el);
+      const elemPos = util.getOffsetTop(el);
 
       // add active class when project in view
       ((elemPos < scrollCenter) && (elemPos + el.clientHeight > scrollCenter)) 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { getScrollTop } from '../util/utilities';
 
 export default React.createClass({
 
@@ -10,7 +11,7 @@ export default React.createClass({
   },
 
   parallax: function(event) {
-    const scrollTop = window.pageYOffset;
+    const scrollTop = getScrollTop();
     const elementHeight = this.refs.splash.clientHeight;
 
     // only call when element is in view
