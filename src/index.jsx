@@ -3,22 +3,16 @@ import ReactDOM from 'react-dom';
 import Main from './components/Main';
 import appData from './data.json';
 import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 import reducer from './reducers/reducers';
 
-const init = {
-	splash: {
-		top: 0,
-		opacity: 1
-	}
-};
+// create Redux store
+const store = createStore(reducer);
 
-let store = createStore(reducer, init);
-
-console.log(store.getState());
-store.dispatch({ type: 'PARALLAX', position: 4 });
-console.log(store.getState());
-
+// render app
 ReactDOM.render(
-  <Main appData={ appData } />,
+  <Provider store={store}>
+    <Main appData={ appData } />
+  </Provider>,
   document.getElementById('app')
 );

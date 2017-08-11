@@ -1,12 +1,10 @@
-// action types
-export const PARALLAX = 'PARALLAX';
-export const SET_SPLASH_OPACITY = 'SET_SPLASH_OPACITY';
+import * as types from './types';
 
 // action creators
-export function parallax(position) {
-  return { type: PARALLAX, position }
+export function parallax(top) {
+  return { type: types.PARALLAX, top }
 }
 
 export function setSplashOpacity(opacity) {
-  return { type: SET_SPLASH_OPACITY, opacity }
+  return { type: types.SET_SPLASH_OPACITY, opacity }
 }

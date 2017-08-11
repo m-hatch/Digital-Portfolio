@@ -1,17 +1,15 @@
 import { combineReducers } from 'redux';
-import { 
-  PARALLAX, 
-  SET_SPLASH_OPACITY
-} from '../actions/actions';
+import * as types from '../actions/types';
+import * as init from './defaults';
 
 // reducers
-function splash(state = {}, action) {
+function splash(state = init.splash, action) {
   switch(action.type) {
-    case PARALLAX:
+    case types.PARALLAX:
       return Object.assign(
-        {}, state, { top: action.position }
+        {}, state, { top: action.top }
       );
-    case SET_SPLASH_OPACITY:
+    case types.SET_SPLASH_OPACITY:
       return Object.assign(
         {}, state, { opacity: action.opacity }
       );
@@ -20,9 +18,12 @@ function splash(state = {}, action) {
   }
 }
 
-// combine reducers
-const reducer = combineReducers({
-  splash
-})
+function navbar(state = init.navbar, action) {
+  return state;
+}
 
-export default reducer;
+// combine reducers
+export default combineReducers({
+  splash,
+  navbar
+})
