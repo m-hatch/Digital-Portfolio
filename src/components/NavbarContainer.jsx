@@ -1,35 +1,31 @@
 import React from 'react';
 import Navbar from './Navbar';
 import * as util from '../util/utilities';
+import { connect } from 'react-redux';
+import * as actions from '../actions/actions';
 
-export default React.createClass({
-
-  getInitialState: function () {
-      return {
-         showNav: true,
-         toggleNav: false,
-         animate: false
-      };
-   },
+export const NavbarContainer = React.createClass({
 
   getName: function() {
     return this.props.name || '';
   },
 
-  getLinks: function () {
+  getLinks: function() {
     return this.props.nav.links || [];
   },
 
+  setVisibility: function(status) {
+    this.props.dispatch(actions.showNav(status));
+  },
+
   toggleNav: function() {
-    this.setState(prevState => ({
-      animate: true, 
-      toggleNav: !prevState.toggleNav
-    }));
+    this.props.dispatch(actions.animateNav(true));
+    this.props.dispatch(actions.toggleNav());
   },
 
   handleWheel: function(event) {
     const delta = (event.wheelDelta) ? event.wheelDelta : -1 * event.deltaY;
-    (delta < 0) ? this.setState({showNav: false}) : this.setState({showNav: true});
+    (delta < 0) ? this.setVisibility(false) : this.setVisibility(true);
   },
 
   handleScroll: function(event) {
@@ -50,18 +46,16 @@ export default React.createClass({
 
   handleResize: function(event) {
     // prevent animating nav change on window resize
-    this.setState({
-      animate: false,
-    });
+    this.props.dispatch(actions.animateNav(false));
   },
 
   handleHover: function(mouseEvent) {
     if (mouseEvent.type === 'mouseenter') {
-      this.setState({showNav: true});
+      this.setVisibility(true);
     }
     if (mouseEvent.type === 'mouseleave') {
       setTimeout( () => {
-        this.setState({showNav: false});
+        this.setVisibility(false);
       }, 400);
     }
   },
@@ -89,10 +83,22 @@ export default React.createClass({
           navLinks={ this.getLinks() } 
           navRef={ el => this.nav = el } 
           onBtnClick={ this.toggleNav } 
-          showNav={ this.state.showNav } 
-          toggleNav={ this.state.toggleNav } 
-          animate={ this.state.animate } />
+          showNav={ this.props.showNav } 
+          toggleNav={ this.props.toggleNav } 
+          animate={ this.props.animate } />
     );
   }
 
 });
+
+const mapStateToProps = (state) => {
+  return {
+    showNav: state.navbar.showNav,
+    toggleNav: state.navbar.toggleNav,
+    animate: state.navbar.animate
+  }
+}
+
+export default connect(
+  mapStateToProps
+)(NavbarContainer);

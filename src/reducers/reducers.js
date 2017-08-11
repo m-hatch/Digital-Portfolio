@@ -19,7 +19,22 @@ function splash(state = init.splash, action) {
 }
 
 function navbar(state = init.navbar, action) {
-  return state;
+  switch(action.type) {
+    case types.SHOW_NAV:
+      return Object.assign(
+        {}, state, { showNav: action.isVisible }
+      );
+    case types.TOGGLE_NAV:
+      return Object.assign(
+        {}, state, { toggleNav: !state.toggleNav }
+      );
+    case types.ANIMATE_NAV:
+      return Object.assign(
+        {}, state, { animate: action.isAnimated }
+      );
+    default:
+      return state;
+  }
 }
 
 // combine reducers
