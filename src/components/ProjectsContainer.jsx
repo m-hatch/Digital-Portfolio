@@ -2,14 +2,16 @@ import React from 'react';
 import Project from './Project';
 import Section from './Section';
 import * as util from '../util/utilities';
+import { connect } from 'react-redux';
+import * as actions from '../actions/actions';
 
-export default React.createClass({
+export const ProjectsContainer = React.createClass({
 
   getProjects: function() {
     const projects = this.props.projects.map((project, index) => {
       return <Project project={ project } 
               key={ project.name } 
-              openModal={ this.props.openModal } />;
+              openModal={ this.openModal } />;
     });
     
     return projects;
@@ -26,6 +28,11 @@ export default React.createClass({
       ((elemPos < scrollCenter) && (elemPos + el.clientHeight > scrollCenter)) 
         ? el.classList.add('project--active') : el.classList.remove('project--active');
     });
+  },
+
+  openModal: function(event, project) {
+    this.props.dispatch(actions.showModal(true));
+    this.props.dispatch(actions.setModalContent(project));
   },
 
   componentDidMount: function() {
@@ -45,3 +52,5 @@ export default React.createClass({
   }
   
 });
+
+export default connect()(ProjectsContainer);

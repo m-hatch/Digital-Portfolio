@@ -20,3 +20,11 @@ export function toggleNav() {
 export function animateNav(isAnimated) {
 	return { type: types.ANIMATE_NAV, isAnimated };
 }
+
+export function showModal(isVisible) {
+	return { type: types.SHOW_MODAL, isVisible};
+}
+
+export function setModalContent(project) {
+	return { type: types.SET_MODAL_CONTENT, project };
+}
