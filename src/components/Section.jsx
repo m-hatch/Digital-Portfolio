@@ -2,11 +2,11 @@ import React from 'react';
 
 export default React.createClass({
 
-  getHeading() {
+  getHeading: function() {
     return this.props.heading;
   },
 
-  getBackground() {
+  getBackground: function() {
     return (this.props.bg === 'grey') ? " l-section__bg" : "";
   },
 
