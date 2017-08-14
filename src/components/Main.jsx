@@ -25,7 +25,7 @@ export default React.createClass({
         <Splash text={ this.getData().myinfo } />
 
         <div className="l-container">
-          <About description={ this.getData().about.description } />
+          <About about={ this.getData().about } />
           <ProjectsContainer projects={ this.getData().projects } />
           <Contact />
         </div>

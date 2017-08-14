@@ -31,6 +31,7 @@
     ]
   },
   "about": {
+    "img": "profile.png",
     "description": "<p>Hello, my name is Monte.</p><p>I'm a Web Developer with a passion for front-end technologies. I love learning and building cool things. Right now, some of my interests are React-Redux, ES6, Webpack, NodeJS, and Angular 4.</p><p>When not coding, I can be found performing on the stages of Lincoln Center and Carnegie Hall (and occasionally a Broadway pit) as a classical musician. I'm also a voracious reader of fiction, and a not-very-good surfer.</p>"
   },
   "projects": [

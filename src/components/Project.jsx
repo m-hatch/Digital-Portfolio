@@ -18,7 +18,8 @@ export default React.createClass({
 
         <ProjectImage 
           img={ this.getProject().img } 
-          imgAlt={ this.getProject().img_alt } />
+          imgAlt={ this.getProject().img_alt }
+          link={ this.getProject().link } />
 
         <ProjectText 
           projectName={ this.getProject().name } 

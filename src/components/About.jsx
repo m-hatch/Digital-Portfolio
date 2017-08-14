@@ -13,11 +13,11 @@ export default React.createClass({
 
           <div className="about">
             <div className="about__image">
-              <img className="about__img" src="img/profile.png" alt="profile pic"/>
+              <img className="about__img" src={ 'img/' + this.props.about.img } alt="profile pic"/>
             </div>
 
             <div className="about__description"
-              dangerouslySetInnerHTML={ this.getRichText(this.props.description) }>
+              dangerouslySetInnerHTML={ this.getRichText(this.props.about.description) }>
             </div>
           </div>
 
