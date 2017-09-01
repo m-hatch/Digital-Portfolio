@@ -10,7 +10,6 @@ npm install --save-dev react-hot-loader
 npm install --save-dev json-loader
 npm install --save-dev css-loader node-sass sass-loader
 npm install --save-dev extract-text-webpack-plugin
-npm install --save react-addons-test-utils
 #npm install --save-dev image-webpack-loader
 npm install --save-dev file-loader
 npm install --save-dev url-loader
@@ -18,3 +17,6 @@ npm install --save-dev url-loader
 ## Run the Development Server
 webpack-dev-server
 #node_modules/.bin/webpack-dev-server
+
+## Run tests
+npm run test

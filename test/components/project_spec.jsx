@@ -2,30 +2,36 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { 
   renderIntoDocument,
-  scryRenderedDOMComponentsWithTag
-} from 'react-addons-test-utils';
-import ProjectsContainer from '../../src/components/ProjectsContainer';
+  scryRenderedComponentsWithType
+} from 'react-dom/test-utils';
 import Project from '../../src/components/Project';
+import ProjectImage from '../../src/components/ProjectImage';
+import ProjectText from '../../src/components/ProjectText';
 import {expect} from 'chai';
+
+const component = renderIntoDocument(
+  <Project project={
+    {
+      "name": "Demo",
+      "img": "path.jpg",
+      "img_alt": "alt desc",
+      "description": "lorem ipsum",
+      "github": "repository",
+      "link": "website"
+    }
+  } />
+);
 
 describe('Project', () => {
 
-  it('renders a project json into a div', () => {
-    const component = renderIntoDocument(
-      <Project project={
-        {
-          "name": "Demo",
-          "img": "path.jpg",
-          "img_alt": "alt desc",
-          "description": "lorem ipsum",
-          "github": "repository",
-          "link": "website"
-        }
-      } />
-    );
+  it('renders a ProjectImage component', () => {
+    const projectImage = scryRenderedComponentsWithType(component, ProjectImage)
+    expect(projectImage.length).to.equal(1);
+  });
 
-    //const projectName = scryRenderedDOMComponentsWithTag(component, 'h2');
-    //expect(projectName.textContent).to.equal('Demo');
+  it('renders a ProjectText component', () => {
+    const projectText = scryRenderedComponentsWithType(component, ProjectText)
+    expect(projectText.length).to.equal(1);
   });
 
 });
