@@ -59,7 +59,7 @@
     position: absolute;
     right: 0;
     height: 100vh;
-    width: 90vw;
+    width: 100vw;
     background-color: $black;
     color: $pigeon-grey;
     overflow: auto;
@@ -73,18 +73,19 @@
 
 @media screen and (min-width: 568px){
   .modal__content {
-    width: 80vw;
+    width: 78vw;
+    max-width: 600px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .modal__content {
-    width: 50vw;
+    width: 60vw;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .modal__content {
-    width: 45vw;
+    width: 46vw;
   }
 }
