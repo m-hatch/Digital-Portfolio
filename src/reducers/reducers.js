@@ -52,9 +52,21 @@ function modal(state = init.modal, action) {
   }
 }
 
+function contact(state = init.contact, action) {
+  switch(action.type) {
+    case types.SHOW_CONTACT_FORM:
+      return Object.assign(
+        {}, state, { showForm: action.isVisible }
+      );
+    default:
+      return state;
+  }
+}
+
 // combine reducers
 export default combineReducers({
   splash,
   navbar,
-  modal
-})
+  modal,
+  contact
+});

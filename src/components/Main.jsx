@@ -6,6 +6,7 @@ import About from './About';
 import ProjectsContainer from './ProjectsContainer';
 import Contact from './Contact';
 import ModalContainer from './ModalContainer';
+import ContactFormContainer from './ContactFormContainer';
 import Footer from './Footer';
 
 export default React.createClass({
@@ -31,6 +32,7 @@ export default React.createClass({
         </div>
 
         <ModalContainer />
+        <ContactFormContainer />
 
         <Footer links={ this.getData().myinfo.links } />
 

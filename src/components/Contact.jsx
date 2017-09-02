@@ -1,10 +1,16 @@
 import React from 'react';
 import Section from './Section';
+import { connect } from 'react-redux';
+import * as actions from '../actions/actions';
 
-export default React.createClass({
+export const Contact = React.createClass({
 
   getContent: function() {
     return this.props.content || {};
+  },
+
+  openForm: function(event) {
+    this.props.dispatch(actions.showContactForm(true));
   },
 
   render: function() {
@@ -17,7 +23,7 @@ export default React.createClass({
             
             <p>{ this.getContent().text }</p>
 
-            <button className="button contact__button">
+            <button className="button contact__button" onClick={ this.openForm }>
               Send a message
             </button>
 
@@ -28,3 +34,5 @@ export default React.createClass({
   }
   
 });
+
+export default connect()(Contact);

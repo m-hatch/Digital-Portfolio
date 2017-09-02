@@ -28,3 +28,7 @@ export function showModal(isVisible) {
 export function setModalContent(project) {
 	return { type: types.SET_MODAL_CONTENT, project };
 }
+
+export function showContactForm(isVisible) {
+  return { type: types.SHOW_CONTACT_FORM, isVisible};
+}

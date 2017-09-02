@@ -14,3 +14,7 @@ export const modal = {
   showModal: false,
   content: {}
 };
+
+export const contact = {
+  showForm: false
+};

@@ -1,0 +1,51 @@
+.dialog {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 0;
+  overflow: hidden;
+  z-index: 500;
+  background: $shadow;
+
+  &--open {
+    height: 100vh;
+    
+    .contact-form {
+      margin: 10px auto;
+      opacity: 1;
+    }
+  }
+}
+
+.contact-form {
+  position: relative;
+  margin: 50vh auto;
+  height: calc(100vh - 20px);
+  width: 60%;
+  background-color: $white;
+  color: $pigeon-grey;
+  overflow: auto;
+  padding: 10px 25px 25px;
+  border-radius: 5px;
+  box-shadow: 0 4px 40px $shadow;
+  opacity: 0;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+
+  &__heading {
+    margin: 10px 0;
+    font-size: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $silver;
+  }
+
+  &__close {
+    font-size: 28px;
+    font-weight: bold;
+    float: right;
+  }
+}

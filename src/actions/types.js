@@ -6,3 +6,4 @@ export const TOGGLE_NAV = 'TOGGLE_NAV';
 export const ANIMATE_NAV = 'ANIMATE_NAV';
 export const SHOW_MODAL = 'SHOW_MODAL';
 export const SET_MODAL_CONTENT = 'SET_MODAL_CONTENT';
+export const SHOW_CONTACT_FORM = 'SHOW_CONTACT_FORM';
