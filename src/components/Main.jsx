@@ -27,7 +27,7 @@ export default React.createClass({
         <div className="l-container">
           <About about={ this.getData().about } />
           <ProjectsContainer projects={ this.getData().projects } />
-          <Contact />
+          <Contact content={ this.getData().contact } />
         </div>
 
         <ModalContainer />

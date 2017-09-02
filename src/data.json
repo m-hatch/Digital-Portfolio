@@ -72,6 +72,10 @@
       "link": "website2"
     }
   ],
+  "contact": {
+    "heading": "Want to work together?",
+    "text": "I am currently accepting new offers and would love to hear about yours. Please take a moment to tell me about it."
+  },
   "modal": {
     "name": "Demo",
     "img": "path.jpg",
