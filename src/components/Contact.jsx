@@ -23,7 +23,7 @@ export const Contact = React.createClass({
             
             <p>{ this.getContent().text }</p>
 
-            <button className="button contact__button" onClick={ this.openForm }>
+            <button className="contact__button contact__btn-dialog" onClick={ this.openForm }>
               Send a message
             </button>
 

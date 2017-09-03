@@ -33,7 +33,7 @@ export default React.createClass({
               <label htmlFor="message">Message</label>
               <textarea className="contact-form__textarea" id="message" name="message" placeholder="message..."></textarea>
 
-              <input className="contact-form__submit" type="submit" value="Submit"/>
+              <input className="contact__button" type="submit" value="Submit"/>
 
             </form>
           </div>

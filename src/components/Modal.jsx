@@ -15,7 +15,7 @@ export default React.createClass({
           <h3 className="modal__title">{ this.props.name }</h3>
           <div dangerouslySetInnerHTML={ this.props.content }></div>
 
-          <button className="modal__close-btn" onClick={ this.props.closeModal }>Close</button>
+          <button className="button modal__close-btn" onClick={ this.props.closeModal }>Close</button>
         </div>
 
       </div>

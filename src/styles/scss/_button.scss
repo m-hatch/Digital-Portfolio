@@ -1,29 +1,22 @@
 .button {
+  /* Remove all decorations to look like normal text */
+  background: none;
+  border: none;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  outline-offset: 0;
+  
+  /* Additional styles */
   text-align: center;
   text-decoration: none;
   color: $black;
-  font-size: 13px;
-  padding: 5px 20px;
   cursor: pointer;
-  border: 1px solid $silver;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  background-color: $dark-grey;
-  background-image: -webkit-linear-gradient(top, $dark-grey, $medium-grey);
-  background-image: -moz-linear-gradient(top, $dark-grey, $medium-grey);
-  background-image: -ms-linear-gradient(top, $dark-grey, $medium-grey);
-  background-image: -o-linear-gradient(top, $dark-grey, $medium-grey);
-  background-image: linear-gradient(to bottom, $dark-grey, $medium-grey);
-
+  
   &:hover,
   &:active {
-    background-color: $medium-grey;
-    background-image: -webkit-linear-gradient(top, $medium-grey, $light-grey);
-    background-image: -moz-linear-gradient(top, $medium-grey, $light-grey);
-    background-image: -ms-linear-gradient(top, $medium-grey, $light-grey);
-    background-image: -o-linear-gradient(top, $medium-grey, $light-grey);
-    background-image: linear-gradient(to bottom, $medium-grey, $light-grey);
+    text-decoration: underline;
   }
 
   &:focus {
