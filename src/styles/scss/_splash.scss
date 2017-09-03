@@ -28,15 +28,16 @@
   }
 
   &__title {
-    width: 280px; 
+    width: 330px; 
     margin: 0 auto;
     margin-top: 80px;
 
     &__text {
       background-color: $shadow;
-      padding-top: 1px;
-      padding-bottom: 4px;
-      font-size: 28px;
+      padding-top: 4px;
+      padding-bottom: 6px;
+      font-size: 22px;
+      font-weight: 500;
       -webkit-border-radius: 8px;
       -moz-border-radius: 8px;
       border-radius: 8px;
@@ -82,12 +83,10 @@
 @media screen and (min-width: 568px) {
   .splash {
     &__title {
-      width: 520px; 
-      margin-top: 100px;
+      width: 445px; 
 
       &__text {
-        font-size: 32px;
-        font-weight: 300;
+        font-size: 26px;
       }
     }
 
@@ -96,37 +95,55 @@
     }
 
     &__heading {
-      font-size: 46px;
+      font-size: 45px;
     }
 
     &__portfolio {
       font-size: 18px;
+
+      &::before {
+        width: 62px;
+      }
+
+      &:hover::before { 
+        width: 100px;
+      }
     }
   }
 }
 
 @media screen and (min-width: 768px) {
   .splash {
-    &__title {
-      width: 560px; 
-
-      &__text {
-        font-size: 37px;
-      }
-    }
-
     &__heading {
       font-size: 48px;
     }
 
     &__portfolio {
       font-size: 20px;
+
+      &::before {
+        width: 72px;
+      }
+
+      &:hover::before { 
+        width: 110px;
+      }
     }
   }
 }
 
 @media screen and (min-width: 1024px) {
   .splash {
+    &__title {
+      width: 500px;
+      margin-top: 100px;
+
+      &__text {
+        font-size: 30px;
+        font-weight: 300;
+      }
+    }
+
     &__heading {
       font-size: 56px;
     }
@@ -136,10 +153,10 @@
 @media screen and (min-width: 1280px) {
   .splash {
     &__title {
-      width: 700px;
+      width: 580px;
 
       &__text {
-        font-size: 44px;
+        font-size: 34px;
       }
     }
 
@@ -149,6 +166,14 @@
 
     &__portfolio {
       font-size: 22px;
+
+      &::before {
+        width: 82px;
+      }
+
+      &:hover::before { 
+        width: 120px;
+      }
     }
   }
 }
