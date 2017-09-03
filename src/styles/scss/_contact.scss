@@ -10,7 +10,7 @@
   }
 
   &__button {
-    background-color: #4CAF50;
+    background-color: $verdant;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -19,7 +19,7 @@
 
     &:hover,
     &:active {
-      background-color: #45a049;
+      background-color: $grass;
     }
 
     &:focus {
