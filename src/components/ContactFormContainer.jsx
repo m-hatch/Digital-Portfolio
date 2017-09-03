@@ -10,7 +10,7 @@ export const ContactFormContainer = React.createClass({
   },
 
   closeForm: function() {
-    this.props.dispatch(actions.showContactForm(false));
+    this.props.dispatch(actions.showContactForm(false));console.log('close');
   },
 
   handleOutsideClick: function(event) {
@@ -26,7 +26,7 @@ export const ContactFormContainer = React.createClass({
       <ContactForm 
         formContainerRef={ el => this.form_container = el }
         showForm={ this.props.showForm }
-        closeForm={ this.props.closeForm }
+        closeForm={ this.closeForm }
         handleOutsideClick={ this.handleOutsideClick } />
     );
   }
