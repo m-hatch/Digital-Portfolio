@@ -6,6 +6,7 @@ export default React.createClass({
     return (
       <div className="project__image">
         <a href={ this.props.link }>
+          <div className="image__filter"></div>
           <img className="project__img" 
 	          src={ 'img/' + this.props.img } 
 	          alt={ this.props.imgAlt } />
