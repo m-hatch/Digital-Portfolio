@@ -49,9 +49,9 @@
       display: block;
       background: $mine-shaft;
       height: 2px;
-      width: 100%;
+      width: calc(100% + 1px);
       bottom: -3px;
-      left: 1px;
+      left: 0;
     }
   }
 
