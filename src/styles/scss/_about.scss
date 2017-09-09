@@ -18,7 +18,6 @@
 }
 
 .expertise {
-  // border: 1px solid red;
   text-align: center;
 
   &__heading {
@@ -37,12 +36,9 @@
   }
 
   &__box {
-    // border: 1px solid gray;
     width: 100%;
     padding: 10px;
     float: left;
-
-    // p{text-align: left;}
   }
 
   &--empty {

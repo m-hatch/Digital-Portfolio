@@ -25,7 +25,7 @@ export default React.createClass({
         <h3 className="expertise__heading">{ this.props.heading }</h3>
         <span className="expertise__sub-heading">{ this.props.description }</span>
 
-        <div className="expertise__grid">{ this.getSkills() }</div>
+        <div>{ this.getSkills() }</div>
 
       </div>
     );
