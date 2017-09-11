@@ -22,3 +22,11 @@ export function getOffsetTop(element) {
 export function easeOutQuad(x, t, b, c, d) {
   return -c * (t /= d) * (t - 2) + b;
 }
+
+// check if element is in view
+export function isInView(ref) {
+  const scrollTop = getScrollTop();
+  const elementHeight = ref.clientHeight;
+
+  return (scrollTop < elementHeight) ? true : false;
+}

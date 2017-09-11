@@ -1,5 +1,8 @@
 import React from 'react';
-import { getScrollTop } from '../util/utilities';
+import { 
+  getScrollTop,
+  isInView 
+} from '../util/utilities';
 import { connect } from 'react-redux';
 import * as actions from '../actions/actions';
 
@@ -28,7 +31,7 @@ export const Splash = React.createClass({
   typewriter: function() {
     const spanList = document.getElementsByClassName('type');
     
-    if (this.isInView()) {
+    if (isInView(this.refs.splash)) {
       this.clearType(spanList);
 
       for (var i = 0; i < spanList.length; i++) {
@@ -45,7 +48,7 @@ export const Splash = React.createClass({
     const scrollTop = getScrollTop();
     const elementHeight = this.refs.splash.clientHeight;
 
-    if (this.isInView()) {
+    if (isInView(this.refs.splash)) {
       this.props.dispatch(actions.parallax(scrollTop * .7));
       this.props.dispatch(actions.setSplashOpacity((elementHeight - scrollTop) / elementHeight));
     }
@@ -55,13 +58,6 @@ export const Splash = React.createClass({
     for (var i = 0; i < spanList.length; i++) {
       spanList[i].classList.remove('type--active');
     }
-  },
-
-  isInView: function() {
-    const scrollTop = getScrollTop();
-    const elementHeight = this.refs.splash.clientHeight;
-
-    return (scrollTop < elementHeight) ? true : false;
   },
 
   componentDidMount: function() {
