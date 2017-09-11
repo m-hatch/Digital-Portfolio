@@ -9,6 +9,10 @@ export function setSplashOpacity(opacity) {
   return { type: types.SET_SPLASH_OPACITY, opacity };
 }
 
+export function setSplashVisibility(isVisible) {
+  return { type: types.SET_SPLASH_VISIBILITY, isVisible };
+}
+
 export function showNav(isVisible) {
 	return { type: types.SHOW_NAV, isVisible};
 }

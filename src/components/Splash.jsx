@@ -1,4 +1,5 @@
 import React from 'react';
+import Typewriter from './Typewriter';
 import { 
   getScrollTop,
   isInView 
@@ -8,66 +9,25 @@ import * as actions from '../actions/actions';
 
 export const Splash = React.createClass({
 
-  getTypeText: function() {
-    const text = this.props.text.position_title;
-
-    const textHtml = text.split('').map(function(char){
-      let html;
-
-      if (char === ' ') { 
-        html = '<span class="type">&nbsp;</span>';
-      } else if (char === '/') { 
-        html = '<span class="type__break type"></span>';
-      } else { 
-        html = '<span class="type">'+char+'</span>';
-      }
-
-      return html;
-    });
-
-    return textHtml.join('').toString() + '<span class="typewriter__cursor"></span>';
-  },
-
-  typewriter: function() {
-    const spanList = document.getElementsByClassName('type');
-    
-    if (isInView(this.refs.splash)) {
-      this.clearType(spanList);
-
-      for (var i = 0; i < spanList.length; i++) {
-        (function(i) {
-          setTimeout(function() { 
-            spanList[i].classList.add('type--active'); 
-          }, 100 * i);
-        })(i);
-      }
-    }
-  },
-
   parallax: function(event) {
     const scrollTop = getScrollTop();
     const elementHeight = this.refs.splash.clientHeight;
 
+    // check if splash is in view
     if (isInView(this.refs.splash)) {
+      this.props.dispatch(actions.setSplashVisibility(true));
       this.props.dispatch(actions.parallax(scrollTop * .7));
       this.props.dispatch(actions.setSplashOpacity((elementHeight - scrollTop) / elementHeight));
-    }
-  },
-
-  clearType: function(spanList) {
-    for (var i = 0; i < spanList.length; i++) {
-      spanList[i].classList.remove('type--active');
+    } else {
+      this.props.dispatch(actions.setSplashVisibility(false));
     }
   },
 
   componentDidMount: function() {
-    this.typewriter();
-    window.setInterval(this.typewriter, 5000);
     window.addEventListener('scroll', this.parallax);
   },
 
   componentWillUnmount: function() {
-    window.clearInterval(this.typewriter);
     window.removeEventListener('scroll', this.parallax);
   },
 
@@ -89,9 +49,11 @@ export const Splash = React.createClass({
             <p className="splash__portfolio">{ this.props.text.title }</p>
 
             <div className="splash__title">
-              <p className="typewriter"
-                dangerouslySetInnerHTML={{ __html: this.getTypeText() }}>
-              </p>
+              
+              <Typewriter 
+                text={ this.props.text.position_title }
+                isVisible={ this.props.isVisible } />
+
             </div>
 
           </div>
@@ -106,7 +68,8 @@ export const Splash = React.createClass({
 const mapStateToProps = (state) => {
   return {
     top: state.splash.top,
-    opacity: state.splash.opacity
+    opacity: state.splash.opacity,
+    isVisible: state.splash.isVisible
   };
 }
 

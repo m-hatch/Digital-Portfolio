@@ -13,6 +13,10 @@ function splash(state = init.splash, action) {
       return Object.assign(
         {}, state, { opacity: action.opacity }
       );
+    case types.SET_SPLASH_VISIBILITY:
+      return Object.assign(
+        {}, state, { isVisible: action.isVisible }
+      );
     default:
       return state;
   }

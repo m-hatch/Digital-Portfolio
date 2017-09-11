@@ -1,7 +1,8 @@
 // default states
 export const splash = {
   top: 0,
-  opacity: 1
+  opacity: 1,
+  isVisible: true
 };
 
 export const navbar = {
