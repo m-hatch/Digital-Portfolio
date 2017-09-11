@@ -31,17 +31,6 @@
     width: 330px; 
     margin: 0 auto;
     margin-top: 80px;
-
-    &__text {
-      background-color: $shadow;
-      padding-top: 4px;
-      padding-bottom: 6px;
-      font-size: 22px;
-      font-weight: 500;
-      -webkit-border-radius: 8px;
-      -moz-border-radius: 8px;
-      border-radius: 8px;
-    }
   }
 
   &__heading {
@@ -86,6 +75,7 @@
       width: 445px; 
 
       &__text {
+        height: 74px;
         font-size: 26px;
       }
     }
@@ -139,6 +129,7 @@
       margin-top: 100px;
 
       &__text {
+        height: 82px;
         font-size: 30px;
         font-weight: 300;
       }
@@ -156,6 +147,7 @@
       width: 580px;
 
       &__text {
+        height: 92px;
         font-size: 34px;
       }
     }
