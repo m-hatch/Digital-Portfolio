@@ -10,7 +10,7 @@ export const ContactFormContainer = React.createClass({
   },
 
   closeForm: function() {
-    this.props.dispatch(actions.showContactForm(false));console.log('close');
+    this.props.dispatch(actions.showContactForm(false));
   },
 
   handleOutsideClick: function(event) {
@@ -20,6 +20,48 @@ export const ContactFormContainer = React.createClass({
       this.closeForm();
     }
   },
+
+  handleChange: function(e) {
+    e.target.classList.add('active');
+    this.showInputError(e.target.name);
+  },
+
+  handleSubmit: function() {
+    const inputs = document.querySelectorAll('.contact-form__input');
+    let isValid = true;
+
+    inputs.forEach(input => {
+      input.classList.add('active');
+      
+      const isInputValid = this.showInputError(input.name);
+
+      if (!isInputValid) {
+        isValid = false;
+      }
+    });
+
+    if (isValid) {
+      console.log('submit form');
+    }
+  },
+
+  showInputError: function(name) {
+    const validity = document.getElementById(name).validity;
+    const label = document.getElementById(`${name}Label`).textContent;
+    const error = document.getElementById(`${name}Error`);
+    const isError = !validity.valid;
+    let message = '';
+
+    if (isError && validity.valueMissing) {
+      message = `${label} is a required field`; 
+    }
+    if (isError && validity.patternMismatch) {
+      message = `${label} should be a valid email address`; 
+    }
+    error.textContent = message;
+
+    return !isError;
+  },
   
   render: function() {
     return (
@@ -27,7 +69,9 @@ export const ContactFormContainer = React.createClass({
         formContainerRef={ el => this.form_container = el }
         showForm={ this.props.showForm }
         closeForm={ this.closeForm }
-        handleOutsideClick={ this.handleOutsideClick } />
+        handleOutsideClick={ this.handleOutsideClick }
+        handleChange={ this.handleChange }
+        handleSubmit={ this.handleSubmit } />
     );
   }
 

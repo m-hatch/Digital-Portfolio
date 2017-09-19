@@ -10,33 +10,76 @@ export default React.createClass({
         onClick={ this.props.handleOutsideClick }>
 
         <div className="contact-form">
+
           <div>
-          <span className="contact-form__close" onClick={ this.props.closeForm }>&times;</span>
-          <h3 className="contact-form__heading">Contact Form</h3>
+            <span className="contact-form__close" onClick={ this.props.closeForm }>&times;</span>
+            <h3 className="contact-form__heading">Contact Form</h3>
           </div>
           
-          <div>
-            <form className="contact-form__container" action="">
+          <form className="contact-form__container"
+            id="contactForm" noValidate>
 
-              <label htmlFor="fname">First Name</label>
-              <input className="contact-form__input" type="text" id="fname" name="firstname" placeholder="first name"/>
+            <label htmlFor="firstname" 
+              id="firstnameLabel">First Name</label>
+            <input className="contact-form__input" 
+              type="text" 
+              id="firstname" 
+              name="firstname" 
+              placeholder="first name"
+              onChange={ this.props.handleChange }
+              required />
+            <div className="contact-form__error" id="firstnameError" />
 
-              <label htmlFor="lname">Last Name</label>
-              <input className="contact-form__input" type="text" id="lname" name="lastname" placeholder="last name"/>
+            <label htmlFor="lastname"
+              id="lastnameLabel">Last Name</label>
+            <input className="contact-form__input" 
+              type="text" 
+              id="lastname" 
+              name="lastname" 
+              placeholder="last name"
+              onChange={ this.props.handleChange }
+              required />
+            <div className="contact-form__error" id="lastnameError" />
 
-              <label htmlFor="email">Email</label>
-              <input className="contact-form__input" type="text" id="email" name="email" placeholder="email"/>
+            <label htmlFor="email"
+              id="emailLabel">Email</label>
+            <input className="contact-form__input" 
+              type="text" 
+              id="email" 
+              name="email" 
+              placeholder="email"
+              pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:(\.[a-zA-Z0-9-]+)+)+$"
+              onChange={ this.props.handleChange }
+              required />
+            <div className="contact-form__error" id="emailError" />
 
-              <label htmlFor="company">Company/Affiliation</label>
-              <input className="contact-form__input" type="text" id="company" name="company" placeholder="company/affiliation"/>
+            <label htmlFor="company"
+              id="companyLabel">Company/Affiliation</label>
+            <input className="contact-form__input" 
+              type="text" 
+              id="company" 
+              name="company" 
+              placeholder="company/affiliation"
+              onChange={ this.props.handleChange }
+              required />
+            <div className="contact-form__error" id="companyError" />
 
-              <label htmlFor="message">Message</label>
-              <textarea className="contact-form__textarea" id="message" name="message" placeholder="message..."></textarea>
+            <label htmlFor="message"
+              id="messageLabel">Message</label>
+            <textarea className="contact-form__input contact-form__textarea" 
+              id="message" 
+              name="message" 
+              placeholder="message..."
+              onChange={ this.props.handleChange }
+              required></textarea>
+            <div className="contact-form__error" id="messageError" />
 
-              <input className="contact__button" type="submit" value="Submit"/>
+            <input className="contact__button" 
+              type="button" 
+              value="Submit"
+              onClick={ this.props.handleSubmit } />
 
-            </form>
-          </div>
+          </form>
 
         </div>
 

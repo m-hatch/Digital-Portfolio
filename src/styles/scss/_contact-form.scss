@@ -64,15 +64,13 @@
     border-radius: 5px;
   }
 
-  &__input,
-  &__textarea {
+  &__input {
     width: 100%;
     padding: 12px;
     border: 1px solid $dark-grey;
     border-radius: 4px;
     box-sizing: border-box;
     margin-top: 8px;
-    margin-bottom: 18px;
     resize: vertical;
 
     &::-webkit-input-placeholder {
@@ -90,10 +88,27 @@
     &:-moz-placeholder {
       color: $silver;
     }
+
+    &.active {
+      &:invalid {
+        box-shadow: 0 0 3px 1px $crimson;
+      }
+
+      &:focus {
+        box-shadow: 0 0 3px 1px $dark-grey;
+      }
+    }
   }
 
   &__textarea {
     height: 100px;
+  }
+
+  &__error {
+    color: $crimson;
+    font-size: 12px;
+    margin-top: 8px;
+    margin-bottom: 18px;
   }
 }
 
