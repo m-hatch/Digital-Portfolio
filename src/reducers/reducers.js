@@ -3,6 +3,17 @@ import * as types from '../actions/types';
 import * as init from './defaults';
 
 // reducers
+function main(state = init.main, action) {
+  switch(action.type) {
+    case types.SET_MAIN_CONTENT:
+      return Object.assign(
+        {}, state, { content: action.data }
+      );
+    default:
+      return state;
+  }
+}
+
 function splash(state = init.splash, action) {
   switch(action.type) {
     case types.PARALLAX:
@@ -69,6 +80,7 @@ function contact(state = init.contact, action) {
 
 // combine reducers
 export default combineReducers({
+  main, 
   splash,
   navbar,
   modal,

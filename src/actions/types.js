@@ -1,4 +1,5 @@
 // action types
+export const SET_MAIN_CONTENT = 'SET_MAIN_CONTENT';
 export const PARALLAX = 'PARALLAX';
 export const SET_SPLASH_OPACITY = 'SET_SPLASH_OPACITY';
 export const SET_SPLASH_VISIBILITY = 'SET_SPLASH_VISIBILITY';

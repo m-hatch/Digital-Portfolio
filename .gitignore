@@ -3,5 +3,6 @@
 package-lock.json
 todo.txt
 node_modules
+api/node_modules
 dist/bundle.js
 dist/styles.css

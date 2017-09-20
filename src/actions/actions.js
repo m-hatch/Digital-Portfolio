@@ -1,6 +1,10 @@
 import * as types from './types';
 
 // action creators
+export function setMainContent(data) {
+  return { type: types.SET_MAIN_CONTENT, data};
+}
+
 export function parallax(top) {
   return { type: types.PARALLAX, top };
 }
