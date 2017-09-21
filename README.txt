@@ -15,6 +15,8 @@ npm install --save-dev file-loader
 npm install --save-dev url-loader
 npm install --save redux
 npm install --save react-redux
+npm install --save core-js
+npm install --save whatwg-fetch
 
 ## Run the Development Server
 webpack-dev-server
