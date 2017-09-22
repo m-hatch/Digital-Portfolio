@@ -16,6 +16,7 @@
   transition: 0.8s;
 
   &__btn,
+  &__btn:hover,
   &__btn:focus,
   &__btn:active {
     /* Remove all decorations to look like normal text */
@@ -29,9 +30,9 @@
     outline-offset: 0;
     /* Additional styles */
     position: absolute;
+    top: 0;
     transform-origin: left top;
     transform: rotate(90deg) translateX(-32%);
-    float: right;
     padding: 5px;
     cursor: pointer;
   }
