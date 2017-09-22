@@ -9,7 +9,6 @@ Digital portfolio website for Montgomery Hatch
 
 2. Add data
 
----
 
 ### REST API
 1. Install [Node.js](https://nodejs.org/en/download/)
@@ -21,17 +20,16 @@ Digital portfolio website for Montgomery Hatch
 
 3. Connect to database.  
 
-  In /api/server.js update `mongoose.connect()` with your db connect string. For local development use 
+   In /api/server.js update `mongoose.connect()` with your db connect string. For local development use 
   `mongodb://127.0.0.1:27017/{database name}`
 
 4. Start NodeJS server.  
 
-  Navigate to /api and run 
+   Navigate to /api and run 
   ` node server.js`  
 
-  *Default port is 3000, you can set this in* /api/server.js
+   *Default port is 3000, you can set this in* /api/server.js
 
----
 
 ### Application
 
