@@ -1,5 +1,4 @@
 # Digital Portfolio #
-==========================
 
 Digital portfolio website for Montgomery Hatch
 
@@ -9,6 +8,8 @@ Digital portfolio website for Montgomery Hatch
 1. Install [MongoDB](https://docs.mongodb.com/manual/installation/)
 
 2. Add data
+
+---
 
 ### REST API
 1. Install [Node.js](https://nodejs.org/en/download/)
@@ -29,6 +30,8 @@ Digital portfolio website for Montgomery Hatch
   ` node server.js`  
 
   *Default port is 3000, you can set this in* /api/server.js
+
+---
 
 ### Application
 
