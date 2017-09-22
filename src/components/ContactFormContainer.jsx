@@ -5,19 +5,11 @@ import * as actions from '../actions/actions';
 
 export const ContactFormContainer = React.createClass({
 
-  openForm: function(event) {
-    this.props.dispatch(actions.showContactForm(true));
-  },
-
-  closeForm: function() {
-    this.props.dispatch(actions.showContactForm(false));
-  },
-
   handleOutsideClick: function(event) {
     const formContainer = this.form_container;
 
     if(event.target == formContainer) {
-      this.closeForm();
+      this.props.closeForm();
     }
   },
 
@@ -30,6 +22,7 @@ export const ContactFormContainer = React.createClass({
     const inputs = document.querySelectorAll('.contact-form__input');
     let isValid = true;
 
+    // validate form fields
     inputs.forEach(input => {
       input.classList.add('active');
       
@@ -68,7 +61,7 @@ export const ContactFormContainer = React.createClass({
       <ContactForm 
         formContainerRef={ el => this.form_container = el }
         showForm={ this.props.showForm }
-        closeForm={ this.closeForm }
+        closeForm={ this.props.closeForm }
         handleOutsideClick={ this.handleOutsideClick }
         handleChange={ this.handleChange }
         handleSubmit={ this.handleSubmit } />
@@ -83,6 +76,15 @@ const mapStateToProps = (state) => {
   };
 }
 
+const mapDispatchToProps = (dispatch) => {
+  return {
+    closeForm: () => {
+      dispatch(actions.showContactForm(false));
+    }
+  };
+};
+
 export default connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(ContactFormContainer);

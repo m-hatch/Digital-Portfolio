@@ -15,11 +15,11 @@ export const Splash = React.createClass({
 
     // check if splash is in view
     if (isInView(this.refs.splash)) {
-      this.props.dispatch(actions.setSplashVisibility(true));
-      this.props.dispatch(actions.parallax(scrollTop * .7));
-      this.props.dispatch(actions.setSplashOpacity((elementHeight - scrollTop) / elementHeight));
+      this.props.setVisibility(true);
+      this.props.setOpacity((elementHeight - scrollTop) / elementHeight);
+      this.props.setParallax(scrollTop * .7);
     } else {
-      this.props.dispatch(actions.setSplashVisibility(false));
+      this.props.setVisibility(false);
     }
   },
 
@@ -71,8 +71,23 @@ const mapStateToProps = (state) => {
     opacity: state.splash.opacity,
     isVisible: state.splash.isVisible
   };
-}
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    setVisibility: (isVisible) => {
+      dispatch(actions.setSplashVisibility(isVisible));
+    },
+    setOpacity: (opacity) => {
+      dispatch(actions.setSplashOpacity(opacity));
+    },
+    setParallax: (scrollTop) => {
+      dispatch(actions.parallax(scrollTop));
+    }
+  };
+};
 
 export default connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(Splash);

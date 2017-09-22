@@ -57,7 +57,7 @@ const mapStateToProps = (state) => {
   return {
     content: state.main.content
   };
-}
+};
 
 export default connect(
   mapStateToProps

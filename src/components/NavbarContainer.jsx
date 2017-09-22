@@ -15,12 +15,12 @@ export const NavbarContainer = React.createClass({
   },
 
   setVisibility: function(status) {
-    this.props.dispatch(actions.showNav(status));
+    this.props.setShowNav(status);
   },
 
   toggleNav: function() {
-    this.props.dispatch(actions.animateNav(true));
-    this.props.dispatch(actions.toggleNav());
+    this.props.setAnimation(true);
+    this.props.toggle();
   },
 
   handleWheel: function(event) {
@@ -46,7 +46,7 @@ export const NavbarContainer = React.createClass({
 
   handleResize: function(event) {
     // prevent animating nav change on window resize
-    this.props.dispatch(actions.animateNav(false));
+    this.props.setAnimation(false);
   },
 
   handleHover: function(mouseEvent) {
@@ -97,8 +97,23 @@ const mapStateToProps = (state) => {
     toggleNav: state.navbar.toggleNav,
     animate: state.navbar.animate
   }
-}
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    setShowNav: (status) => {
+      dispatch(actions.showNav(status));
+    },
+    setAnimation: (status) => {
+      dispatch(actions.animateNav(status));
+    },
+    toggle: () => {
+      dispatch(actions.toggleNav());
+    }
+  };
+};
 
 export default connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(NavbarContainer);

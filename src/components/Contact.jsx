@@ -9,8 +9,8 @@ export const Contact = React.createClass({
     return this.props.content || {};
   },
 
-  openForm: function(event) {
-    this.props.dispatch(actions.showContactForm(true));
+  handleClick: function(event) {
+    this.props.openForm();
   },
 
   render: function() {
@@ -23,7 +23,7 @@ export const Contact = React.createClass({
             
             <p>{ this.getContent().text }</p>
 
-            <button className="contact__button contact__btn-dialog" onClick={ this.openForm }>
+            <button className="contact__button contact__btn-dialog" onClick={ this.handleClick }>
               Send a message
             </button>
 
@@ -35,4 +35,15 @@ export const Contact = React.createClass({
   
 });
 
-export default connect()(Contact);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    openForm: () => {
+      dispatch(actions.showContactForm(true));
+    }
+  };
+};
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(Contact);

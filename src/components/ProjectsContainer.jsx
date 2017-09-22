@@ -11,7 +11,7 @@ export const ProjectsContainer = React.createClass({
     const projects = this.props.projects.map((project, index) => {
       return <Project project={ project } 
               key={ project.name } 
-              openModal={ this.openModal } />;
+              openModal={ this.props.openModal } />;
     });
     
     return projects;
@@ -28,11 +28,6 @@ export const ProjectsContainer = React.createClass({
       ((elemPos < scrollCenter) && (elemPos + el.clientHeight > scrollCenter)) 
         ? el.classList.add('project--active') : el.classList.remove('project--active');
     });
-  },
-
-  openModal: function(event, project) {
-    this.props.dispatch(actions.showModal(true));
-    this.props.dispatch(actions.setModalContent(project));
   },
 
   componentDidMount: function() {
@@ -53,4 +48,16 @@ export const ProjectsContainer = React.createClass({
   
 });
 
-export default connect()(ProjectsContainer);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    openModal: (event, project) => {
+      dispatch(actions.showModal(true));
+      dispatch(actions.setModalContent(project));
+    }
+  };
+};
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(ProjectsContainer);

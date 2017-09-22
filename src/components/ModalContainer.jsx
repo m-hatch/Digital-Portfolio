@@ -9,20 +9,11 @@ export const ModalContainer = React.createClass({
     return { __html: markup };
   },
 
-  openModal: function(event, project) {
-    this.props.dispatch(actions.showModal(true));
-    this.props.dispatch(actions.setModalContent(project));
-  },
-
-  closeModal: function() {
-    this.props.dispatch(actions.showModal(false));
-  },
-
   handleOutsideClick: function(event) {
     const modalContainer = this.container;
 
     if(event.target == modalContainer) {
-      this.closeModal();
+      this.props.closeModal();
     }
   },
   
@@ -33,7 +24,7 @@ export const ModalContainer = React.createClass({
         content={ this.getRichText(this.props.content.description) }
         containerRef={ el => this.container = el }
         showModal={ this.props.showModal }
-        closeModal={ this.closeModal }
+        closeModal={ this.props.closeModal }
         handleOutsideClick={ this.handleOutsideClick} />
     );
   }
@@ -45,8 +36,17 @@ const mapStateToProps = (state) => {
     showModal: state.modal.showModal,
     content: state.modal.content
   };
-}
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    closeModal: () => {
+      dispatch(actions.showModal(false));
+    }
+  };
+};
 
 export default connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(ModalContainer);
