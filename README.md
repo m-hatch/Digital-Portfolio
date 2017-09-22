@@ -15,8 +15,8 @@ Digital portfolio website for Montgomery Hatch
 
 2. Retrieve project dependencies  
 
-  In project root run 
-  `$ npm install`
+   In project root run 
+   `$ npm install`
 
 3. Connect to database.  
 
