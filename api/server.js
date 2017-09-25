@@ -8,6 +8,7 @@ var aboutRoute = require('./routes/aboutRoute.js');
 var portfolioRoute = require('./routes/portfolioRoute.js');
 var contactRoute = require('./routes/contactRoute.js');
 var allDataRoute = require('./routes/allDataRoute.js');
+var mailRoute = require('./routes/mailRoute.js');
 
 // initialize api and configure to get data from POST
 var api = express();
@@ -27,6 +28,7 @@ api.use('/about', aboutRoute);
 api.use('/portfolio', portfolioRoute);
 api.use('/contact', contactRoute);
 api.use('/alldata', allDataRoute);
+api.use('/mail', mailRoute);
 
 // start server
 api.listen(port);
