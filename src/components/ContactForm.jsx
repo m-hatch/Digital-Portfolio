@@ -17,6 +17,7 @@ export default React.createClass({
           </div>
           
           <form className="contact-form__container"
+            ref={ this.props.formRef }
             id="contactForm" noValidate>
 
             <label htmlFor="firstname" 

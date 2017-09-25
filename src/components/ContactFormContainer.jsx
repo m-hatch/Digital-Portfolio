@@ -34,7 +34,23 @@ export const ContactFormContainer = React.createClass({
     });
 
     if (isValid) {
+      const form = this.form_ref;
       console.log('submit form');
+      
+      let formData = JSON.stringify({
+        name: form.firstname.value + ' ' + form.lastname.value,
+        email: form.email.value,
+        company: form.company.value,
+        message: form.message.value
+      });
+
+      fetch('http://localhost:3000/mail', {
+        method: 'post',
+        headers: { 'Content-Type': 'application/json' },
+        body: formData
+      })
+      .then(response => response.json())
+      .then(message => console.log(message));
     }
   },
 
@@ -60,6 +76,7 @@ export const ContactFormContainer = React.createClass({
     return (
       <ContactForm 
         formContainerRef={ el => this.form_container = el }
+        formRef={ el => this.form_ref = el }
         showForm={ this.props.showForm }
         closeForm={ this.props.closeForm }
         handleOutsideClick={ this.handleOutsideClick }
