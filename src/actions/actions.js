@@ -40,3 +40,7 @@ export function setModalContent(project) {
 export function showContactForm(isVisible) {
   return { type: types.SHOW_CONTACT_FORM, isVisible};
 }
+
+export function setFormCompleted(isComplete) {
+  return { type: types.SET_FORM_COMPLETED, isComplete};
+}

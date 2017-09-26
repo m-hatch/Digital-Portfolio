@@ -73,6 +73,10 @@ function contact(state = init.contact, action) {
       return Object.assign(
         {}, state, { showForm: action.isVisible }
       );
+    case types.SET_FORM_COMPLETED:
+      return Object.assign(
+        {}, state, { isComplete: action.isComplete }
+      );
     default:
       return state;
   }

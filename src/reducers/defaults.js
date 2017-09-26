@@ -32,5 +32,6 @@ export const modal = {
 };
 
 export const contact = {
-  showForm: false
+  showForm: false,
+  isComplete: false
 };

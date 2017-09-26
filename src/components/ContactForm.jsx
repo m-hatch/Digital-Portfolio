@@ -15,8 +15,16 @@ export default React.createClass({
             <span className="contact-form__close" onClick={ this.props.closeForm }>&times;</span>
             <h3 className="contact-form__heading">Contact Form</h3>
           </div>
+
+          { 
+            this.props.completed && 
+            <div>
+              <img src="img/checkmark.png" alt="checkmark" className="contact-form__checkmark"/>
+              <p className="contact-form__confirm">Your message has been sent!</p>
+            </div>
+          }
           
-          <form className="contact-form__container"
+          <form className={ this.props.completed ? "contact-form__container contact-form__container--complete" : "contact-form__container" }
             ref={ this.props.formRef }
             id="contactForm" noValidate>
 

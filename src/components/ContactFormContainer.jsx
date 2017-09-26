@@ -50,7 +50,10 @@ export const ContactFormContainer = React.createClass({
         body: formData
       })
       .then(response => response.json())
-      .then(message => console.log(message));
+      .then(message => {
+        console.log(message);
+        this.props.completeForm();
+      });
     }
   },
 
@@ -81,7 +84,8 @@ export const ContactFormContainer = React.createClass({
         closeForm={ this.props.closeForm }
         handleOutsideClick={ this.handleOutsideClick }
         handleChange={ this.handleChange }
-        handleSubmit={ this.handleSubmit } />
+        handleSubmit={ this.handleSubmit } 
+        completed={ this.props.isComplete } />
     );
   }
 
@@ -89,7 +93,8 @@ export const ContactFormContainer = React.createClass({
 
 const mapStateToProps = (state) => {
   return {
-    showForm: state.contact.showForm
+    showForm: state.contact.showForm,
+    isComplete: state.contact.isComplete
   };
 }
 
@@ -97,6 +102,9 @@ const mapDispatchToProps = (dispatch) => {
   return {
     closeForm: () => {
       dispatch(actions.showContactForm(false));
+    },
+    completeForm: () => {
+      dispatch(actions.setFormCompleted(true));
     }
   };
 };
