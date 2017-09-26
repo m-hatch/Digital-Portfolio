@@ -13,12 +13,12 @@ export default React.createClass({
         <ul>
           { this.props.github && 
             <li className="project__list-item">
-              <a className="project__link" href={this.props.github}>Source Code</a>
+              <a className="project__link" href={this.props.github} target="_blank">Source Code</a>
             </li> 
           }
           { this.props.webLink && 
             <li className="project__list-item">
-              <a className="project__link" href={ this.props.webLink }>View Project</a>
+              <a className="project__link" href={ this.props.webLink } target="_blank">View Project</a>
             </li> 
           }
         </ul>
