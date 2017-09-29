@@ -40,7 +40,7 @@
         "is_empty": false,
         "icon": "fa-code",
         "area": "Front-End",
-        "description": "I am comfortable with a variety of Javascript frameworks including React, AngularJS, or just plain vanilla Javascript! I use front end build tools such as Gulp and Webpack for asset bundling and optimization. I follow the latest developments and trends in CSS and use Sass for preprocessing, and naming strategies such as BEM for maximum maintainablility."
+        "description": "I am comfortable with a variety of Javascript frameworks including React, AngularJS, or just plain vanilla Javascript! I use front end build tools such as Gulp and Webpack for asset bundling and optimization. I follow the latest developments and trends in CSS, use preprocessors like Sass, and naming strategies such as BEM for maximum maintainablility."
       },
       {
         "is_empty": false,
@@ -70,40 +70,58 @@
   },
   "projects": [
     {
+      "name": "Digital Portfolio",
+      "img": "mh.jpg",
+      "img_alt": "montgomeryhatch.com",
+      "tagline": "Digital Portfolio website for Montgomery Hatch",
+      "description": "<p>Okay, so it's kind of meta to list this website on itself, but it was designed specifically to provide sample source code in the technologies that I'm interested in.</p><p>This website is a single page app built using React/Redux with a NodeJS/Express backend and MongoDB database. The application is built entirely with Javascript and utilizes ES6 syntax transpiled and bundled using Webpack. Typically, an application of this size would not require a Redux store to manage its state - the native React state is more than sufficient &mdash; but once again, it is included to provide an example of how I would manage state in larger applications. Towards the same ends, the project includes a unit test suite using Mocha/Chai.</p><p class='table-heading'>Technologies used:</p><table><tr><td>Javascript</td><td>NodeJS</td><td>React.js</td><td>Redux</td></tr><tr><td>Webpack</td><td>Express</td><td>MongoDB</td><td>Mocha/Chai</td></tr><tr><td>Sass/SCSS</td></tr></table>",
+      "github": "https://github.com/m-hatch/montgomeryhatch.com",
+      "link": "http://montgomeryhatch.com"
+    },
+    {
       "name": "Bachovich Music Publications",
       "img": "bmp.png",
-      "img_alt": "alt desc",
-      "tagline": "E-commerce website for Bachovich Music Publications.",
-      "description": "<p>Lorem ipsum dolor sit amet, mea graece volumus forensibus ea. No his fugit dicta lobortis, eos sale vituperata in. Quis ferri disputando te eam. Et feugiat indoctum contentiones eum, dicit affert ne his.</p><p>Harum graecis cum ut, ipsum vulputate consetetur ius ad, nibh adipiscing et vix. Solet iudico ne duo, ut mei ceteros instructior. Sea ex timeam volumus, ex omnis urbanitas mea. Nam at graece hendrerit comprehensam, at pri vitae ubique civibus. Ad iudicabit similique mediocritatem sit, cu pro sumo nulla urbanitas.</p><p>Persius epicurei assentior quo eu, vix possim aliquam molestiae ex. Ius ut oblique phaedrum laboramus, cum ut copiosae deseruisse. His omittam mandamus et, usu fugit alienum torquatos te. Eu ridens tincidunt vituperatoribus has. Mundi pertinacia in sed, choro solet ex mei. Impedit sententiae vis at, est ei velit percipit constituto.</p><p>Lorem scribentur te eum, qui eu invidunt molestiae efficiantur. Rebum vidisse et vis, ceteros oporteat eleifend ea ius, malis expetenda ad sit. Delenit partiendo salutatus et his, ad nec mandamus reprimique. Cu nam delectus periculis consequat. Te doming theophrastus mel, phaedrum persecuti ne per, corrumpit constituam repudiandae cu vim. Nam inermis mediocritatem ei.</p>",
-      "github": "repository",
-      "link": "website"
+      "img_alt": "bachovich.com",
+      "tagline": "E-commerce website for Bachovich Music Publications",
+      "description": "<p>As Lead Developer for this project, I was involved in all aspects of development process from inception to deployment. This included designing the databse schema in MySQL, website design, frontend development using AngularJS, backend development using Slim PHP, development of a custom content management system, data migration, and maintenance.</p><p>This project was a great experience for me, both in terms of development, and in terms of project management and communication skills. The goal of the project was to create a dynamic, modern application that non-technical users could easily maintain and update. Deployed in 2015 and still used today, the project was a success and saved the company cosiderable costs compared to their previous web solutions.</p><p class='table-heading'>Technologies used:</p><table><tr><td>Javascript</td><td>AngularJS</td><td>Slim PHP</td><td>HTML/CSS</td></tr><tr><td>Bootstrap 3</td><td>MySQL</td></tr></table>",
+      "github": "https://github.com/m-hatch/BachovichMusicPublications",
+      "link": "http://www.bachovich.com"
+    },
+    {
+      "name": "Association for Computing Machinery",
+      "img": "acm.jpg",
+      "img_alt": "acm.org",
+      "tagline": "Website for ACM, the world's largest educational and scientific computing society",
+      "description": "<p>At ACM, I am in charge of development for the flagship ACM website as well as it's numerous subdomains. The applications are built using the Hippo CMS Java framework with Gulp frontend builds. Content is delivered through a combination of user contributions to the CMS repository, and data driven components and page templates. The source code is proprietary and involves a number of files and configurations, but I have provided examples on Gist of what some of the more common component files typically look like.</p><ul><li><a href=''>Component Java class</a></li><li><a href=''>Contributor dialog class</a></li><li><a href=''>JSP template</a></li></ul><p class='table-heading'>Technologies used:</p><table><tr><td>Java</td><td>JSP/JSTL</td><td>Hippo</td><td>Maven</td></tr><tr><td>Gulp</td><td>Javascript</td><td>Sass/SCSS</td><td>Freemarker</td></tr><tr></tr></table>",
+      "github": "",
+      "link": "http://www.acm.org"
     },
     {
       "name": "Hook & Loop",
       "img": "hl.jpg",
-      "img_alt": "alt desc 2",
-      "tagline": "Website for Hook & Loop, the creative agency of Infor.",
-      "description": "<p>Lorem ipsum dolor sit amet, mea graece volumus forensibus ea. No his fugit dicta lobortis, eos sale vituperata in. Quis ferri disputando te eam. Et feugiat indoctum contentiones eum, dicit affert ne his.</p><p>Harum graecis cum ut, ipsum vulputate consetetur ius ad, nibh adipiscing et vix. Solet iudico ne duo, ut mei ceteros instructior. Sea ex timeam volumus, ex omnis urbanitas mea. Nam at graece hendrerit comprehensam, at pri vitae ubique civibus. Ad iudicabit similique mediocritatem sit, cu pro sumo nulla urbanitas.</p><p>Persius epicurei assentior quo eu, vix possim aliquam molestiae ex. Ius ut oblique phaedrum laboramus, cum ut copiosae deseruisse. His omittam mandamus et, usu fugit alienum torquatos te. Eu ridens tincidunt vituperatoribus has. Mundi pertinacia in sed, choro solet ex mei. Impedit sententiae vis at, est ei velit percipit constituto.</p><p>Lorem scribentur te eum, qui eu invidunt molestiae efficiantur. Rebum vidisse et vis, ceteros oporteat eleifend ea ius, malis expetenda ad sit. Delenit partiendo salutatus et his, ad nec mandamus reprimique. Cu nam delectus periculis consequat. Te doming theophrastus mel, phaedrum persecuti ne per, corrumpit constituam repudiandae cu vim. Nam inermis mediocritatem ei.</p>",
-      "github": "my/repository",
-      "link": "website2"
+      "img_alt": "hookandloopnyc.com",
+      "tagline": "Website for Hook & Loop, the creative agency of Infor",
+      "description": "<p>At Infor | Hook &amp; Loop, one of my projects was to update and renovate their custom Wordpress theme. This involved a revamp of the responsive grid system (the previous system was designed mobile last), building a new navigation system, and fixing animation and parallax bugs. The code is proprietary, so I do not have a code sample, but the website is still beautiful!</p><p class='table-heading'>Technologies used:</p><table><tr><td>Javascript</td><td>PHP</td><td>jQuery</td><td>HTML/CSS</td></tr><tr><td>Wordpress</td><td>MySQL</td></tr></table>",
+      "github": "",
+      "link": "http://www.hookandloopnyc.com"
     },
     {
       "name": "Pronto",
       "img": "pronto.jpg",
-      "img_alt": "alt desc",
-      "tagline": "E-commerce website for Bachovich Music Publications.",
-      "description": "<p>Lorem ipsum dolor sit amet, mea graece volumus forensibus ea. No his fugit dicta lobortis, eos sale vituperata in. Quis ferri disputando te eam. Et feugiat indoctum contentiones eum, dicit affert ne his.</p><p>Harum graecis cum ut, ipsum vulputate consetetur ius ad, nibh adipiscing et vix. Solet iudico ne duo, ut mei ceteros instructior. Sea ex timeam volumus, ex omnis urbanitas mea. Nam at graece hendrerit comprehensam, at pri vitae ubique civibus. Ad iudicabit similique mediocritatem sit, cu pro sumo nulla urbanitas.</p><p>Persius epicurei assentior quo eu, vix possim aliquam molestiae ex. Ius ut oblique phaedrum laboramus, cum ut copiosae deseruisse. His omittam mandamus et, usu fugit alienum torquatos te. Eu ridens tincidunt vituperatoribus has. Mundi pertinacia in sed, choro solet ex mei. Impedit sententiae vis at, est ei velit percipit constituto.</p><p>Lorem scribentur te eum, qui eu invidunt molestiae efficiantur. Rebum vidisse et vis, ceteros oporteat eleifend ea ius, malis expetenda ad sit. Delenit partiendo salutatus et his, ad nec mandamus reprimique. Cu nam delectus periculis consequat. Te doming theophrastus mel, phaedrum persecuti ne per, corrumpit constituam repudiandae cu vim. Nam inermis mediocritatem ei.</p>",
+      "img_alt": "pronto demo",
+      "tagline": "Proof of concept for the Pronto Expense app",
+      "description": "<p>This was a static proof of concept for the mobile expense app Pronto. It explores the idea of creating a storyline experience using animations on scroll. It was impemented using standard Javascript, jQuery, CSS 3 animations, and the Scroll Magic JS library.</p><p class='table-heading'>Technologies used:</p><table><tr><td>Javascript</td><td>jQuery</td><td>HTML/CSS</td><td>Scroll Magic</td></tr></table>",
       "github": "repository",
-      "link": "website"
+      "link": "http://montgomeryhatch.com/demos/pronto"
     },
     {
-      "name": "Promiscuities",
-      "img": "promiscuities.png",
-      "img_alt": "alt desc 2",
-      "tagline": "Website for Hook & Loop, the creative agency of Infor.",
-      "description": "<p>Lorem ipsum dolor sit amet, mea graece volumus forensibus ea. No his fugit dicta lobortis, eos sale vituperata in. Quis ferri disputando te eam. Et feugiat indoctum contentiones eum, dicit affert ne his.</p><p>Harum graecis cum ut, ipsum vulputate consetetur ius ad, nibh adipiscing et vix. Solet iudico ne duo, ut mei ceteros instructior. Sea ex timeam volumus, ex omnis urbanitas mea. Nam at graece hendrerit comprehensam, at pri vitae ubique civibus. Ad iudicabit similique mediocritatem sit, cu pro sumo nulla urbanitas.</p><p>Persius epicurei assentior quo eu, vix possim aliquam molestiae ex. Ius ut oblique phaedrum laboramus, cum ut copiosae deseruisse. His omittam mandamus et, usu fugit alienum torquatos te. Eu ridens tincidunt vituperatoribus has. Mundi pertinacia in sed, choro solet ex mei. Impedit sententiae vis at, est ei velit percipit constituto.</p><p>Lorem scribentur te eum, qui eu invidunt molestiae efficiantur. Rebum vidisse et vis, ceteros oporteat eleifend ea ius, malis expetenda ad sit. Delenit partiendo salutatus et his, ad nec mandamus reprimique. Cu nam delectus periculis consequat. Te doming theophrastus mel, phaedrum persecuti ne per, corrumpit constituam repudiandae cu vim. Nam inermis mediocritatem ei.</p>",
-      "github": "my/repository",
-      "link": "website2"
+      "name": "ACM APIs",
+      "img": "spring.jpg",
+      "img_alt": "spring boot logo",
+      "tagline": "Java REST APIs of ACM",
+      "description": "<p>Since joining ACM, I have taken on the lead developer role for the ACM Spring Boot APIs. These REST APIs are tightly coupled to the main website as well as a number of other websites and subdomains within the ACM umbrella. The applications are built using the Java Spring Boot framework with Hibernate, Jackson, and Lombok plugins. I use Spring Data JPA methods to connect to databases in Oracle and Postgres.</p><p>The code is propietary, but I have built a sample Spring Boot app to give a general idea of the architecture and coding style that I use.</p><p class='table-heading'>Technologies used:</p><table><tr><td>Java</td><td>Spring Boot</td><td>Hibernate</td><td>Maven</td></tr><tr><td>Spring Data JPA</td><td>Lombok</td><td>Jackson</td><td>Oracle</td></tr><tr><td>Postgres</td></tr></table>",
+      "github": "https://github.com/m-hatch/Spring-Boot-Demo",
+      "link": ""
     }
   ],
   "contact": {

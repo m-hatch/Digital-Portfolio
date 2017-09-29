@@ -15,7 +15,8 @@ import * as actions from '../actions/actions';
 export const Main = React.createClass({
 
   getData: function(data) {
-    return this.props.content;
+    //return this.props.content;
+    return appData;
   },
 
   componentDidMount: function() {
