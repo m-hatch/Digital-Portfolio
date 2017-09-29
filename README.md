@@ -14,21 +14,25 @@ Digital portfolio website for Montgomery Hatch
 2. Retrieve project dependencies  
 
    In project root run 
-   `$ npm install`
+   `$ npm install` 
 
-3. Connect to database  
+3. Set mail client 
+
+   Set the username/password in /api/routes/mailRoute.js 
+
+4. Connect to database  
 
    In /api/server.js update `mongoose.connect()` with your db connect string. For local development use 
   `mongodb://127.0.0.1:27017/{database name}`
 
-4. Start NodeJS server  
+5. Start NodeJS server  
 
    Navigate to /api and run 
   ` node server.js`  
 
    *Default port is 3000, you can set this in* /api/server.js
 
-5. Add data   
+6. Add data   
 
    You may add data using the mongo command line interface or by using the REST API endpoints defined in /api/server.js
 
