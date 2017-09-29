@@ -9,11 +9,11 @@ export default React.createClass({
       let html;
 
       if (char === ' ') { 
-        html = '<span class="type">&nbsp;</span>';
+        html = '<span class="type type--active">&nbsp;</span>';
       } else if (char === '/') { 
-        html = '<span class="type__break type"></span>';
+        html = '<span class="type type__break type--active"></span>';
       } else { 
-        html = '<span class="type">'+char+'</span>';
+        html = '<span class="type type--active">'+char+'</span>';
       }
 
       return html;
