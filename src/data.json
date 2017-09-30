@@ -106,13 +106,13 @@
       "link": "http://www.hookandloopnyc.com"
     },
     {
-      "name": "Pronto",
+      "name": "Tally",
       "img": "pronto.jpg",
-      "img_alt": "pronto demo",
-      "tagline": "Proof of concept for the Pronto Expense app",
-      "description": "<p>This was a static proof of concept for the mobile expense app Pronto. It explores the idea of creating a storyline experience using animations on scroll. It was impemented using standard Javascript, jQuery, CSS 3 animations, and the Scroll Magic JS library.</p><p class='table-heading'>Technologies used:</p><table><tr><td>Javascript</td><td>jQuery</td><td>HTML/CSS</td><td>Scroll Magic</td></tr></table>",
-      "github": "repository",
-      "link": "http://montgomeryhatch.com/demos/pronto"
+      "img_alt": "tally demo",
+      "tagline": "Proof of concept for the Tally Expense app",
+      "description": "<p>This was a static proof of concept for the mobile expense app Tally. It explores the idea of creating a storyline experience using animations on scroll. It was impemented using standard Javascript, jQuery, CSS 3 animations, and the Scroll Magic JS library.</p><p class='table-heading'>Technologies used:</p><table><tr><td>Javascript</td><td>jQuery</td><td>HTML/CSS</td><td>Scroll Magic</td></tr></table>",
+      "github": "https://github.com/m-hatch/Tally-Demo",
+      "link": "https://m-hatch.github.io/Tally-Demo"
     },
     {
       "name": "ACM APIs",
