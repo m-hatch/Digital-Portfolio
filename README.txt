@@ -17,6 +17,9 @@ npm install --save redux
 npm install --save react-redux
 npm install --save core-js
 npm install --save whatwg-fetch
+## in /api/
+npm install --save compression
+npm install --save helmet
 
 ## Run the Development Server
 webpack-dev-server
