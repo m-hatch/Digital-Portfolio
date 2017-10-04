@@ -21,11 +21,12 @@ export default React.createClass({
               <a className="project__link" href={ this.props.webLink } target="_blank">View Project</a>
             </li> 
           }
+          <li>
+            <button className="button project__button" onClick={ this.props.openModal }>
+              Description
+            </button>
+          </li>
         </ul>
-
-        <button className="button project__button" onClick={ this.props.openModal }>
-          Description
-        </button>
 
         <VerticalButton label="Description" openModal={ this.props.openModal } />
 
