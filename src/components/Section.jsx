@@ -1,27 +1,21 @@
 import React from 'react';
 
-export default React.createClass({
+export default (props) => {
 
-  getHeading: function() {
-    return this.props.heading;
-  },
+  const getBackground = () => {
+    return (props.bg === 'grey') ? "l-section l-section__bg" : "l-section";
+  };
 
-  getBackground: function() {
-    return (this.props.bg === 'grey') ? " l-section__bg" : "";
-  },
+  return (
+    <div id={ props.heading } className={ getBackground() }>
+      <div className="l-wrapper">
 
-  render: function() {
-    return (
-      <div id={ this.getHeading() } className={ "l-section" + this.getBackground() }>
-        <div className="l-wrapper">
+        <h2 className="l-section__heading">{ props.heading }</h2>
 
-          <h2 className="l-section__heading">{ this.getHeading() }</h2>
+        { props.children }
 
-          { this.props.children }
-
-        </div>
       </div>
-    );
-  }
+    </div>
+  );
   
-});
+}

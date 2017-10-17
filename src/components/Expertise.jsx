@@ -1,10 +1,10 @@
 import React from 'react';
 
-export default React.createClass({
+export default (props) => {
 
-  getSkills: function() {
-    const expertise = this.props.skills || [];
-    const skills = expertise.map((skill, index) => {
+  // build array of skill components
+  const getSkills = () => {
+    const skills = props.skills.map((skill, index) => {
       return (
         <div className={ skill.is_empty ? "expertise__box expertise--empty" : "expertise__box" }
           key={ index }>
@@ -16,19 +16,17 @@ export default React.createClass({
     })
 
     return skills;
-  },
+  };
 
-  render: function() {
-    return (
-      <div className="expertise">
+  return (
+    <div className="expertise">
 
-        <h3 className="expertise__heading">{ this.props.heading }</h3>
-        <span className="expertise__sub-heading">{ this.props.description }</span>
+      <h3 className="expertise__heading">{ props.heading }</h3>
+      <span className="expertise__sub-heading">{ props.description }</span>
 
-        <div>{ this.getSkills() }</div>
+      <div>{ getSkills() }</div>
 
-      </div>
-    );
-  }
+    </div>
+  );
   
-});
+}

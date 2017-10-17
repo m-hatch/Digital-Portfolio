@@ -1,18 +1,16 @@
 import React from 'react';
 
-export default React.createClass({
+export default (props) => {
   
-  render: function() {
-    return (
-      <div className="project__image">
-        <a href={ this.props.link } target="_blank">
-          <div className="image__filter"></div>
-          <img className="project__img" 
-	          src={ 'img/' + this.props.img } 
-	          alt={ this.props.imgAlt } />
-        </a>
-      </div>
-    );
-  }
+  return (
+    <div className="project__image">
+      <a href={ props.link } target="_blank">
+        <div className="image__filter"></div>
+        <img className="project__img" 
+          src={ 'img/' + props.img } 
+          alt={ props.imgAlt } />
+      </a>
+    </div>
+  );
 
-});
+}
