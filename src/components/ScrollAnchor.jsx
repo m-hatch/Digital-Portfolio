@@ -1,15 +1,15 @@
 import React from 'react';
 import * as util from '../util/utilities';
 
-export default React.createClass({
+export default (props) => {
 
-  animateScroll: function(props) {
-    const id = (props.to && props.to.replace(/^#/, '')) || '';
+  const animateScroll = (options) => {
+    const id = (options.to && options.to.replace(/^#/, '')) || '';
     const element = id ? document.getElementById(id) : document.body;
     const start = util.getScrollTop();
-    const pos = util.getOffsetTop(element) + props.animate.offset;
+    const pos = util.getOffsetTop(element) + options.animate.offset;
     const change = pos - start;
-    const duration = props.animate.duration;
+    const duration = options.animate.duration;
 
     function animate(elapsedTime = 0) {
       const increment = 20;
@@ -24,20 +24,17 @@ export default React.createClass({
     
     animate();
     window.location.hash = id;
-  },
+  };
 
-  handleClick: function(event) {
+  const handleClick = (event) => {
     event.preventDefault();
-    this.animateScroll(this.props);
-  },
+    animateScroll(props);
+  };
   
-  render: function() {
+  return (
+    <a className={ props.className } href='' onClick={ handleClick } >
+      { props.children }
+    </a>
+  );
 
-    return (
-      <a className={ this.props.className } href='' onClick={ this.handleClick } >
-        { this.props.children }
-      </a>
-    );
-  }
-
-});
+}

@@ -2,35 +2,35 @@ import React from 'react';
 import ProjectImage from './ProjectImage';
 import ProjectText from './ProjectText';
 
-export default React.createClass({
+export default (props) => {
 
-  getProject: function() {
-    return this.props.project || {};
-  },
+  // intialize project obj
+  const getProject = () => {
+    return props.project || {};
+  };
 
-  handleClick: function(event) {
-    this.props.openModal(event, this.getProject());
-  },
+  // call click handler passed through props with project data
+  const handleClick = (event) => {
+    props.openModal(event, getProject());
+  };
 
-  render: function() {
-    return (
-      <div className="project">
+  return (
+    <div className="project">
 
-        <ProjectImage 
-          img={ this.getProject().img } 
-          imgAlt={ this.getProject().img_alt }
-          link={ this.getProject().link } />
+      <ProjectImage 
+        img={ getProject().img } 
+        imgAlt={ getProject().img_alt }
+        link={ getProject().link } />
 
-        <ProjectText 
-          projectName={ this.getProject().name } 
-          tagline={ this.getProject().tagline } 
-          description={ this.getProject.description }
-          github={ this.getProject().github }
-          webLink={ this.getProject().link } 
-          openModal={ this.handleClick } />
+      <ProjectText 
+        projectName={ getProject().name } 
+        tagline={ getProject().tagline } 
+        description={ getProject.description }
+        github={ getProject().github }
+        webLink={ getProject().link } 
+        openModal={ handleClick } />
 
-      </div>
-    );
-  }
+    </div>
+  );
   
-});
+}
