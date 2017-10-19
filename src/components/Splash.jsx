@@ -7,9 +7,22 @@ import {
 import { connect } from 'react-redux';
 import * as actions from '../actions/actions';
 
-export const Splash = React.createClass({
+class Splash extends React.Component {
 
-  parallax: function(event) {
+  constructor(props) {
+    super(props);
+    this.parallax = this.parallax.bind(this);
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.parallax);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.parallax);
+  }
+
+  parallax(event) {
     const scrollTop = getScrollTop();
     const elementHeight = this.refs.splash.clientHeight;
 
@@ -21,17 +34,9 @@ export const Splash = React.createClass({
     } else {
       this.props.setVisibility(false);
     }
-  },
+  }
 
-  componentDidMount: function() {
-    window.addEventListener('scroll', this.parallax);
-  },
-
-  componentWillUnmount: function() {
-    window.removeEventListener('scroll', this.parallax);
-  },
-
-  render: function() {
+  render() {
     const splashStyle = { 
       transform: 'translateY(' + this.props.top +'px)',
       opacity: this.props.opacity ? this.props.opacity : 1
@@ -63,7 +68,7 @@ export const Splash = React.createClass({
     );
   }
 
-});
+}
 
 const mapStateToProps = (state) => {
   return {

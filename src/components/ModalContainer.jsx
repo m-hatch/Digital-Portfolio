@@ -3,21 +3,26 @@ import Modal from './Modal';
 import { connect } from 'react-redux';
 import * as actions from '../actions/actions';
 
-export const ModalContainer = React.createClass({
+class ModalContainer extends React.Component {
 
-  getRichText(markup) {
-    return { __html: markup };
-  },
+  constructor(props) {
+    super(props);
+    this.handleOutsideClick = this.handleOutsideClick.bind(this);
+  }
 
-  handleOutsideClick: function(event) {
+  handleOutsideClick(event) {
     const modalContainer = this.container;
 
     if(event.target == modalContainer) {
       this.props.closeModal();
     }
-  },
+  }
+
+  getRichText(markup) {
+    return { __html: markup };
+  }
   
-  render: function() {
+  render() {
     return (
       <Modal 
         name={ this.props.content.name }
@@ -29,7 +34,7 @@ export const ModalContainer = React.createClass({
     );
   }
 
-});
+}
 
 const mapStateToProps = (state) => {
   return {

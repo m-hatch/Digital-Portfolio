@@ -3,17 +3,23 @@ import Section from './Section';
 import { connect } from 'react-redux';
 import * as actions from '../actions/actions';
 
-export const Contact = React.createClass({
+class Contact extends React.Component {
 
-  getContent: function() {
+  constructor(props) {
+    super(props);
+    this.getContent = this.getContent.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  getContent() {
     return this.props.content || {};
-  },
+  }
 
-  handleClick: function(event) {
+  handleClick(event) {
     this.props.openForm();
-  },
+  }
 
-  render: function() {
+  render() {
     return (
       <Section heading="Contact" bg="white">
 
@@ -33,7 +39,7 @@ export const Contact = React.createClass({
     );
   }
   
-});
+}
 
 const mapDispatchToProps = (dispatch) => {
   return {
