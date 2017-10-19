@@ -3,22 +3,30 @@ import ContactForm from './ContactForm';
 import { connect } from 'react-redux';
 import * as actions from '../actions/actions';
 
-export const ContactFormContainer = React.createClass({
+class ContactFormContainer extends React.Component {
 
-  handleOutsideClick: function(event) {
+  constructor(props) {
+    super(props);
+    this.handleOutsideClick = this.handleOutsideClick.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.showInputError = this.showInputError.bind(this);
+  }
+
+  handleOutsideClick(event) {
     const formContainer = this.form_container;
 
     if(event.target == formContainer) {
       this.props.closeForm();
     }
-  },
+  }
 
-  handleChange: function(e) {
+  handleChange(e) {
     e.target.classList.add('active');
     this.showInputError(e.target.name);
-  },
+  }
 
-  handleSubmit: function() {
+  handleSubmit() {
     const inputs = document.querySelectorAll('.contact-form__input');
     let isValid = true;
 
@@ -55,9 +63,9 @@ export const ContactFormContainer = React.createClass({
         this.props.completeForm();
       });
     }
-  },
+  }
 
-  showInputError: function(name) {
+  showInputError(name) {
     const validity = document.getElementById(name).validity;
     const label = document.getElementById(`${name}Label`).textContent;
     const error = document.getElementById(`${name}Error`);
@@ -73,9 +81,9 @@ export const ContactFormContainer = React.createClass({
     error.textContent = message;
 
     return !isError;
-  },
+  }
   
-  render: function() {
+  render() {
     return (
       <ContactForm 
         formContainerRef={ el => this.form_container = el }
@@ -89,7 +97,7 @@ export const ContactFormContainer = React.createClass({
     );
   }
 
-});
+}
 
 const mapStateToProps = (state) => {
   return {

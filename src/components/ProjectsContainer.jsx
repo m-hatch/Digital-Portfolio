@@ -5,9 +5,23 @@ import * as util from '../util/utilities';
 import { connect } from 'react-redux';
 import * as actions from '../actions/actions';
 
-export const ProjectsContainer = React.createClass({
+class ProjectsContainer extends React.Component {
 
-  getProjects: function() {
+  constructor(props) {
+    super(props);
+    this.getProjects = this.getProjects.bind(this);
+    this.handleScroll = this.handleScroll.bind(this);
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  getProjects() {
     const projects = this.props.projects.map((project, index) => {
       return <Project project={ project } 
               key={ project.name } 
@@ -15,9 +29,9 @@ export const ProjectsContainer = React.createClass({
     });
     
     return projects;
-  },
+  }
 
-  handleScroll: function(event) {
+  handleScroll(event) {
     const scrollCenter = util.getScrollCenter();
     const projects = document.querySelectorAll('.project');
 
@@ -28,17 +42,9 @@ export const ProjectsContainer = React.createClass({
       ((elemPos < scrollCenter) && (elemPos + el.clientHeight > scrollCenter)) 
         ? el.classList.add('project--active') : el.classList.remove('project--active');
     });
-  },
-
-  componentDidMount: function() {
-    window.addEventListener('scroll', this.handleScroll);
-  },
-
-  componentWillUnmount: function() {
-    window.removeEventListener('scroll', this.handleScroll);
-  },
-
-  render: function() {
+  }
+  
+  render() {
     return (
       <Section heading="Projects" bg="grey">
           { this.getProjects() }
@@ -46,7 +52,7 @@ export const ProjectsContainer = React.createClass({
     );
   }
   
-});
+}
 
 const mapDispatchToProps = (dispatch) => {
   return {

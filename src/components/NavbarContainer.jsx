@@ -4,31 +4,40 @@ import * as util from '../util/utilities';
 import { connect } from 'react-redux';
 import * as actions from '../actions/actions';
 
-export const NavbarContainer = React.createClass({
+class NavbarContainer extends React.Component {
 
-  getName: function() {
-    return this.props.name || '';
-  },
+  constructor(props) {
+    super(props);
+    this.handleWheel = this.handleWheel.bind(this);
+    this.handleScroll = this.handleScroll.bind(this);
+    this.handleResize = this.handleResize.bind(this);
+    this.handleHover = this.handleHover.bind(this);
+    this.setVisibility = this.setVisibility.bind(this);
+    this.toggleNav = this.toggleNav.bind(this);
+  }
 
-  getLinks: function() {
-    return this.props.nav.links || [];
-  },
+  componentDidMount() {
+    window.addEventListener('wheel', this.handleWheel);
+    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('resize', this.handleResize);
+    this.nav.addEventListener('mouseenter', this.handleHover);
+    this.nav.addEventListener('mouseleave', this.handleHover);
+  }
 
-  setVisibility: function(status) {
-    this.props.setShowNav(status);
-  },
+  componentWillUnmount() {
+    window.removeEventListener('wheel', this.handleWheel);
+    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('resize', this.handleResize);
+    this.nav.removeEventListener('mouseenter', this.handleHover);
+    this.nav.removeEventListener('mouseleave', this.handleHover);
+  }
 
-  toggleNav: function() {
-    this.props.setAnimation(true);
-    this.props.toggle();
-  },
-
-  handleWheel: function(event) {
+  handleWheel(event) {
     const delta = (event.wheelDelta) ? event.wheelDelta : -1 * event.deltaY;
     (delta < 0) ? this.setVisibility(false) : this.setVisibility(true);
-  },
+  }
 
-  handleScroll: function(event) {
+  handleScroll(event) {
     const padding = 50; // for footer
     const scrollBottom = util.getScrollBottom(padding);
     const navLinks = document.querySelectorAll('#topNav a');
@@ -42,14 +51,14 @@ export const NavbarContainer = React.createClass({
         && (refPos + refElement.clientHeight > scrollBottom || refPos + window.innerHeight > scrollBottom)) 
         ? el.classList.add('topnav__link--active') : el.classList.remove('topnav__link--active');
     });
-  },
+  }
 
-  handleResize: function(event) {
+  handleResize(event) {
     // prevent animating nav change on window resize
     this.props.setAnimation(false);
-  },
+  }
 
-  handleHover: function(mouseEvent) {
+  handleHover(mouseEvent) {
     if (mouseEvent.type === 'mouseenter') {
       this.setVisibility(true);
     }
@@ -58,29 +67,22 @@ export const NavbarContainer = React.createClass({
         this.setVisibility(false);
       }, 400);
     }
-  },
+  }
 
-  componentDidMount: function() {
-    window.addEventListener('wheel', this.handleWheel);
-    window.addEventListener('scroll', this.handleScroll);
-    window.addEventListener('resize', this.handleResize);
-    this.nav.addEventListener('mouseenter', this.handleHover);
-    this.nav.addEventListener('mouseleave', this.handleHover);
-  },
+  setVisibility(status) {
+    this.props.setShowNav(status);
+  }
 
-  componentWillUnmount: function() {
-    window.removeEventListener('wheel', this.handleWheel);
-    window.removeEventListener('scroll', this.handleScroll);
-    window.removeEventListener('resize', this.handleResize);
-    this.nav.removeEventListener('mouseenter', this.handleHover);
-    this.nav.removeEventListener('mouseleave', this.handleHover);
-  },
+  toggleNav() {
+    this.props.setAnimation(true);
+    this.props.toggle();
+  }
 
-  render: function() {
+  render() {
     return (
         <Navbar 
-          navTitle={ this.getName() } 
-          navLinks={ this.getLinks() } 
+          navTitle={ this.props.name } 
+          navLinks={ this.props.nav.links } 
           navRef={ el => this.nav = el } 
           onBtnClick={ this.toggleNav } 
           showNav={ this.props.showNav } 
@@ -89,7 +91,7 @@ export const NavbarContainer = React.createClass({
     );
   }
 
-});
+}
 
 const mapStateToProps = (state) => {
   return {

@@ -12,22 +12,27 @@ import Footer from './Footer';
 import { connect } from 'react-redux';
 import * as actions from '../actions/actions';
 
-export const Main = React.createClass({
+class Main extends React.Component {
 
-  getData: function(data) {
-    //return this.props.content;
-    return appData;
-  },
+  constructor(props) {
+    super(props);
+    this.getData = this.getData.bind(this);
+  }
 
-  componentDidMount: function() {
+  componentDidMount() {
     fetch('http://localhost:3000/alldata')
       .then(response => response.json())
       .then(data => this.props.dispatch(
         actions.setMainContent(data))
       );
-  },
+  }
 
-  render: function() {
+  getData(data) {
+    //return this.props.content;
+    return appData;
+  }
+
+  render() {
     return (
       <div> 
 
@@ -52,7 +57,7 @@ export const Main = React.createClass({
     );
   }
   
-});
+}
 
 const mapStateToProps = (state) => {
   return {
