@@ -52,7 +52,7 @@ class ContactFormContainer extends React.Component {
         message: form.message.value
       });
 
-      fetch('http://localhost:3000/mail', {
+      fetch('https://mighty-meadow-15610.herokuapp.com/mail', {
         method: 'post',
         headers: { 'Content-Type': 'application/json' },
         body: formData
