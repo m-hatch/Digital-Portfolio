@@ -4,7 +4,7 @@ export default (props) => {
   
   return (
     <div className="project__image">
-      <a href={ props.link } target="_blank">
+      <a href={ props.link ? props.link : props.github } target="_blank">
         <div className="image__filter"></div>
         <img className="project__img" 
           src={ 'img/' + props.img } 

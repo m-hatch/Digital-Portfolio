@@ -20,7 +20,8 @@ export default (props) => {
       <ProjectImage 
         img={ getProject().img } 
         imgAlt={ getProject().img_alt }
-        link={ getProject().link } />
+        link={ getProject().link }
+        github={ getProject().github} />
 
       <ProjectText 
         projectName={ getProject().name } 
