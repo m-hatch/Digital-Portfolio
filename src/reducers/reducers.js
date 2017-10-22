@@ -58,6 +58,10 @@ function modal(state = init.modal, action) {
       return Object.assign(
         {}, state, { showModal: action.isVisible }
       );
+    case types.PEEK_MODAL:
+      return Object.assign(
+        {}, state, { peekModal: action.isPeeking }
+      );
     case types.SET_MODAL_CONTENT:
       return Object.assign(
         {}, state, { content: action.project }

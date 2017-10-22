@@ -33,6 +33,10 @@ export function showModal(isVisible) {
 	return { type: types.SHOW_MODAL, isVisible};
 }
 
+export function peekModal(isPeeking) {
+  return { type: types.PEEK_MODAL, isPeeking};
+}
+
 export function setModalContent(project) {
 	return { type: types.SET_MODAL_CONTENT, project };
 }

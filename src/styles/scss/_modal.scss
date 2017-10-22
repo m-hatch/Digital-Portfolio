@@ -6,14 +6,18 @@
   height: 100vh;
   overflow: hidden;
   z-index: 500;
-  -webkit-transition: width 0.5s ease-in-out;
-  -moz-transition: width 0.5s ease-in-out;
-  -ms-transition: width 0.5s ease-in-out;
-  -o-transition: width 0.5s ease-in-out;
-  transition: width 0.5s ease-in-out;
+  -webkit-transition: width 0.3s ease-in-out;
+  -moz-transition: width 0.3s ease-in-out;
+  -ms-transition: width 0.3s ease-in-out;
+  -o-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
 
   &--open {
     width: 100vw;
+  }
+
+  &--peek {
+    width: 20px;
   }
 
   &__close {
@@ -58,6 +62,7 @@
 
     p.table-heading {
       color: $aluminum;
+      font-weight: 600;
     }
 
     ul {

@@ -2,8 +2,6 @@ import React from 'react';
 import Project from './Project';
 import Section from './Section';
 import * as util from '../util/utilities';
-import { connect } from 'react-redux';
-import * as actions from '../actions/actions';
 
 class ProjectsContainer extends React.Component {
 
@@ -23,9 +21,8 @@ class ProjectsContainer extends React.Component {
 
   getProjects() {
     const projects = this.props.projects.map((project, index) => {
-      return <Project project={ project } 
-              key={ project.name } 
-              openModal={ this.props.openModal } />;
+      return <Project key={ project.name }
+              project={ project } />;
     });
     
     return projects;
@@ -54,16 +51,4 @@ class ProjectsContainer extends React.Component {
   
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    openModal: (event, project) => {
-      dispatch(actions.showModal(true));
-      dispatch(actions.setModalContent(project));
-    }
-  };
-};
-
-export default connect(
-  null,
-  mapDispatchToProps
-)(ProjectsContainer);
+export default ProjectsContainer;

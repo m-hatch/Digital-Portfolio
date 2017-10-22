@@ -29,6 +29,7 @@ class ModalContainer extends React.Component {
         content={ this.getRichText(this.props.content.description) }
         containerRef={ el => this.container = el }
         showModal={ this.props.showModal }
+        peekModal={ this.props.peekModal }
         closeModal={ this.props.closeModal }
         handleOutsideClick={ this.handleOutsideClick} />
     );
@@ -39,6 +40,7 @@ class ModalContainer extends React.Component {
 const mapStateToProps = (state) => {
   return {
     showModal: state.modal.showModal,
+    peekModal: state.modal.peekModal,
     content: state.modal.content
   };
 };

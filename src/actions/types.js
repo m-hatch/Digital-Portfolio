@@ -7,6 +7,7 @@ export const SHOW_NAV = 'SHOW_NAV';
 export const TOGGLE_NAV = 'TOGGLE_NAV';
 export const ANIMATE_NAV = 'ANIMATE_NAV';
 export const SHOW_MODAL = 'SHOW_MODAL';
+export const PEEK_MODAL = 'PEEK_MODAL';
 export const SET_MODAL_CONTENT = 'SET_MODAL_CONTENT';
 export const SHOW_CONTACT_FORM = 'SHOW_CONTACT_FORM';
 export const SET_FORM_COMPLETED = 'SET_FORM_COMPLETED';

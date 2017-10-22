@@ -28,6 +28,7 @@ export const navbar = {
 
 export const modal = {
   showModal: false,
+  peekModal: false,
   content: {}
 };
 

@@ -1,11 +1,21 @@
 import React from 'react';
 
-export default (props) => {
+export default (props) => {console.log('render');
+
+  let modalClassList = "modal";
+  if (props.showModal) {
+    modalClassList += " modal--open";
+  }
+  else if (props.peekModal) {
+    modalClassList += " modal--peek";
+  }
+  else {
+    modalClassList = "modal";
+  }
 
   return (
-    <div 
-      ref={ props.containerRef }
-      className={ props.showModal ? "modal modal--open" : "modal" } 
+    <div ref={ props.containerRef }
+      className={ modalClassList } 
       onClick={ props.handleOutsideClick }>
 
       <div className="modal__content">
