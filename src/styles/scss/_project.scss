@@ -22,11 +22,6 @@
     margin-bottom: 0;
   }
 
-  &__img {
-    width: 100%;
-    height: auto;
-  }
-
   &__text {
     min-height: 200px;
     padding: 8px;
@@ -82,10 +77,6 @@
  
     &__image {
       float: right;
-    }
-
-    &__img {
-      height: 100%;
     }
 
     &__text {
