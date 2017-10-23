@@ -6,7 +6,7 @@ export default (props) => {
   if (props.showModal) {
     modalClassList += " modal--open";
   }
-  if (props.peekModal) {
+  else if (props.peekModal) {
     modalClassList += " modal--peek";
   }
 
