@@ -20,10 +20,8 @@ export default (props) => {
               <a className="project__link" href={ props.webLink } target="_blank">View Project</a>
             </li> 
           }
-          <li>
-            <button className="button project__button" onClick={ props.openModal }>
-              Description
-            </button>
+          <li className="project__list-item project__button">
+            <a className="project__link" href="" onClick={ props.openModal }>Description</a>
           </li>
         </ul>
 

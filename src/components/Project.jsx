@@ -29,7 +29,8 @@ class Project extends React.Component {
 
   // call click handler with project data
   handleClick(event) {
-    this.props.openModal(event, this.getProject());
+    event.preventDefault();
+    this.props.openModal(this.getProject());
   }
 
   handleHover(mouseEvent) {
@@ -68,7 +69,7 @@ class Project extends React.Component {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    openModal: (event, project) => {
+    openModal: (project) => {
       dispatch(actions.showModal(true));
       dispatch(actions.setModalContent(project));
     },
