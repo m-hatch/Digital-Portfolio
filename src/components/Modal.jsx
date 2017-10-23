@@ -1,16 +1,13 @@
 import React from 'react';
 
-export default (props) => {console.log('render');
+export default (props) => {
 
   let modalClassList = "modal";
   if (props.showModal) {
     modalClassList += " modal--open";
   }
-  else if (props.peekModal) {
+  if (props.peekModal) {
     modalClassList += " modal--peek";
-  }
-  else {
-    modalClassList = "modal";
   }
 
   return (
