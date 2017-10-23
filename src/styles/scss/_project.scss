@@ -79,11 +79,6 @@
       float: right;
     }
 
-    &__text {
-      padding-top: 20px;
-      padding-left: 20px;
-    }
-
     &__tagline {
       margin-bottom: 18px;
     }
@@ -118,6 +113,11 @@
       height: 255px;
     }
 
+    &__text {
+      padding-top: 20px;
+      padding-left: 20px;
+    }
+
     &__tagline {
       margin-bottom: 20px;
     }
@@ -146,4 +146,3 @@
     }
   }
 }
-.test{display:table;}
