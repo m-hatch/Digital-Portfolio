@@ -35,10 +35,10 @@ class Project extends React.Component {
 
   handleHover(mouseEvent) {
     if (mouseEvent.type === 'mouseenter') {
-      this.props.peekModal(true);console.log('peek');
+      this.props.peekModal(true);
     }
     if (mouseEvent.type === 'mouseleave') {
-      this.props.peekModal(false);console.log('hide');
+      this.props.peekModal(false);
     }
   }
 
