@@ -12,12 +12,12 @@ export default (props) => {
         <ul>
           { props.github && 
             <li className="project__list-item">
-              <a className="project__link" href={ props.github } target="_blank">Source Code</a>
+              <a className="project__link" href={ props.github }>Source Code</a>
             </li> 
           }
           { props.webLink && 
             <li className="project__list-item">
-              <a className="project__link" href={ props.webLink } target="_blank">View Project</a>
+              <a className="project__link" href={ props.webLink }>View Project</a>
             </li> 
           }
           <li className="project__list-item project__button">

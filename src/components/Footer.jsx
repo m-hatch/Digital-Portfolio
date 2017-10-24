@@ -7,7 +7,7 @@ export default (props) => {
     return props.links.map(link => {
       return (
         <li className="footer__list-item" key={ link.name }>
-          <a className="footer__link" href={ link.url } target="_blank">{ link.name }</a>
+          <a className="footer__link" href={ link.url }>{ link.name }</a>
         </li>
       )
     });
