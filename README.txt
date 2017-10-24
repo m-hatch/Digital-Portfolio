@@ -9,6 +9,8 @@ npm install --save react react-dom
 npm install --save-dev react-hot-loader
 npm install --save-dev json-loader
 npm install --save-dev css-loader node-sass sass-loader
+npm install --save-dev postcss-loader
+npm install --save-dev autoprefixer 
 npm install --save-dev extract-text-webpack-plugin
 #npm install --save-dev image-webpack-loader
 npm install --save-dev file-loader

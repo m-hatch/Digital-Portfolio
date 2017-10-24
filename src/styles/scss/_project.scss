@@ -53,8 +53,6 @@
 
 @media screen and (min-width: 768px) {
   .project {
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
     column-count: 2;
     padding: 18px;
     margin: 30px auto;

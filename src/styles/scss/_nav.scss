@@ -13,12 +13,8 @@
     width: 100%;
     background-color: $black-veil;
     z-index: 100;
-    color: #fff; 
+    color: $white; 
     font-weight: 400;
-    -webkit-transition: top 0.25s ease-in-out, background 0.25s ease-in-out;
-    -moz-transition: top 0.25s ease-in-out, background 0.25s ease-in-out;
-    -ms-transition: top 0.25s ease-in-out, background 0.25s ease-in-out;
-    -o-transition: top 0.25s ease-in-out, background 0.25s ease-in-out;
     transition: top 0.25s ease-in-out, background 0.25s ease-in-out;
   }
 
@@ -86,10 +82,6 @@
     }
 
     &__link--animate {
-      -webkit-transition: 0.5s;
-      -moz-transition: 0.5s;
-      -ms-transition: 0.5s;
-      -o-transition: 0.5s;
       transition: 0.5s;
     }
 
@@ -127,10 +119,6 @@
       height: auto;
       line-height: 1;
       margin-left: 0;
-      -webkit-transition: 0.5s;
-      -moz-transition: 0.5s;
-      -ms-transition: 0.5s;
-      -o-transition: 0.5s;
       transition: 0.5s;
 
       &--active {

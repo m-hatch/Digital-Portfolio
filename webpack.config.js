@@ -30,9 +30,25 @@ module.exports = {
       },
       {
         test: /\.(sass|scss)$/,
-        use: ExtractTextPlugin.extract([
-          'css-loader', 'sass-loader'
-        ])
+        use: ExtractTextPlugin.extract({
+          use: [
+            {
+              loader: 'css-loader',
+              options: { importLoaders: 1 }
+            },
+            {
+              loader: 'postcss-loader',
+              options: {
+                config: {
+                  path: 'postcss.config.js'
+                }
+              }
+            },
+            {
+              loader: 'sass-loader'
+            }
+          ]
+        })
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
