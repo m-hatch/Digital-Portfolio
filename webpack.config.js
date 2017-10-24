@@ -23,13 +23,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          use: 'css-loader?importLoaders=1',
-        }),
-      },
-      {
-        test: /\.(sass|scss)$/,
+        test: /\.(sass|scss|css)$/,
         use: ExtractTextPlugin.extract({
           use: [
             {
