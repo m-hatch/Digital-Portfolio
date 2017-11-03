@@ -28,8 +28,8 @@ class Main extends React.Component {
   }
 
   getData(data) {
-    //return this.props.content;
-    return appData;
+    return this.props.content;
+    //return appData; // static data for testing
   }
 
   render() {
