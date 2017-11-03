@@ -1,0 +1,83 @@
+/* clearfixes */
+.l-clear:after,
+.l-wrapper:after { 
+  clear: both; 
+  content: ""; 
+  display: block; 
+  height: 0; 
+  visibility: hidden; 
+}
+
+html, body {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  color: $mine-shaft;
+  font-weight: 300;
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-family: 'Montserrat', Helvetica, sans-serif;
+  }
+}
+
+.l-container {
+  position: relative;
+  padding-bottom: 50px;
+  overflow: hidden;
+  background-color:$white;
+  z-index: 99;
+
+  p {
+    font-family: 'Raleway', Helvetica, sans-serif;
+    color: $pigeon-grey;
+  }
+}
+
+.l-wrapper {
+  position: relative;
+  width: 86%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.l-section {
+  padding: 30px 0;;
+
+  &__heading {
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 28px;
+    width: 100%;
+    max-width: 408px;
+    margin: 0 auto;
+  }
+}
+
+.l-font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media screen and (min-width: 568px){
+  .l-wrapper {
+    width: 80%;
+  }
+
+  .l-section {
+    &__heading {
+      font-size: 36px;
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .l-section {
+    &__bg {
+      background-color: $concrete;
+    }
+
+    &__heading {
+      font-size: 40px;
+    }
+  }
+}

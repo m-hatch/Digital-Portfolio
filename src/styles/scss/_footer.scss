@@ -1,0 +1,40 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: $black-veil;
+  z-index: 100;
+  font-size: 16px;
+
+  &__title {
+    display: inline-block;
+    color: $crimson;
+    font-weight: 700;
+    margin-right: 10px;
+    padding: 16px 0;
+  }
+
+  &__list, 
+  &__list-item {
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $white;
+    padding: 16px 10px;
+
+    &:hover::after {
+      position: absolute;
+      content: '';
+      display: block;
+      background: $white;
+      height: 2px;
+      width: 90%;
+      bottom: -5px;
+      left: 5%;
+    }
+  }
+}

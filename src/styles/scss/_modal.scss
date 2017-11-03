@@ -1,0 +1,106 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 500;
+  transition: width 0.3s ease-in-out;
+
+  &--open {
+    width: 100vw;
+  }
+
+  &--peek {
+    width: 20px;
+  }
+
+  &__close {
+    font-size: 28px;
+    font-weight: bold;
+
+    &:focus,
+    &:hover,
+    &:active {
+      cursor: pointer;
+    }
+  }
+
+  &__close-btn,
+  &__close-btn:focus,
+  &__close-btn:active {
+    margin: 40px auto 0;
+    color: inherit;
+  }
+
+  &__title {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
+    color: $aluminum;
+  }
+
+  &__content {
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: $black;
+    color: $boulder;
+    overflow: auto;
+    padding: 10px 25px 25px;
+
+    p {
+      margin: 1em 0;
+    }
+
+    p.table-heading {
+      color: $aluminum;
+      font-weight: 600;
+    }
+
+    ul {
+      list-style-type: disc;
+    }
+
+    li {
+      margin-bottom: 5px;
+      margin-left: 30px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    table {
+      width: 100%;
+      color: $aluminum;
+    }
+  }
+}
+
+@media screen and (min-width: 568px){
+  .modal__content {
+    width: 78vw;
+    max-width: 600px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal__content {
+    width: 60vw;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .modal__content {
+    width: 46vw;
+  }
+}

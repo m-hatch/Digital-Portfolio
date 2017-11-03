@@ -1,0 +1,131 @@
+{
+  "myinfo": {
+    "name": "Montgomery Hatch",
+    "title": "Digital Portfolio",
+    "position_title": "Web Developer and Front-End/Engineer",
+    "links": [
+      {
+        "name": "LinkedIn",
+        "url": "http://www.linkedin.com/pub/montgomery-hatch/10/a4/72a"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/m-hatch"
+      }
+    ]
+  },
+  "navigation": {
+    "links": [
+      {
+        "name": "About",
+        "url": "#About"
+      },
+      {
+        "name": "Projects",
+        "url": "#Projects"
+      },
+      {
+        "name": "Contact",
+        "url": "#Contact"
+      }
+    ]
+  },
+  "about": {
+    "img": "profile.png",
+    "description": "<p>Hello, my name is Monte.</p><p>I'm a Web Developer with a passion for front-end technologies. I love learning and building cool things. Right now, some of my interests are React-Redux, ES6, Webpack, NodeJS, and Angular.</p><p>When not coding, I can be found performing on the stages of Lincoln Center and Carnegie Hall (and occasionally in a Broadway pit) as a classical musician. I'm also a voracious reader of fiction, and a not-very-good surfer.</p>",
+    "skills_heading": "My Expertise",
+    "skills_description": "I love working with all aspects of the development process.",
+    "expertise": [
+      {
+        "is_empty": false,
+        "icon": "fa-code",
+        "area": "Front-End",
+        "description": "I am comfortable with a variety of Javascript frameworks including React, AngularJS, or just plain vanilla Javascript! I use front end build tools such as Gulp and Webpack for asset bundling and optimization. I follow the latest developments and trends in CSS, use preprocessors like Sass, and naming strategies such as BEM for maximum maintainablility."
+      },
+      {
+        "is_empty": false,
+        "icon": "fa-database",
+        "area": "Back-End",
+        "description": "On the back end, I build REST APIs in Java, NodeJS, PHP, and ColdFusion, using Spring Boot, Jersey, Express, and Slim PHP. I also use server side languages like JSP/JSTL and PHP for templating in traditional MVC frameworks. I am familar with database design, SQL, and NoSQL, and connect my APIs to databases in Oracle, Postgres, MySQL, and MongoDB."
+      },
+      {
+        "is_empty": false,
+        "icon": "fa-file-text-o",
+        "area": "CMS",
+        "description": "I have worked extensively with content management systems, both as a developer and in administration roles. I am a certified Hippo CMS Developer and have also worked with Wordpress, Savvy CMS and custom built solutions. Whether you have an enterprise level CMS or need a small custom application, I'm your man!"
+      },
+      {
+        "is_empty": true
+      },
+      {
+        "is_empty": false,
+        "icon": "fa-comments",
+        "area": "Communication",
+        "description": "I believe communication is one of the most important skills you can have as a developer. With over 10 years of experience in collaborative organizations and teaching postions, I am equally comfortable taking a leadership or following role. I also have excellent written and verbal communication skills."
+      },
+      {
+        "is_empty": true
+      }
+    ]
+  },
+  "projects": [
+    {
+      "name": "Digital Portfolio",
+      "img": "mh.jpg",
+      "img_alt": "montgomeryhatch.com",
+      "tagline": "Digital Portfolio website for Montgomery Hatch",
+      "description": "<p>Okay, so it's kind of meta to list this website on itself, but it was designed specifically to provide sample source code in the technologies that I'm interested in.</p><p>This website is a single page app built using React/Redux with a NodeJS/Express backend and MongoDB database. The application is built entirely with Javascript and utilizes ES6 syntax transpiled and bundled using Webpack. Typically, an application of this size would not require a Redux store to manage its state - the native React state is more than sufficient &mdash; but once again, it is included to provide an example of how I would manage state in larger applications. Towards the same ends, the project includes a unit test suite using Mocha/Chai.</p><p class='table-heading'>Technologies used:</p><table><tr><td>Javascript</td><td>NodeJS</td><td>React.js</td><td>Redux</td></tr><tr><td>Webpack</td><td>Express</td><td>MongoDB</td><td>Mocha/Chai</td></tr><tr><td>Sass/SCSS</td></tr></table>",
+      "github": "https://github.com/m-hatch/montgomeryhatch.com",
+      "link": "http://montgomeryhatch.com"
+    },
+    {
+      "name": "Bachovich Music Publications",
+      "img": "bmp.png",
+      "img_alt": "bachovich.com",
+      "tagline": "E-commerce website for Bachovich Music Publications",
+      "description": "<p>As Lead Developer for this project, I was involved in all aspects of development process from inception to deployment. This included designing the databse schema in MySQL, website design, frontend development using AngularJS, backend development using Slim PHP, development of a custom content management system, data migration, and maintenance.</p><p>This project was a great experience for me, both in terms of development, and in terms of project management and communication skills. The goal of the project was to create a dynamic, modern application that non-technical users could easily maintain and update. Deployed in 2015 and still used today, the project was a success and saved the company cosiderable costs compared to their previous web solutions.</p><p class='table-heading'>Technologies used:</p><table><tr><td>Javascript</td><td>AngularJS</td><td>Slim PHP</td><td>HTML/CSS</td></tr><tr><td>Bootstrap 3</td><td>MySQL</td></tr></table>",
+      "github": "https://github.com/m-hatch/BachovichMusicPublications",
+      "link": "http://www.bachovich.com"
+    },
+    {
+      "name": "Association for Computing Machinery",
+      "img": "acm.jpg",
+      "img_alt": "acm.org",
+      "tagline": "Website for ACM, the world's largest educational and scientific computing society",
+      "description": "<p>At ACM, I am in charge of development for the flagship ACM website as well as it's numerous subdomains. The applications are built using the Hippo CMS Java framework with Gulp frontend builds. Content is delivered through a combination of user contributions to the CMS repository, and data driven components and page templates. The source code is proprietary and involves a number of files and configurations. To provide an example of what some of the more common component files typically look like, I have created a sample component on foreign films with example files on Gist.</p><ul><li><a href='https://gist.github.com/m-hatch/2b29f5da46af78ed8942b1c95e751c36' target='_blank'>Java DAO class</a></li><li><a href='https://gist.github.com/m-hatch/7b09ef5685f991ed33d6afd04cddbc8b' target='_blank'>Java Component class</a></li><li><a href='https://gist.github.com/m-hatch/4264b531e5ac2168cd1b6f9ad7853e8f' target='_blank'>CMS Contributor dialog class</a></li><li><a href='https://gist.github.com/m-hatch/15ee49ff9a9b5d287d17255ce92432c0' target='_blank'>JSP template</a></li></ul><p class='table-heading'>Technologies used:</p><table><tr><td>Java</td><td>JSP/JSTL</td><td>Hippo</td><td>Maven</td></tr><tr><td>Gulp</td><td>Javascript</td><td>Sass/SCSS</td><td>Freemarker</td></tr><tr></tr></table>",
+      "github": "",
+      "link": "http://www.acm.org"
+    },
+    {
+      "name": "Hook & Loop",
+      "img": "hl.jpg",
+      "img_alt": "hookandloopnyc.com",
+      "tagline": "Website for Hook & Loop, the creative agency of Infor",
+      "description": "<p>At Infor | Hook &amp; Loop, one of my projects was to update and renovate their custom Wordpress theme. This involved a revamp of the responsive grid system (the previous system was designed mobile last), building a new navigation system, and fixing animation and parallax bugs. The code is proprietary, so I do not have a code sample, but the website is still beautiful!</p><p class='table-heading'>Technologies used:</p><table><tr><td>Javascript</td><td>PHP</td><td>jQuery</td><td>HTML/CSS</td></tr><tr><td>Wordpress</td><td>MySQL</td></tr></table>",
+      "github": "",
+      "link": "http://www.hookandloopnyc.com"
+    },
+    {
+      "name": "Tally",
+      "img": "pronto.jpg",
+      "img_alt": "tally demo",
+      "tagline": "Proof of concept for the Tally Expense app",
+      "description": "<p>This was a static proof of concept for the mobile expense app Tally. It explores the idea of creating a storyline experience using animations on scroll. It was impemented using standard Javascript, jQuery, CSS 3 animations, and the Scroll Magic JS library.</p><p class='table-heading'>Technologies used:</p><table><tr><td>Javascript</td><td>jQuery</td><td>HTML/CSS</td><td>Scroll Magic</td></tr></table>",
+      "github": "https://github.com/m-hatch/Tally-Demo",
+      "link": "https://m-hatch.github.io/Tally-Demo"
+    },
+    {
+      "name": "ACM APIs",
+      "img": "spring.jpg",
+      "img_alt": "spring boot logo",
+      "tagline": "Java REST APIs of ACM",
+      "description": "<p>Since joining ACM, I have taken on the lead developer role for the ACM Spring Boot APIs. These REST APIs are tightly coupled to the main website as well as a number of other websites and subdomains within the ACM umbrella. The applications are built using the Java Spring Boot framework with Hibernate, Jackson, and Lombok plugins. I use Spring Data JPA methods to connect to databases in Oracle and Postgres.</p><p>The code is propietary, but I have built a sample Spring Boot app to give a general idea of the architecture and coding style that I use.</p><p class='table-heading'>Technologies used:</p><table><tr><td>Java</td><td>Spring Boot</td><td>Hibernate</td><td>Maven</td></tr><tr><td>Spring Data JPA</td><td>Lombok</td><td>Jackson</td><td>Oracle</td></tr><tr><td>Postgres</td></tr></table>",
+      "github": "https://github.com/m-hatch/Spring-Boot-Demo",
+      "link": ""
+    }
+  ],
+  "contact": {
+    "heading": "Want to work together?",
+    "text": "I am currently accepting new offers and would love to hear about yours. Please take a moment to tell me about it."
+  }
+}

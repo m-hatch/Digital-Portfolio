@@ -1,0 +1,25 @@
+.button {
+  /* Remove all decorations to look like normal text */
+  background: none;
+  border: none;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  outline-offset: 0;
+  
+  /* Additional styles */
+  text-align: center;
+  text-decoration: none;
+  color: $black;
+  cursor: pointer;
+  
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}

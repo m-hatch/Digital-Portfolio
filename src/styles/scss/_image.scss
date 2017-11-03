@@ -1,0 +1,39 @@
+.image {
+  width: 100%;
+  height: auto;
+
+  &__filter {
+    position: absolute;
+    height: 100%;
+    overflow: hidden;
+
+    &:hover {
+      background-color: $shadow;
+
+      .image__icon {
+        top: 50%;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    background-color: $ghost;
+    border-radius: 50%;
+    padding: 12px;
+    color: $verdant;
+    transition: top 0.4s ease-out;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .image {
+    height: 100%;
+  }
+}
