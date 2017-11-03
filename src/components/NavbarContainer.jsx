@@ -18,6 +18,7 @@ class NavbarContainer extends React.Component {
 
   componentDidMount() {
     window.addEventListener('wheel', this.handleWheel);
+    window.addEventListener('touchmove', this.handleWheel);
     window.addEventListener('scroll', this.handleScroll);
     window.addEventListener('resize', this.handleResize);
     this.nav.addEventListener('mouseenter', this.handleHover);
@@ -26,6 +27,7 @@ class NavbarContainer extends React.Component {
 
   componentWillUnmount() {
     window.removeEventListener('wheel', this.handleWheel);
+    window.removeEventListener('touchmove', this.handleWheel);
     window.removeEventListener('scroll', this.handleScroll);
     window.removeEventListener('resize', this.handleResize);
     this.nav.removeEventListener('mouseenter', this.handleHover);
