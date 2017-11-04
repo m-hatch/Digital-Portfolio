@@ -20,16 +20,16 @@ class Main extends React.Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3000/alldata')
+    /*fetch('http://localhost:3000/alldata')
       .then(response => response.json())
       .then(data => this.props.dispatch(
         actions.setMainContent(data))
-      );
+      );*/
   }
 
   getData(data) {
-    return this.props.content;
-    //return appData; // static data for testing
+    //return this.props.content;
+    return appData; // static data for testing
   }
 
   render() {

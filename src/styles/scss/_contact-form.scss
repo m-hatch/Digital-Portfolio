@@ -12,7 +12,7 @@
     height: 100vh;
     
     .contact-form {
-      margin: 10px auto;
+      margin: 60px auto;
       opacity: 1;
     }
   }
@@ -21,7 +21,7 @@
 .contact-form {
   position: relative;
   margin: 50vh auto;
-  height: calc(100vh - 20px);
+  height: calc(100vh - 60px);
   width: 90%;
   max-width: 620px;
   background-color: $white;
@@ -125,8 +125,17 @@
 }
 
 @media screen and (min-width: 568px) {
+  .dialog {
+    &--open {
+      .contact-form {
+        margin: 10px auto;
+      }
+    }
+  }
+
   .contact-form {
     width: 80%;
+    height: calc(100vh - 20px);
   }
 }
 
