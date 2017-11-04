@@ -17,7 +17,10 @@
       "stage-2"
     ]
   },
-  "browserslist": ["defaults", "not ie < 11"],
+  "browserslist": [
+    "defaults",
+    "not ie < 11"
+  ],
   "devDependencies": {
     "autoprefixer": "^7.1.6",
     "babel-core": "^6.25.0",
