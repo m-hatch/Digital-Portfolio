@@ -23,7 +23,8 @@ export const splash = {
 export const navbar = {
   showNav: true,
   toggleNav: false,
-  animate: false
+  animate: false,
+  scrollPos: 0
 };
 
 export const modal = {

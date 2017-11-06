@@ -29,6 +29,10 @@ export function animateNav(isAnimated) {
 	return { type: types.ANIMATE_NAV, isAnimated };
 }
 
+export function setScrollPos(scrollPos) {
+  return { type: types.SET_SCROLL_POS, scrollPos };
+}
+
 export function showModal(isVisible) {
 	return { type: types.SHOW_MODAL, isVisible};
 }

@@ -18,10 +18,6 @@
     transition: top 0.25s ease-in-out, background 0.25s ease-in-out;
   }
 
-  &__inner--hide {
-    top: -60px;
-  }
-
   &__title {
     float: left;
     padding: 18px 0;
@@ -64,6 +60,14 @@
     line-height: 0;
     overflow: hidden;
     margin-left: 10%;
+  }
+}
+
+@media screen and (min-width: 568px) {
+  .nav {
+    &__inner--hide {
+      top: -60px;
+    }
   }
 }
 

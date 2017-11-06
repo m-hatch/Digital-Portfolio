@@ -47,6 +47,10 @@ function navbar(state = init.navbar, action) {
       return Object.assign(
         {}, state, { animate: action.isAnimated }
       );
+    case types.SET_SCROLL_POS:
+      return Object.assign(
+        {}, state, { scrollPos: action.scrollPos }
+      );
     default:
       return state;
   }
