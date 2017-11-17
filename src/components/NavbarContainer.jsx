@@ -19,14 +19,14 @@ class NavbarContainer extends React.Component {
     window.addEventListener('scroll', this.handleScroll);
     window.addEventListener('resize', this.handleResize);
     this.nav.addEventListener('mouseenter', this.handleHover);
-    this.nav.addEventListener('mouseleave', this.handleHover);
+    //this.nav.addEventListener('mouseleave', this.handleHover);
   }
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
     window.removeEventListener('resize', this.handleResize);
     this.nav.removeEventListener('mouseenter', this.handleHover);
-    this.nav.removeEventListener('mouseleave', this.handleHover);
+    //this.nav.removeEventListener('mouseleave', this.handleHover);
   }
 
   handleScroll(event) {
