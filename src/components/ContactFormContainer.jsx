@@ -32,13 +32,12 @@ class ContactFormContainer extends React.Component {
 
     // validate form fields
     inputs.forEach(input => {
-      input.classList.add('active');
       
-      const isInputValid = this.showInputError(input.name);
-
-      if (!isInputValid) {
-        isValid = false;
+      if (input.name !== 'company') {
+        input.classList.add('active');
+        isValid = !this.showInputError(input.name);
       }
+
     });
 
     if (isValid) {
@@ -80,7 +79,7 @@ class ContactFormContainer extends React.Component {
     }
     error.textContent = message;
 
-    return !isError;
+    return isError;
   }
   
   render() {
