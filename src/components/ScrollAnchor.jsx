@@ -32,7 +32,7 @@ export default (props) => {
   };
   
   return (
-    <a className={ props.className } href='' onClick={ handleClick } >
+    <a className={ props.className } href="" onClick={ handleClick } data-link="anchor" >
       { props.children }
     </a>
   );

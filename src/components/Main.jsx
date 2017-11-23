@@ -1,70 +1,28 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import appData from '../data.json';
-import NavbarContainer from './NavbarContainer';
 import Splash from './Splash';
 import About from './About';
 import ProjectsContainer from './ProjectsContainer';
 import Contact from './Contact';
 import ModalContainer from './ModalContainer';
-import ContactFormContainer from './ContactFormContainer';
-import Footer from './Footer';
-import { connect } from 'react-redux';
-import * as actions from '../actions/actions';
 
-class Main extends React.Component {
+export default (props) => {
 
-  constructor(props) {
-    super(props);
-    this.getData = this.getData.bind(this);
-  }
+  return (
+    <div> 
 
-  componentDidMount() {
-    fetch('http://localhost:3000/alldata')
-      .then(response => response.json())
-      .then(data => this.props.dispatch(
-        actions.setMainContent(data))
-      );
-  }
+      <Splash text={ props.appData.myinfo } />
 
-  getData(data) {
-    return this.props.content;
-    //return appData; // static data for testing
-  }
+      <div className="l-container">
 
-  render() {
-    return (
-      <div> 
-
-        <NavbarContainer 
-          name={ this.getData().myinfo.name } 
-          nav={ this.getData().navigation } />
-
-        <Splash text={ this.getData().myinfo } />
-
-        <div className="l-container">
-          <About about={ this.getData().about } />
-          <ProjectsContainer projects={ this.getData().projects } />
-          <Contact content={ this.getData().contact } />
-        </div>
-
-        <ModalContainer />
-        <ContactFormContainer />
-
-        <Footer links={ this.getData().myinfo.links } />
+        <About about={ props.appData.about } />
+        <ProjectsContainer projects={ props.appData.projects } />
+        <Contact content={ props.appData.contact } />
 
       </div>
-    );
-  }
+
+      <ModalContainer />
+
+    </div>
+  );
   
 }
-
-const mapStateToProps = (state) => {
-  return {
-    content: state.main.content
-  };
-};
-
-export default connect(
-  mapStateToProps
-)(Main);
