@@ -13,18 +13,22 @@ export default (props) => {
   // build navbar links
   const getLinks = () => {
     return props.navLinks.map(link => {
+
+      const links = ( link.url.startsWith('#') ) ? 
+        <ScrollAnchor  
+          className={ getClassList() } 
+          to={ link.url } 
+          animate={{ offset: -57, duration: 400 }} >
+          { link.name }
+        </ScrollAnchor>
+
+        : <a className={ getClassList() } href={ link.url } >{ link.name }</a>
+
       return (
         <li className={"topnav__list-item" 
             + ( props.toggleNav ? " topnav__list-item--open" : "" )} 
-            key={ link.name }>
-
-          <ScrollAnchor  
-            className={ getClassList() } 
-            to={ link.url } 
-            animate={{ offset: -57, duration: 400 }} >
-            { link.name }
-          </ScrollAnchor>
-          
+            key={ link.name } >
+            { links }
         </li>
       )
     });
