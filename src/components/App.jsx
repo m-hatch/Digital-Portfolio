@@ -36,10 +36,12 @@ class App extends React.Component {
             nav={ this.getData().navigation } />
           
           <Route exact path="/" render={
-            (props) => <Main appData={ this.getData() }/> }/>
+            (props) => <Main appData={ this.getData() }/> 
+          }/>
 
           <Route path="/blog" render={ 
-            withRouter((props) => <Blog {...props} content={ this.getData().blog }/>) }/>
+            withRouter((props) => <Blog {...props} content={ this.getData().blog }/>) 
+          }/>
 
           <ContactFormContainer />
 

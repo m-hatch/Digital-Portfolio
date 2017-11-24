@@ -135,6 +135,29 @@
   "blog": {
     "heading": "Welcome to my blog!",
     "description": "This is where I explore ideas and technologies that interest me. I write these posts to help others learn about the topics discussed, as well as to expand and solidify my own understanding of them.",
-    "contact": "Have a comment or suggestion? Feel free to contact me."
+    "contact": "Have a comment or suggestion? Feel free to contact me.",
+    "articles": [
+      {
+        "title": "Modern JavaScript",
+        "subtitle": "Learning ES6",
+        "nav_label": "learning-es6",
+        "date": "2017-11-6",
+        "content": "<p>Lorem ipsum dolor sit amet, ut vim eius partiendo. Quo aperiri detracto no, labitur blandit intellegam eu cum. Ex rebum facete accusamus ius. Purto deseruisse posidonium an nam. Has viris epicurei conclusionemque ut, nostro habemus tincidunt ut eam.</p><p>Et illud fugit veniam est, ludus patrioque ad quo, sit meis tibique lobortis id. Congue nonumy comprehensam in ius, clita feugait vivendum qui ne, mea no omnis pericula imperdiet. Ne pri persius omittam, ea diam laudem expetenda eos. Vix facilis convenire eu, malis debet vocent qui in, nec postea legimus volumus ex. Luptatum urbanitas cu his. Sit sonet tation nostrum ei.</p>"
+      },
+      {
+        "title": "Modern JavaScript",
+        "subtitle": "Classes and Objects",
+        "nav_label": "classes-and-objects",
+        "date": "2017-11-14",
+        "content": "<p>Nam et labitur oporteat expetendis, assum mucius perpetua an sea. Habemus eligendi ad vis. Ut quas erroribus philosophia mel. In assum viris altera vim. Harum sadipscing ius id, usu eu animal commune. Utamur percipitur nec eu, est ad veritus civibus mnesarchum, ex primis theophrastus vim.</p><p>Alienum periculis patrioque ea cum. Illud denique mnesarchum cu sed, primis scaevola consulatu ut has. Corpora comprehensam id vim. Nec simul scriptorem ne, velit consul constituam ne sed, at est erat conceptam eloquentiam. Gubergren ullamcorper theophrastus vis id.</p>"
+      },
+      {
+        "title": "Understanding Webpack",
+        "subtitle": "Building a Configuration File",
+        "nav_label": "webpack-1",
+        "date": "2017-11-27",
+        "content": "<p>Pri pericula tincidunt ut, facer viderer eos ei, nobis timeam vituperata sed in. Summo mundi elitr sed eu, in case interesset delicatissimi nam. Ne sea soluta repudiandae. At ornatus delicata mea, sit quis decore legere et, duo ne putant placerat. Novum vulputate mei ne, quo doctus democritum definitionem ei.</p>"
+      }
+    ]
   }
 }
