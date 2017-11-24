@@ -1,6 +1,6 @@
 .article {
   &__date {
-    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-family: $Helvetica !important;
     margin: 20px 0;
   }
 
