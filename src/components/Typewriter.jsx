@@ -23,7 +23,7 @@ class Typewriter extends React.Component {
     if (this.props.isVisible) {
       this.clearType(spanList);
 
-      for (var i = 0; i < spanList.length; i++) {
+      for (let i = 0; i < spanList.length; i++) {
         (function(i) {
           setTimeout(function() { 
             spanList[i].classList.add('type--active'); 
