@@ -1,4 +1,6 @@
 import React from 'react';
+import { Route, Link } from 'react-router-dom';
+import Article from './Article';
 import ModalContainer from './ModalContainer';
 import { connect } from 'react-redux';
 import * as actions from '../actions/actions';
@@ -38,6 +40,8 @@ class Blog extends React.Component {
   }
 
   render() {
+    const navPath = `${this.props.match.url}/${this.props.content.articles[0].nav_label}`;
+    console.log('match',`${this.props.match.url}/:navLabel`);
     return (
       <div> 
 
@@ -50,13 +54,26 @@ class Blog extends React.Component {
             <a className="blog__link" href="">two</a>
 
             <div className="blog__row">
+
               <div className="blog__col blog__main">
+
                 <h2>Recent posts</h2>
+
+                <Route exact path={this.props.match.url} render={() => (
+                  <h3>Please select a topic.</h3>)
+                }/>
+
+                <Route path={`${this.props.match.url}/:navLabel`} render={ 
+                  (props) => <Article {...props} articles={ this.props.content.articles }/>
+                }/>
+
               </div>
 
               <div className="blog__col blog__sidebar">
                 <h2>Browse Topics</h2>
+                <Link className="blog__link" to={ navPath } >{ this.props.content.articles[0].title }</Link>
               </div>
+
             </div>
 
             <div>
