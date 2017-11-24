@@ -134,7 +134,7 @@
   },
   "blog": {
     "heading": "Welcome to my blog!",
-    "description": "This is where I explore ideas and technologies that interest me. I write these posts both to help others learn about the topics discussed, as well as to expand and solidify my own understanding of them.",
-    "contact": "Have a comment or suggestion? Feel free to contact me:"
+    "description": "This is where I explore ideas and technologies that interest me. I write these posts to help others learn about the topics discussed, as well as to expand and solidify my own understanding of them.",
+    "contact": "Have a comment or suggestion? Feel free to contact me."
   }
 }
