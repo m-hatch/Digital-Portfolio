@@ -1,0 +1,49 @@
+.blog {
+  padding-top: 100px;
+
+  &__heading {
+    margin-bottom: 20px;
+  }
+
+  &__main,
+  &__sidebar {
+    width: 100%;
+  }
+
+  &__btn {
+    display: inline-block;
+    margin: 0 20px;
+  }
+
+  &__row {
+    margin: 30px 0;
+
+    &::after {
+      display: table;
+      clear: both;
+      content: '';
+    }
+  }
+
+  &__col {
+    margin-right: 20px;
+    float: left;
+
+    &:nth-child(2n+2) {
+      margin-right: 0;
+      float: right;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .blog {
+    &__main {
+      width: calc(70% - 10px);
+    }
+
+    &__sidebar {
+      width: calc(30% - 10px);
+    }
+  }
+}
