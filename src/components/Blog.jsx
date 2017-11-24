@@ -40,30 +40,31 @@ class Blog extends React.Component {
   }
 
   render() {
+    const contextPath = this.props.match.url;
+    const nestedPath = `${this.props.match.url}/:navLabel`;
+
     const navPath = `${this.props.match.url}/${this.props.content.articles[0].nav_label}`;
-    console.log('match',`${this.props.match.url}/:navLabel`);
+
     return (
       <div> 
 
         <div className="l-container blog">
           <div className="l-wrapper">
 
-            <h1 className="l-section__heading blog__heading">{ this.props.content.heading }</h1>
-            <p>{ this.props.content.description }</p>
-            <a className="blog__link" href="">one</a>
-            <a className="blog__link" href="">two</a>
-
             <div className="blog__row">
 
               <div className="blog__col blog__main">
 
-                <h2>Recent posts</h2>
+                <Route exact path={ contextPath } render={() => (
+                  <div>
+                    <h1 className="l-section__heading blog__heading">{ this.props.content.heading }</h1>
+                    <p>{ this.props.content.description }</p>
 
-                <Route exact path={this.props.match.url} render={() => (
-                  <h3>Please select a topic.</h3>)
-                }/>
+                    <h2>Recent posts</h2>
+                  </div>
+                )}/>
 
-                <Route path={`${this.props.match.url}/:navLabel`} render={ 
+                <Route path={ nestedPath } render={ 
                   (props) => <Article {...props} articles={ this.props.content.articles }/>
                 }/>
 
@@ -76,7 +77,7 @@ class Blog extends React.Component {
 
             </div>
 
-            <div>
+            <div className="blog__contact">
               <p className="l-text-center">
                 { this.props.content.contact }
                 <button className="blog__btn contact__button" onClick={ this.handleClick }>

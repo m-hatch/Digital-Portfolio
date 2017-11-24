@@ -30,3 +30,14 @@ export function isInView(ref) {
 
   return (scrollTop < elementHeight) ? true : false;
 }
+
+// convert Date to formatted string
+export function getFormattedDate(date) {
+  const monthNames = ["January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
+  const month = monthNames[date.getMonth()];
+  const day = date .getDate();
+  const year = date .getFullYear();
+  return month + ' ' + day + ', ' + year;
+}
