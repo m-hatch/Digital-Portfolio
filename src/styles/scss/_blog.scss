@@ -34,6 +34,22 @@
       float: right;
     }
   }
+
+  &__link {
+    color: $ocean;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:visited {
+      color: $ocean;
+    }
+
+    &:hover,
+    &:active {
+      color: $sky;
+      text-decoration: none;
+    }
+  }
 }
 
 @media screen and (min-width: 768px) {
