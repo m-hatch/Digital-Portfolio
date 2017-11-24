@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ScrollAnchor from './ScrollAnchor';
 
 export default (props) => {
@@ -22,7 +23,7 @@ export default (props) => {
           { link.name }
         </ScrollAnchor>
 
-        : <a className={ getClassList() } href={ link.url } >{ link.name }</a>
+        : <Link className={ getClassList() } to={ link.url } >{ link.name }</Link>
 
       return (
         <li className={"topnav__list-item" 

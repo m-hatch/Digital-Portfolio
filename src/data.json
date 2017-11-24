@@ -131,5 +131,10 @@
   "contact": {
     "heading": "Want to work together?",
     "text": "I am currently accepting new offers and would love to hear about yours. Please take a moment to tell me about it."
+  },
+  "blog": {
+    "heading": "Welcome to my blog!",
+    "description": "This is where I explore ideas and technologies that interest me. I write these posts both to help others learn about the topics discussed, as well as to expand and solidify my own understanding of them.",
+    "contact": "Have a comment or suggestion? Feel free to contact me:"
   }
 }
