@@ -1,11 +1,14 @@
 import React from 'react';
 import ModalContainer from './ModalContainer';
+import { connect } from 'react-redux';
+import * as actions from '../actions/actions';
 
 class Blog extends React.Component {
 
   constructor(props) {
     super(props);
     this.checkRoute = this.checkRoute.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
@@ -30,11 +33,41 @@ class Blog extends React.Component {
     });
   }
 
+  handleClick(event) {
+    this.props.openForm();
+  }
+
   render() {
     return (
       <div> 
 
-        <h1>Blog</h1>
+        <div className="l-container blog">
+          <div className="l-wrapper">
+
+            <h1 className="l-section__heading blog__heading">{ this.props.content.heading }</h1>
+            <p>{ this.props.content.description }</p>
+
+            <div className="blog__row">
+              <div className="blog__col blog__main">
+                <h2>Recent posts</h2>
+              </div>
+
+              <div className="blog__col blog__sidebar">
+                <h2>Browse Topics</h2>
+              </div>
+            </div>
+
+            <div>
+              <p className="l-text-center">
+                { this.props.content.contact }
+                <button className="blog__btn contact__button" onClick={ this.handleClick }>
+                  Send a message
+                </button>
+              </p>
+            </div>
+
+          </div>
+        </div>
 
         <ModalContainer />
 
@@ -44,4 +77,15 @@ class Blog extends React.Component {
   
 }
 
-export default Blog;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    openForm: () => {
+      dispatch(actions.showContactForm(true));
+    }
+  };
+};
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(Blog);
