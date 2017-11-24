@@ -46,6 +46,8 @@ class Blog extends React.Component {
 
             <h1 className="l-section__heading blog__heading">{ this.props.content.heading }</h1>
             <p>{ this.props.content.description }</p>
+            <a className="blog__link" href="">one</a>
+            <a className="blog__link" href="">two</a>
 
             <div className="blog__row">
               <div className="blog__col blog__main">
