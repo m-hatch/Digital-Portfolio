@@ -1,7 +1,8 @@
 import React from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import BlogLanding from './BlogLanding';
 import Article from './Article';
+import Sidebar from './Sidebar';
 import ModalContainer from './ModalContainer';
 import { connect } from 'react-redux';
 import * as actions from '../actions/actions';
@@ -79,10 +80,7 @@ class Blog extends React.Component {
 
               </div>
 
-              <div className="blog__col blog__sidebar">
-                <h2>Browse Topics</h2>
-                <Link className="blog__link" to={ testPath } >{ this.props.content.articles[0].topic }</Link>
-              </div>
+              <Sidebar articles={ this.props.content.articles } navPath={ navPath } />
 
             </div>
 
