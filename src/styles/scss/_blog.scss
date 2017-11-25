@@ -3,7 +3,10 @@
 
   &__heading {
     max-width: 100%;
-    margin-bottom: 20px;
+  }
+
+  &__description {
+    margin-top: 20px;
   }
 
   &__main,
@@ -16,13 +19,25 @@
     background-color: $concrete;
   }
 
+  &__recent {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
   &__btn {
     display: inline-block;
     margin: 0 20px;
   }
 
-  &__contact {
+  &__footer {
     margin-bottom: 40px;
+  }
+
+  &__contact {
+    border: solid 1px $dark-grey;
+    border-radius: 25px;
+    padding: 10px;
   }
 
   &__row {

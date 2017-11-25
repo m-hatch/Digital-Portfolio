@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
+import BlogLanding from './BlogLanding';
 import Article from './Article';
 import ModalContainer from './ModalContainer';
 import { connect } from 'react-redux';
@@ -14,7 +15,7 @@ class Blog extends React.Component {
   }
 
   componentDidMount() {
-    this.checkRoute(this.props.location.pathname);
+    this.checkRoute(this.props.match.path);
   }
 
   checkRoute(path) {
@@ -41,9 +42,9 @@ class Blog extends React.Component {
 
   render() {
     const contextPath = this.props.match.url;
-    const nestedPath = `${this.props.match.url}/:navLabel`;
-
-    const navPath = `${this.props.match.url}/${this.props.content.articles[0].nav_label}`;
+    const navPath = `${this.props.match.url}`;
+    const nestedPath = `${navPath}/:navLabel`;
+    const testPath = `${this.props.match.url}/${this.props.content.articles[0].nav_label}`;
 
     return (
       <div> 
@@ -55,14 +56,10 @@ class Blog extends React.Component {
 
               <div className="blog__col blog__main">
 
-                <Route exact path={ contextPath } render={() => (
-                  <div>
-                    <h1 className="l-section__heading blog__heading">{ this.props.content.heading }</h1>
-                    <p>{ this.props.content.description }</p>
-
-                    <h2>Recent posts</h2>
-                  </div>
-                )}/>
+                <Route exact path={ contextPath } render={
+                  (props) => <BlogLanding {...props} blog={ this.props.content }
+                  navPath={ navPath }/>
+                }/>
 
                 <Route path={ nestedPath } render={ 
                   (props) => <Article {...props} articles={ this.props.content.articles }/>
@@ -72,13 +69,13 @@ class Blog extends React.Component {
 
               <div className="blog__col blog__sidebar">
                 <h2>Browse Topics</h2>
-                <Link className="blog__link" to={ navPath } >{ this.props.content.articles[0].topic }</Link>
+                <Link className="blog__link" to={ testPath } >{ this.props.content.articles[0].topic }</Link>
               </div>
 
             </div>
 
-            <div className="blog__contact">
-              <p className="l-text-center">
+            <div className="blog__footer">
+              <p className="l-text-center blog__contact">
                 { this.props.content.contact }
                 <button className="blog__btn contact__button" onClick={ this.handleClick }>
                   Send a message
