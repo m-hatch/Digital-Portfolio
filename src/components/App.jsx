@@ -34,8 +34,8 @@ class App extends React.Component {
             name={ this.getData().myinfo.name } 
             nav={ this.getData().navigation } />
           
-          <Route exact path="/" render={
-            (props) => <Main appData={ this.getData() }/> 
+          <Route exact path="/" render={(props) => 
+            <Main appData={ this.getData() }/> 
           }/>
 
           <Route path="/blog" render={(props) => 
