@@ -68,13 +68,13 @@ class Blog extends React.Component {
 
               <div className="blog__col blog__main">
 
-                <Route exact path={ contextPath } render={
-                  (props) => <BlogLanding {...props} blog={ this.props.content }
+                <Route exact path={ contextPath } render={(props) => 
+                  <BlogLanding {...props} blog={ this.props.content }
                   navPath={ navPath }/>
                 }/>
 
-                <Route path={ nestedPath } render={ 
-                  (props) => <Article {...props} articles={ this.props.content.articles }/>
+                <Route path={ nestedPath } render={(props) => 
+                  <Article {...props} articles={ this.props.content.articles }/>
                 }/>
 
               </div>
