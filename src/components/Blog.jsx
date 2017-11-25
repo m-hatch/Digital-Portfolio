@@ -18,6 +18,10 @@ class Blog extends React.Component {
     this.checkRoute(this.props.match.path);
   }
 
+  componentWillUnmount() {
+    this.clearRouteHighlight();
+  }
+
   checkRoute(path) {
     const navLinks = document.querySelectorAll('#topNav a');
 
@@ -33,6 +37,14 @@ class Blog extends React.Component {
       (route === el.getAttribute('href')) 
         ? el.classList.add('topnav__link--active') 
         : el.classList.remove('topnav__link--active');
+    });
+  }
+
+  clearRouteHighlight() {
+    const navLinks = document.querySelectorAll('#topNav a');
+
+    Array.prototype.forEach.call(navLinks, function(el){
+      el.classList.remove('topnav__link--active');
     });
   }
 
