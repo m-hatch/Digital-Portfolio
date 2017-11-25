@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, 
-  Route, withRouter } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import appData from '../data.json';
 import NavbarContainer from './NavbarContainer';
 import Main from './Main';
@@ -39,8 +38,8 @@ class App extends React.Component {
             (props) => <Main appData={ this.getData() }/> 
           }/>
 
-          <Route path="/blog" render={ 
-            withRouter((props) => <Blog {...props} content={ this.getData().blog }/>) 
+          <Route path="/blog" render={(props) => 
+            <Blog {...props} content={ this.getData().blog }/> 
           }/>
 
           <ContactFormContainer />

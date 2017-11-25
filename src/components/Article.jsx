@@ -14,10 +14,10 @@ export default (props) => {
   return (
     <div className="article">
 
-      <h1 className="l-section__heading">{ article.topic }:</h1>
-      <h2 className="l-section__heading">{ article.title }</h2>
+      <h1 className="l-section__heading blog__heading">{ article.topic }:</h1>
+      <h2 className="l-section__heading blog__heading">{ article.title }</h2>
 
-      <p className="article__date">Posted on { getFormattedDate(date) }</p>
+      <p className="l-italic article__date">Posted on { getFormattedDate(date) }</p>
 
       <div className="article__content"
         dangerouslySetInnerHTML={ htmlContent }>
