@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter as Router, 
+  Route } from 'react-router-dom';
 import appData from '../data.json';
+import ScrollToTop from './ScrollToTop';
 import NavbarContainer from './NavbarContainer';
 import Main from './Main';
 import Blog from './Blog';
@@ -27,27 +29,29 @@ class App extends React.Component {
 
   render() {
     return (
-      <BrowserRouter>
-        <div> 
+      <Router>
+        <ScrollToTop>
+          <div> 
 
-          <NavbarContainer 
-            name={ this.getData().myinfo.name } 
-            nav={ this.getData().navigation } />
-          
-          <Route exact path="/" render={(props) => 
-            <Main appData={ this.getData() }/> 
-          }/>
+            <NavbarContainer 
+              name={ this.getData().myinfo.name } 
+              nav={ this.getData().navigation } />
+            
+            <Route exact path="/" render={(props) => 
+              <Main appData={ this.getData() }/> 
+            }/>
 
-          <Route path="/blog" render={(props) => 
-            <Blog {...props} content={ this.getData().blog }/> 
-          }/>
+            <Route path="/blog" render={(props) => 
+              <Blog {...props} content={ this.getData().blog }/> 
+            }/>
 
-          <ContactFormContainer />
+            <ContactFormContainer />
 
-          <Footer links={ this.getData().myinfo.links } />
+            <Footer links={ this.getData().myinfo.links } />
 
-        </div>
-      </BrowserRouter>
+          </div>
+        </ScrollToTop>
+      </Router>
     );
   }
   
