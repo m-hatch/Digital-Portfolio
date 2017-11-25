@@ -72,7 +72,7 @@ class Blog extends React.Component {
 
               <div className="blog__col blog__sidebar">
                 <h2>Browse Topics</h2>
-                <Link className="blog__link" to={ navPath } >{ this.props.content.articles[0].title }</Link>
+                <Link className="blog__link" to={ navPath } >{ this.props.content.articles[0].topic }</Link>
               </div>
 
             </div>
