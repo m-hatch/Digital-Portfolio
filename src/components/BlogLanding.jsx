@@ -7,7 +7,7 @@ export default (props) => {
   const blog = props.blog || {};
   const articles = props.blog.articles || [];
   const navLabel = props.match.params.navLabel;
-  const recent = articles.sort((a,b) => (
+  const recent = articles.concat().sort((a,b) => (
     new Date(b.date) - new Date(a.date))
   )[0];
   const date = new Date(recent.date);
