@@ -14,8 +14,8 @@ export default (props) => {
   return (
     <div className="article">
 
-      <h1 className="l-section__heading">{ article.title }:</h1>
-      <h2 className="l-section__heading">{ article.subtitle }</h2>
+      <h1 className="l-section__heading">{ article.topic }:</h1>
+      <h2 className="l-section__heading">{ article.title }</h2>
 
       <p className="article__date">Posted on { getFormattedDate(date) }</p>
 
