@@ -10,12 +10,53 @@
   }
 
   &__content {
+    // styles for injected HTML
+    color: $pigeon-grey;
+
+    h2, h3, h4 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
     p {
       margin-bottom: 20px;
     }
 
+    a {
+      color: $ocean;
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: 500;
+
+      &:visited {
+        color: $ocean;
+      }
+
+      &:hover,
+      &:active {
+        color: $sky;
+        text-decoration: none;
+      }
+    }
+
+    table {
+      margin-bottom: 20px;
+
+      th {
+        text-align: left;
+      }
+
+      th, td {
+        padding: 6px 12px;
+      }
+    }
+
     pre {
       margin-bottom: 20px !important;
+    }
+
+    small {
+      font-size: 13px;
     }
   }
 }
