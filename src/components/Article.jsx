@@ -1,5 +1,6 @@
 import React from 'react';
 import { getFormattedDate } from '../util/utilities';
+import Prism from '../vendor/prism.js';
 
 export default (props) => {
 
