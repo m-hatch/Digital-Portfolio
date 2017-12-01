@@ -66,19 +66,24 @@
       }
     }
 
-    pre {
-      margin-bottom: 20px !important;
-    }
-
     code {
-      font-family: Consolas,"Liberation Mono",Courier,monospace;
+      font-family: $Consolas
       font-weight: 400;
-      color: #333;
-      background-color: #f8f8f8;
+      color: $mine-shaft;
+      background-color: $tin;
       border-width: 1px;
       border-style: solid;
-      border-color: #dfdfdf;
+      border-color: $light-grey;
       padding: .125rem .3125rem .0625rem;
+    }
+
+    pre {
+      margin-bottom: 20px !important;
+
+      code {
+        border: none;
+        padding: 0;
+      }
     }
 
     small {
