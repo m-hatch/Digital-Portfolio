@@ -19,6 +19,11 @@
     background-color: $concrete;
   }
 
+  &__browse {
+    font-weight: 600;
+    font-size: 19px;
+  }
+
   &__recent {
     margin-top: 20px;
     margin-bottom: 10px;
