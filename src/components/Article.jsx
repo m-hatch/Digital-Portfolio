@@ -1,30 +1,61 @@
 import React from 'react';
 import { getFormattedDate } from '../util/utilities';
-import Prism from '../vendor/prism.js';
 
-export default (props) => {
+class Article extends React.Component {
 
-  const articles = props.articles || [];
-  const navLabel = props.match.params.navLabel;
-  const article = articles.find((obj) => {
-    return obj.nav_label === navLabel;
-  });
-  const date = new Date(article.date);
-  const htmlContent = { __html: article.content } || '';
+  constructor(props) {
+    super(props);
+    this.loadScript = this.loadScript.bind(this);
+  }
 
-  return (
-    <div className="article">
+  componentDidMount() {
+    this.loadScript('/vendor/prism.js');
+  }
 
-      <h1 className="l-section__heading blog__heading">{ article.topic }:</h1>
-      <h2 className="l-section__heading blog__heading">{ article.title }</h2>
+  componentWillUpdate() {
+    const tag = document.getElementById('vendor');
+    document.body.removeChild(tag);
+  }
 
-      <p className="l-italic article__date">Posted on { getFormattedDate(date) }</p>
+  componentDidUpdate() {
+    this.loadScript('/vendor/prism.js');
+  }
 
-      <div className="article__content"
-        dangerouslySetInnerHTML={ htmlContent }>
+  getArticle() {
+    const articles = this.props.articles || [];
+    const navLabel = this.props.match.params.navLabel;
+    return articles.find((obj) => {
+      return obj.nav_label === navLabel;
+    });
+  }
+
+  loadScript(src) {
+    const elem = document.createElement('script');
+    elem.async = false;
+    elem.src = src;
+    elem.id = 'vendor';
+    document.body.appendChild(elem);
+  }
+
+  render() {
+    const date = new Date(this.getArticle().date);
+    const htmlContent = { __html: this.getArticle().content } || '';
+
+    return (
+      <div className="article">
+
+        <h1 className="l-section__heading blog__heading">{ this.getArticle().topic }:</h1>
+        <h2 className="l-section__heading blog__heading">{ this.getArticle().title }</h2>
+
+        <p className="l-italic article__date">Posted on { getFormattedDate(date) }</p>
+
+        <div className="article__content"
+          dangerouslySetInnerHTML={ htmlContent }>
+        </div>
+
       </div>
-
-    </div>
-  );
-
+    );
+  }
 }
+
+export default Article;
