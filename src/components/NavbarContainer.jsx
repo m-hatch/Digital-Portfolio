@@ -48,10 +48,11 @@ class NavbarContainer extends React.Component {
       // check if link to anchor on page
       if (el.dataset.link === 'anchor') {
         const refElement = document.getElementById(el.innerHTML);
-        const refPos = util.getOffsetTop(refElement);
+        const refPos = refElement ? util.getOffsetTop(refElement) : null;
 
         // add active class when section in view
-        ((refPos <= scrollBottom) 
+        ((refPos !== null)
+          && (refPos <= scrollBottom) 
           && (refPos + refElement.clientHeight > scrollBottom || refPos + window.innerHeight > scrollBottom)) 
           ? el.classList.add('topnav__link--active') : el.classList.remove('topnav__link--active');
       } 
