@@ -13,13 +13,19 @@
     // styles for injected HTML
     color: $pigeon-grey;
 
-    h2, h3, h4 {
+    h2, h3 {
       font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    h4 {
+      font-size: 28px;
       margin-bottom: 10px;
     }
 
     p {
       margin-bottom: 20px;
+      line-height: 1.6;
     }
 
     a {
@@ -39,6 +45,15 @@
       }
     }
 
+    strong {
+      font-family: Helvetica;
+      font-weight: bold;
+    }
+
+    em {
+      font-style: italic;
+    }
+
     table {
       margin-bottom: 20px;
 
@@ -53,6 +68,17 @@
 
     pre {
       margin-bottom: 20px !important;
+    }
+
+    code {
+      font-family: Consolas,"Liberation Mono",Courier,monospace;
+      font-weight: 400;
+      color: #333;
+      background-color: #f8f8f8;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #dfdfdf;
+      padding: .125rem .3125rem .0625rem;
     }
 
     small {
