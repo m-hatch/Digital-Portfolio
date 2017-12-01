@@ -15,8 +15,8 @@ export default (props) => {
         <ul className="sidebar__list">{
           category.map((post, i) => {
             return (
-              <div>
-                <Link key={i} className="blog__link" 
+              <div key={i}>
+                <Link className="blog__link" 
                   to={ `${props.navPath}/${post.nav_label}` }>
                   { post.title }
                 </Link>
@@ -28,7 +28,6 @@ export default (props) => {
     )
   });
 
-console.log(sortedList);
   return (
     <div className="blog__col blog__sidebar">
       <h2 className="blog__browse">Browse Topics</h2>
