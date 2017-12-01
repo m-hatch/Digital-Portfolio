@@ -1,0 +1,14 @@
+.sidebar {
+  font-family: $Montserrat;
+  margin-top: 10px;
+  line-height: 1.4;
+
+  &__topic {
+    color: $bluejay;
+    font-weight: 500;
+  }
+
+  &__list {
+    padding-left: 10px;
+  }
+}
