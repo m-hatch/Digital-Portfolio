@@ -6,15 +6,16 @@ class Typewriter extends React.Component {
     super(props);
     this.typewriter = this.typewriter.bind(this);
     this.clearType = this.clearType.bind(this);
+    this.getTypeText = this.getTypeText.bind(this);
   }
 
   componentDidMount() {
     this.typewriter();
-    window.setInterval(this.typewriter, 5000);
+    this.intervalId = window.setInterval(this.typewriter, 5000);
   }
 
   componentWillUnmount() {
-    window.clearInterval(this.typewriter);
+    window.clearInterval(this.intervalId);
   }
 
   typewriter() {
@@ -25,7 +26,7 @@ class Typewriter extends React.Component {
 
       for (let i = 0; i < spanList.length; i++) {
         (function(i) {
-          setTimeout(function() { 
+          setTimeout(() => { 
             spanList[i].classList.add('type--active'); 
           }, 100 * i);
         })(i);
@@ -33,9 +34,14 @@ class Typewriter extends React.Component {
     }
   }
 
+  clearType(spanList) {
+    for (var i = 0; i < spanList.length; i++) {
+      spanList[i].classList.remove('type--active');
+    }
+  }
+
   getTypeText() {
     const text = this.props.text;
-
     const textHtml = text.split('').map(function(char){
       let html;
 
@@ -51,12 +57,6 @@ class Typewriter extends React.Component {
     });
 
     return textHtml.join('').toString() + '<span class="typewriter__cursor"></span>';
-  }
-
-  clearType(spanList) {
-    for (var i = 0; i < spanList.length; i++) {
-      spanList[i].classList.remove('type--active');
-    }
   }
 
   render() {
