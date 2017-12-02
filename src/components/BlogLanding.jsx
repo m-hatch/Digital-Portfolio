@@ -35,7 +35,7 @@ export default (props) => {
           dangerouslySetInnerHTML={ htmlContent }>
         </div>
 
-        <Link className="blog__link" to={ `${props.navPath}${recent.nav_label}` }>
+        <Link className="blog__link" to={ `${props.navPath}/${recent.nav_label}` }>
           [Read more]
         </Link>
 
