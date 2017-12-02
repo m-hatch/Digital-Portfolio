@@ -29,11 +29,9 @@ class Blog extends React.Component {
     Array.prototype.forEach.call(navLinks, function(el){
 
       // add active class to nav link when route matches
-      let route = path.substr(1, path.length);
-
-      if (route.indexOf('/') !== -1) {
-        route = route.substr(0, route.indexOf('/'));
-      }
+      let route = (path.indexOf('/', 1) !== -1) 
+        ? path.substr(0, route.indexOf('/', 1))
+        : path;
 
       (route === el.getAttribute('href')) 
         ? el.classList.add('topnav__link--active') 
@@ -55,9 +53,7 @@ class Blog extends React.Component {
 
   render() {
     const contextPath = this.props.match.url;
-    const navPath = `${this.props.match.url}`;
-    const nestedPath = `${navPath}/:navLabel`;
-    const testPath = `${this.props.match.url}/${this.props.content.articles[0].nav_label}`;
+    const nestedPath = `${contextPath}/:navLabel`;
 
     return (
       <div> 
@@ -71,7 +67,7 @@ class Blog extends React.Component {
 
                 <Route exact path={ contextPath } render={(props) => 
                   <BlogLanding {...props} blog={ this.props.content }
-                  navPath={ navPath }/>
+                  navPath={ contextPath }/>
                 }/>
 
                 <Route path={ nestedPath } render={(props) => 
@@ -80,7 +76,7 @@ class Blog extends React.Component {
 
               </div>
 
-              <Sidebar articles={ this.props.content.articles } navPath={ navPath } />
+              <Sidebar articles={ this.props.content.articles } navPath={ contextPath } />
 
             </div>
 

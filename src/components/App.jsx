@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, 
   Route } from 'react-router-dom';
 import appData from '../data.json';
-import ScrollToTop from './ScrollToTop';
+import ScrollPosition from './ScrollPosition';
 import NavbarContainer from './NavbarContainer';
 import Main from './Main';
 import Blog from './Blog';
@@ -30,7 +30,7 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <ScrollToTop>
+        <ScrollPosition>
           <div> 
 
             <NavbarContainer 
@@ -50,7 +50,7 @@ class App extends React.Component {
             <Footer links={ this.getData().myinfo.links } />
 
           </div>
-        </ScrollToTop>
+        </ScrollPosition>
       </Router>
     );
   }

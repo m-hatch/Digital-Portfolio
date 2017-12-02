@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ScrollAnchor from './ScrollAnchor';
 
 export default (props) => {
 
@@ -15,21 +14,13 @@ export default (props) => {
   const getLinks = () => {
     return props.navLinks.map(link => {
 
-      const links = ( link.url.startsWith('#') ) ? 
-        <ScrollAnchor  
-          className={ getClassList() } 
-          to={ link.url } 
-          animate={{ offset: -57, duration: 400 }} >
-          { link.name }
-        </ScrollAnchor>
-
-        : <Link className={ getClassList() } to={ link.url } >{ link.name }</Link>
-
       return (
         <li className={"topnav__list-item" 
             + ( props.toggleNav ? " topnav__list-item--open" : "" )} 
             key={ link.name } >
-            { links }
+            <Link className={ getClassList() } to={ link.url } >
+              { link.name }
+            </Link>
         </li>
       )
     });
@@ -41,12 +32,7 @@ export default (props) => {
 
         <div className="l-wrapper">
           <span className="nav__title">
-            <ScrollAnchor  
-              className="nav__link"
-              to="#" 
-              animate={{ offset: 0, duration: 400 }} >
-              { props.navTitle }
-            </ScrollAnchor>
+            <Link className="nav__link" to="/">{ props.navTitle }</Link>
           </span>
           <span className="nav__icon" onClick={ props.onBtnClick }>&#9776;</span>
         </div>

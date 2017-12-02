@@ -44,19 +44,17 @@ class NavbarContainer extends React.Component {
     const navLinks = document.querySelectorAll('#topNav a');
 
     Array.prototype.forEach.call(navLinks, function(el){
+      const refElement = document.getElementById(el.innerHTML);
+      const refPos = refElement ? util.getOffsetTop(refElement) : null;
 
-      // check if link to anchor on page
-      if (el.dataset.link === 'anchor') {
-        const refElement = document.getElementById(el.innerHTML);
-        const refPos = refElement ? util.getOffsetTop(refElement) : null;
+      // check if section exists on page
+      if (refPos !== null) {
 
         // add active class when section in view
-        ((refPos !== null)
-          && (refPos <= scrollBottom) 
+        ((refPos <= scrollBottom) 
           && (refPos + refElement.clientHeight > scrollBottom || refPos + window.innerHeight > scrollBottom)) 
           ? el.classList.add('topnav__link--active') : el.classList.remove('topnav__link--active');
-      } 
-      
+      }
     });
   }
 
