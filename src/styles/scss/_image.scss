@@ -7,7 +7,9 @@
     height: 100%;
     overflow: hidden;
 
-    &:hover {
+    &:hover,
+    &:active,
+    &:focus {
       background-color: $shadow;
     }
   }
