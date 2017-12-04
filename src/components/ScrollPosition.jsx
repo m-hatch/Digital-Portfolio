@@ -1,7 +1,5 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import { connect } from 'react-redux';
-import * as actions from '../actions/actions';
 import * as util from '../util/utilities';
 
 class ScrollPosition extends React.Component {
@@ -31,7 +29,6 @@ class ScrollPosition extends React.Component {
   jumpToHash(hash) {
     const position = this.getPosition(hash);
     util.setScrollTop(position);
-    // use Promise to chain functions this.props.setShowNav(true);
   }
 
   animateScroll(hash) {
@@ -51,7 +48,6 @@ class ScrollPosition extends React.Component {
       }, increment);
     }
     animate();
-    // use Promise to chain functions this.props.setShowNav(true);
   }
 
   getPosition(hash) {
@@ -68,15 +64,4 @@ class ScrollPosition extends React.Component {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    setShowNav: (status) => {
-      dispatch(actions.showNav(status));
-    }
-  };
-};
-
-export default withRouter(connect(
-  null,
-  mapDispatchToProps
-)(ScrollPosition));
+export default withRouter(ScrollPosition);
