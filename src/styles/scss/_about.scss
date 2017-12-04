@@ -3,9 +3,9 @@
   margin: 0 auto;
 
   &__image {
-    width: 33%;
+    width: 50%;
     max-width: 225px;
-    margin: 20px 0;
+    margin: 20px auto;
   }
 
   &__img {
@@ -73,6 +73,15 @@
   }
 }
 
+@media screen and (min-width: 568px) {
+  .about {
+    &__image {
+      width: 36%;
+      margin: 20px 0;
+    }
+  }
+}
+
 @media screen and (min-width: 568px) and (max-width: 767px) {
   .expertise {
     &__box {
@@ -86,7 +95,7 @@
   }
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
   .about {
     max-width: 100%;
     display: flex;
