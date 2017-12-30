@@ -10,7 +10,7 @@ class ScrollPosition extends React.Component {
     this.animateScroll = this.animateScroll.bind(this);
   }
 
-  componentDidUpdate(prevProps) {console.log('hello');
+  componentDidUpdate(prevProps) {
     // check if previous location is homepage
     if (prevProps.location.pathname === '/') {
       // check if current location is homepage
