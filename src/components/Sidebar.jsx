@@ -15,12 +15,12 @@ export default (props) => {
         <ul className="sidebar__list">{
           category.map((post, i) => {
             return (
-              <div key={i}>
+              <li key={i}>
                 <Link className="blog__link" 
                   to={ `${props.navPath}/${post.nav_label}` }>
                   { post.title }
                 </Link>
-              </div>
+              </li>
             );
           })
         }</ul>
