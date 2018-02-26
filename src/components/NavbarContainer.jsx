@@ -17,7 +17,7 @@ class NavbarContainer extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener('wheel', this.handleWheel);
+    window.addEventListener('wheel', this.handleWheel, {passive: true});
     window.addEventListener('scroll', this.handleScroll);
     window.addEventListener('resize', this.handleResize);
     this.nav.addEventListener('mouseenter', this.handleHover);
