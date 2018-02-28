@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyLoad from 'react-lazyload';
 
 export default (props) => {
   
@@ -8,9 +9,11 @@ export default (props) => {
         <div className="image image__filter">
           <i className="image__icon fa fa-search"></i>
         </div>
-        <img className="image" 
-          src={ 'img/' + props.img } 
-          alt={ props.imgAlt } />
+        <LazyLoad height={306} offset={300} debounce={0} throttle={100}>
+          <img className="image" 
+            src={ 'img/' + props.img } 
+            alt={ props.imgAlt } />
+        </LazyLoad>
       </a>
     </div>
   );
