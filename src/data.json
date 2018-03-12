@@ -42,19 +42,19 @@
     "expertise": [
       {
         "is_empty": false,
-        "icon": "fa-code",
+        "icon": "icon-code",
         "area": "Front-End",
         "description": "I am comfortable with a variety of Javascript frameworks including React, AngularJS, or just plain vanilla Javascript! I use front end build tools such as Gulp and Webpack for asset bundling and optimization. I follow the latest developments and trends in CSS, use preprocessors like Sass, and naming strategies such as BEM for maximum maintainablility."
       },
       {
         "is_empty": false,
-        "icon": "fa-database",
+        "icon": "icon-database",
         "area": "Back-End",
         "description": "On the back end, I build REST APIs in Java, NodeJS, PHP, and ColdFusion, using Spring Boot, Jersey, Express, and Slim PHP. I also use server side languages like JSP/JSTL and PHP for templating in traditional MVC frameworks. I am familar with database design, SQL, and NoSQL, and connect my APIs to databases in Oracle, Postgres, MySQL, and MongoDB."
       },
       {
         "is_empty": false,
-        "icon": "fa-file-text-o",
+        "icon": "icon-file-text-o",
         "area": "CMS",
         "description": "I have worked extensively with content management systems, both as a developer and in administrative roles. I am a certified Hippo CMS Developer and have also worked with Wordpress, Savvy CMS, and custom-built solutions. Whether you have an enterprise level CMS or need a small custom application, I'm your man!"
       },
@@ -63,7 +63,7 @@
       },
       {
         "is_empty": false,
-        "icon": "fa-comments",
+        "icon": "icon-comments",
         "area": "Communication",
         "description": "I believe communication is one of the most important skills you can have as a developer. With over 10 years of experience in collaborative organizations and teaching postions, I am equally comfortable taking a leadership or following role. I also have excellent written and verbal communication skills."
       },

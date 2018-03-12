@@ -7,7 +7,7 @@ export default (props) => {
     <div className="project__image">
       <a href={ props.link ? props.link : props.github }>
         <div className="image image__filter">
-          <i className="image__icon fa fa-search"></i>
+          <i className="image__icon icon-search"></i>
         </div>
         <LazyLoad height={306} offset={300} debounce={0} throttle={100}>
           <img className="image" 

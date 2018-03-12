@@ -45,6 +45,10 @@ module.exports = {
         })
       },
       {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        use: 'file-loader?name=fonts/[name].[ext]'
+      },
+      {
         test: /\.(jpe?g|png|gif|svg)$/i,
         use: 'url-loader?limit=8192'
       },
