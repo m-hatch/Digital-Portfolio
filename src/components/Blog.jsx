@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
+import blogData from '../blog.json';
 import BlogLanding from './BlogLanding';
 import Article from './Article';
 import Sidebar from './Sidebar';
@@ -21,6 +22,10 @@ class Blog extends React.Component {
 
   componentWillUnmount() {
     this.clearRouteHighlight();
+  }
+
+  getData() {
+    return blogData.blog;
   }
 
   checkRoute(path) {
@@ -66,23 +71,23 @@ class Blog extends React.Component {
               <div className="blog__col blog__main">
 
                 <Route exact path={ contextPath } render={(props) => 
-                  <BlogLanding {...props} blog={ this.props.content }
+                  <BlogLanding {...props} blog={ this.getData() }
                   navPath={ contextPath }/>
                 }/>
 
                 <Route path={ nestedPath } render={(props) => 
-                  <Article {...props} articles={ this.props.content.articles }/>
+                  <Article {...props} articles={ this.getData().articles }/>
                 }/>
 
               </div>
 
-              <Sidebar articles={ this.props.content.articles } navPath={ contextPath } />
+              <Sidebar articles={ this.getData().articles } navPath={ contextPath } />
 
             </div>
 
             <div className="blog__footer">
               <p className="l-text-center blog__contact">
-                { this.props.content.contact }
+                { this.getData().contact }
                 <button className="blog__btn contact__button" onClick={ this.handleClick }>
                   Send a message
                 </button>
