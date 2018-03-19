@@ -42,7 +42,7 @@ class App extends React.Component {
             }/>
 
             <Route path="/blog" render={(props) => 
-              <Blog {...props} content={ this.getData().blog }/> 
+              <Blog {...props} /> 
             }/>
 
             <ContactFormContainer />
