@@ -6,11 +6,17 @@ import appData from '../data.json';
 import ScrollPosition from './ScrollPosition';
 import NavbarContainer from './NavbarContainer';
 import Main from './Main';
-import Blog from './Blog';
 import ContactFormContainer from './ContactFormContainer';
 import Footer from './Footer';
 import { connect } from 'react-redux';
 import * as actions from '../actions/actions';
+import Loadable from 'react-loadable';
+
+// load Blog component only when requested
+const Blog = Loadable({
+  loader: () => import('./Blog'),
+  loading: () => null
+});
 
 class App extends React.Component {
 
