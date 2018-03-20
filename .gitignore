@@ -6,5 +6,6 @@ README.txt
 node_modules
 api/node_modules
 dist/bundle.js
+dist/blog.*.js
 dist/styles.css
 dist/fonts
