@@ -64,7 +64,8 @@ module.exports = {
   output: {
     path: __dirname + '/dist',
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    chunkFilename: 'blog.[chunkhash].js'
   },
   devServer: {
     contentBase: './dist',
