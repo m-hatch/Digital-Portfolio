@@ -25,7 +25,9 @@ export default (props) => {
           </li>
         </ul>
 
-        <VerticalButton btnRef={ props.btnRef } label="Description" openModal={ props.openModal } />
+        <VerticalButton label="Description" 
+          openModal={ props.openModal }
+          onMouseHover={ props.onMouseHover } />
 
       </div>
     );

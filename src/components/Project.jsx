@@ -13,16 +13,6 @@ class Project extends React.Component {
     this.handleHover = this.handleHover.bind(this);
   }
 
-  componentDidMount() {
-    this.btn.addEventListener('mouseenter', this.handleHover);
-    this.btn.addEventListener('mouseleave', this.handleHover);
-  }
-
-  componentWillUnmount() {
-    this.btn.removeEventListener('mouseenter', this.handleHover);
-    this.btn.removeEventListener('mouseleave', this.handleHover);
-  }
-
   getProject() {
     return this.props.project || {};
   }
@@ -58,8 +48,8 @@ class Project extends React.Component {
           description={ this.getProject.description }
           github={ this.getProject().github }
           webLink={ this.getProject().link } 
-          btnRef={ el => this.btn = el } 
-          openModal={ this.handleClick } />
+          openModal={ this.handleClick }
+          onMouseHover={ this.handleHover } />
 
       </div>
     );

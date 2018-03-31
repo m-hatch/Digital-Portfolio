@@ -13,8 +13,7 @@ class Article extends React.Component {
   }
 
   componentWillUpdate() {
-    const tag = document.getElementById('vendor');
-    document.body.removeChild(tag);
+    this.removeScript('vendor');
   }
 
   componentDidUpdate() {
@@ -35,6 +34,11 @@ class Article extends React.Component {
     elem.src = src;
     elem.id = 'vendor';
     document.body.appendChild(elem);
+  }
+
+  removeScript(id) {
+    const tag = document.getElementById(id);
+    document.body.removeChild(tag);
   }
 
   render() {

@@ -27,7 +27,7 @@ export default (props) => {
   };
   
   return (
-    <div ref={ props.navRef } className="nav">
+    <div className="nav" onMouseEnter={ props.onMouseEnter }>
       <nav className={"nav__inner l-font-smoothing" + (!props.showNav ? " nav__inner--small" : "")}>
 
         <div className="l-wrapper">
