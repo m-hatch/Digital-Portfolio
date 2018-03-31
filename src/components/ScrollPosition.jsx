@@ -14,15 +14,15 @@ class ScrollPosition extends React.Component {
     // check if previous location is homepage
     if (prevProps.location.pathname === '/') {
       // check if current location is homepage
-      (this.props.location.pathname === '/')
-        ? this.animateScroll(this.props.location.hash)
-        : window.scrollTo(0, 0);
+      (this.props.location.pathname === '/')? 
+        this.animateScroll(this.props.location.hash) : 
+        window.scrollTo(0, 0);
     } 
     else {
       // check if location is anchor hash
-      (this.props.location.hash !== '')
-        ? this.jumpToHash(this.props.location.hash)
-        : window.scrollTo(0, 0);
+      (this.props.location.hash !== '') ? 
+        this.jumpToHash(this.props.location.hash) : 
+        window.scrollTo(0, 0);
     }
   }
 

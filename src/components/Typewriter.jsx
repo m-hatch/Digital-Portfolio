@@ -5,8 +5,6 @@ class Typewriter extends React.Component {
   constructor(props) {
     super(props);
     this.typewriter = this.typewriter.bind(this);
-    this.clearType = this.clearType.bind(this);
-    this.getTypeText = this.getTypeText.bind(this);
   }
 
   componentDidMount() {

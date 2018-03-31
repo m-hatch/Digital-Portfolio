@@ -20,14 +20,12 @@ class NavbarContainer extends React.Component {
     window.addEventListener('wheel', this.handleWheel, {passive: true});
     window.addEventListener('scroll', this.handleScroll);
     window.addEventListener('resize', this.handleResize);
-    this.nav.addEventListener('mouseenter', this.handleHover);
   }
 
   componentWillUnmount() {
     window.removeEventListener('wheel', this.handleWheel);
     window.removeEventListener('scroll', this.handleScroll);
     window.removeEventListener('resize', this.handleResize);
-    this.nav.removeEventListener('mouseenter', this.handleHover);
   }
 
   handleWheel(event) {
@@ -63,14 +61,7 @@ class NavbarContainer extends React.Component {
   }
 
   handleHover(mouseEvent) {
-    if (mouseEvent.type === 'mouseenter') {
-      this.setFullSize(true);
-    }
-    if (mouseEvent.type === 'mouseleave') {
-      setTimeout( () => {
-        this.setFullSize(false);
-      }, 400);
-    }
+    this.setFullSize(true);
   }
 
   setFullSize(status) {
@@ -87,7 +78,7 @@ class NavbarContainer extends React.Component {
         <Navbar 
           navTitle={ this.props.name } 
           navLinks={ this.props.nav.links } 
-          navRef={ el => this.nav = el } 
+          onMouseEnter={ this.handleHover } 
           onBtnClick={ this.toggleNav } 
           showNav={ this.props.showNavFullSize } 
           toggleNav={ this.props.toggleNav } 
