@@ -7,6 +7,7 @@ export const SHOW_NAV_FULL_SIZE = 'SHOW_NAV_FULL_SIZE';
 export const TOGGLE_NAV = 'TOGGLE_NAV';
 export const ANIMATE_NAV = 'ANIMATE_NAV';
 export const SET_SCROLL_POS = 'SET_SCROLL_POS';
+export const SHOW_FOOTER_FULL_SIZE = 'SHOW_FOOTER_FULL_SIZE';
 export const SHOW_MODAL = 'SHOW_MODAL';
 export const PEEK_MODAL = 'PEEK_MODAL';
 export const SET_MODAL_CONTENT = 'SET_MODAL_CONTENT';

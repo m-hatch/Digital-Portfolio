@@ -31,7 +31,7 @@ class NavbarContainer extends React.Component {
   }
 
   handleWheel(event) {
-    // hide navigation on down scroll, show on up scroll
+    // shrink navigation on down scroll, show full size on up scroll
     const delta = (event.wheelDelta) ? event.wheelDelta : -1 * event.deltaY;
     (delta < 0) ? this.setFullSize(false) : this.setFullSize(true);
   }
@@ -103,7 +103,7 @@ const mapStateToProps = (state) => {
     showNavFullSize: state.navbar.fullSize,
     toggleNav: state.navbar.toggleNav,
     animate: state.navbar.animate
-  }
+  };
 };
 
 const mapDispatchToProps = (dispatch) => {

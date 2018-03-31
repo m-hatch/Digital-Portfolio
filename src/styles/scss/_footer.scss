@@ -12,6 +12,7 @@
     font-weight: 700;
     margin-right: 10px;
     padding: 16px 0;
+    transition: 0.5s padding ease;
   }
 
   &__list, 
@@ -25,6 +26,7 @@
     text-decoration: none;
     color: $white;
     padding: 16px 10px;
+    transition: 0.5s padding ease;
 
     &:hover::after {
       position: absolute;
@@ -38,3 +40,24 @@
     }
   }
 }
+
+@media screen and (min-width: 768px) {
+  .footer {
+    height: 51px;
+    transition: 0.5s all ease;
+  }
+
+  .footer--small {
+    height: 40px;
+    font-size: 14px;
+
+    .footer__title {
+      padding: 11.5px 0;
+    }
+
+    .footer__link {
+      padding: 12px 10px;
+    }
+  }
+}
+

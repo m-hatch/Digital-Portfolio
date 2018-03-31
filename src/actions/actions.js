@@ -33,6 +33,10 @@ export function setScrollPos(scrollPos) {
   return { type: types.SET_SCROLL_POS, scrollPos };
 }
 
+export function showFooterFullSize(isFullSize) {
+  return { type: types.SHOW_FOOTER_FULL_SIZE, isFullSize};
+}
+
 export function showModal(isVisible) {
 	return { type: types.SHOW_MODAL, isVisible};
 }

@@ -56,6 +56,17 @@ function navbar(state = init.navbar, action) {
   }
 }
 
+function footer(state = init.footer, action) {
+  switch(action.type) {
+    case types.SHOW_FOOTER_FULL_SIZE:
+      return Object.assign(
+        {}, state, { fullSize: action.isFullSize }
+      );
+    default:
+      return state;
+  }
+}
+
 function modal(state = init.modal, action) {
   switch(action.type) {
     case types.SHOW_MODAL:
@@ -95,6 +106,7 @@ export default combineReducers({
   main, 
   splash,
   navbar,
+  footer,
   modal,
   contact
 });
