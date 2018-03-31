@@ -17,8 +17,8 @@ export function setSplashVisibility(isVisible) {
   return { type: types.SET_SPLASH_VISIBILITY, isVisible };
 }
 
-export function showNav(isVisible) {
-	return { type: types.SHOW_NAV, isVisible};
+export function showNavFullSize(isFullSize) {
+	return { type: types.SHOW_NAV_FULL_SIZE, isFullSize};
 }
 
 export function toggleNav() {

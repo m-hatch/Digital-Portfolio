@@ -35,9 +35,9 @@ function splash(state = init.splash, action) {
 
 function navbar(state = init.navbar, action) {
   switch(action.type) {
-    case types.SHOW_NAV:
+    case types.SHOW_NAV_FULL_SIZE:
       return Object.assign(
-        {}, state, { showNav: action.isVisible }
+        {}, state, { fullSize: action.isFullSize }
       );
     case types.TOGGLE_NAV:
       return Object.assign(
