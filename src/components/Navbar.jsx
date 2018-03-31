@@ -28,7 +28,7 @@ export default (props) => {
   
   return (
     <div ref={ props.navRef } className="nav">
-      <nav className={"nav__inner l-font-smoothing" + (!props.showNav ? " nav__inner--hide" : "")}>
+      <nav className={"nav__inner l-font-smoothing" + (!props.showNav ? " nav__inner--small" : "")}>
 
         <div className="l-wrapper">
           <span className="nav__title">

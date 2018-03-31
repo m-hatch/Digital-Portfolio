@@ -21,7 +21,7 @@ export const splash = {
 };
 
 export const navbar = {
-  showNav: true,
+  fullSize: true,
   toggleNav: false,
   animate: false,
   scrollPos: 0

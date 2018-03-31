@@ -15,7 +15,7 @@
     z-index: 100;
     color: $white; 
     font-weight: 400;
-    transition: top 0.25s ease-in-out, background 0.25s ease-in-out;
+    transition: 0.25s all ease-in-out;
   }
 
   &__title {
@@ -23,6 +23,7 @@
     padding: 18px 0;
     font-weight: 700;
     text-transform: uppercase;
+    transition: padding .5s ease;
   }
 
   &__icon {
@@ -43,6 +44,7 @@
     text-decoration: none;
     color: $white;  
     font-size: 17px;
+    transition: 0.5s;
   }
 }
 
@@ -60,14 +62,6 @@
     line-height: 0;
     overflow: hidden;
     margin-left: 10%;
-  }
-}
-
-@media screen and (min-width: 568px) {
-  .nav {
-    &__inner--hide {
-      top: -60px;
-    }
   }
 }
 
@@ -98,12 +92,16 @@
 
 @media screen and (min-width: 768px) {
   .nav {
+    &__inner {
+      height: 57px;
+    }
+
     &__icon {
       display: none;
     }
 
     &__wrapper {
-      width: 360px;
+      padding-right: 30px;
       position: absolute;
       right: 6%;
       top: 0;
@@ -123,7 +121,7 @@
       height: auto;
       line-height: 1;
       margin-left: 0;
-      transition: 0.5s;
+      transition: 0.5s all ease;
 
       &--active {
         color: $crimson;
@@ -143,6 +141,22 @@
         top: 10px;
         left: 10%;
       }
+    }
+  }
+
+  .nav__inner--small {
+    height: 40px;
+
+    .nav__link {
+      font-size: 14px;
+    }
+
+    .nav__title {
+      padding: 10px 0;
+    }
+
+    .topnav__link {
+      padding: 13px 16px;
     }
   }
 }

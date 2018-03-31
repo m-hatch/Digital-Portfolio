@@ -12,7 +12,7 @@ class NavbarContainer extends React.Component {
     this.handleScroll = this.handleScroll.bind(this);
     this.handleResize = this.handleResize.bind(this);
     this.handleHover = this.handleHover.bind(this);
-    this.setVisibility = this.setVisibility.bind(this);
+    this.setFullSize = this.setFullSize.bind(this);
     this.toggleNav = this.toggleNav.bind(this);
   }
 
@@ -33,7 +33,7 @@ class NavbarContainer extends React.Component {
   handleWheel(event) {
     // hide navigation on down scroll, show on up scroll
     const delta = (event.wheelDelta) ? event.wheelDelta : -1 * event.deltaY;
-    (delta < 0) ? this.setVisibility(false) : this.setVisibility(true);
+    (delta < 0) ? this.setFullSize(false) : this.setFullSize(true);
   }
 
   handleScroll(event) {
@@ -64,17 +64,17 @@ class NavbarContainer extends React.Component {
 
   handleHover(mouseEvent) {
     if (mouseEvent.type === 'mouseenter') {
-      this.setVisibility(true);
+      this.setFullSize(true);
     }
     if (mouseEvent.type === 'mouseleave') {
       setTimeout( () => {
-        this.setVisibility(false);
+        this.setFullSize(false);
       }, 400);
     }
   }
 
-  setVisibility(status) {
-    this.props.setShowNav(status);
+  setFullSize(status) {
+    this.props.setShowNavFullSize(status);
   }
 
   toggleNav() {
@@ -89,7 +89,7 @@ class NavbarContainer extends React.Component {
           navLinks={ this.props.nav.links } 
           navRef={ el => this.nav = el } 
           onBtnClick={ this.toggleNav } 
-          showNav={ this.props.showNav } 
+          showNav={ this.props.showNavFullSize } 
           toggleNav={ this.props.toggleNav } 
           animate={ this.props.animate } />
     );
@@ -100,7 +100,7 @@ class NavbarContainer extends React.Component {
 const mapStateToProps = (state) => {
   return {
     scrollPos: state.navbar.scrollPos,
-    showNav: state.navbar.showNav,
+    showNavFullSize: state.navbar.fullSize,
     toggleNav: state.navbar.toggleNav,
     animate: state.navbar.animate
   }
@@ -111,8 +111,8 @@ const mapDispatchToProps = (dispatch) => {
     setScrollPos: (pos) => {
       dispatch(actions.setScrollPos(pos));
     },
-    setShowNav: (status) => {
-      dispatch(actions.showNav(status));
+    setShowNavFullSize: (status) => {
+      dispatch(actions.showNavFullSize(status));
     },
     setAnimation: (status) => {
       dispatch(actions.animateNav(status));
