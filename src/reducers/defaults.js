@@ -27,6 +27,10 @@ export const navbar = {
   scrollPos: 0
 };
 
+export const footer = {
+  fullSize: true
+};
+
 export const modal = {
   showModal: false,
   peekModal: false,
