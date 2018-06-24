@@ -78,9 +78,18 @@
       "img": "mh.jpg",
       "img_alt": "montgomeryhatch.com",
       "tagline": "Digital Portfolio website for Montgomery Hatch",
-      "description": "<p>Okay, so it's kind of meta to list this website on itself, but it was designed specifically to provide sample source code in the technologies that I'm interested in.</p><p>This website is a single page app built using React/Redux with a NodeJS/Express backend and MongoDB database. The application is built entirely with Javascript and utilizes ES6 syntax transpiled and bundled using Webpack. Typically, an application of this size would not require a Redux store to manage its state &mdash; the native React state is more than sufficient &mdash; but once again, it is included to provide an example of how I would manage state in larger applications.<!--To that end, the project also includes a unit test suite using Mocha/Chai.--></p><p class='table-heading'>Technologies used:</p><table><tr><td>Javascript</td><td>NodeJS</td><td>React.js</td><td>Redux</td></tr><tr><td>Webpack</td><td>Express</td><td>MongoDB</td><td>Mocha/Chai</td></tr><tr><td>Sass/SCSS</td></tr></table>",
-      "github": "https://github.com/m-hatch/montgomeryhatch.com",
+      "description": "<p>Okay, so it's kind of meta to list this website on itself, but it was designed specifically to provide sample source code in the technologies that I'm interested in.</p><p>This website is a single page app built using React/Redux with a NodeJS/Express backend and MongoDB database. The application is built entirely with Javascript and utilizes ES6 syntax transpiled and bundled using Webpack. Typically, an application of this size would not require a Redux store to manage its state &mdash; the native React state is more than sufficient &mdash; but once again, it is included to provide an example of how I would manage state in larger applications.<!--To that end, the project also includes a unit test suite using Mocha/Chai.--></p><p class='table-heading'>Technologies used:</p><table><tr><td>Javascript</td><td>NodeJS</td><td>React.js</td><td>Redux</td></tr><tr><td>Webpack</td><td>Express</td><td>MongoDB</td><td>Sass/SCSS</td></tr></table>",
+      "github": "https://github.com/m-hatch/Digital-Portfolio",
       "link": "http://montgomeryhatch.com"
+    },
+    {
+      "name": "Cryptocurrency Trade Ticker",
+      "img": "crypto.jpg",
+      "img_alt": "Cryptocurrency Trade Ticker",
+      "tagline": "Realtime Cryptocurrency Trade Ticker",
+      "description": "<p>This project was built to explore realtime data updates through the use of web sockets. It is a simple single page application built using React/Redux, and connecting to a BitMEX API for the data stream. The application is an excellent example of how I would structure a component or application, and displays clear separation of concerns, extensible design, and easy readability.</p><p class='table-heading'>Technologies used:</p><table><tr><td>Javascript</td><td>React.js</td><td>Redux</td><td>Webpack</td></tr><tr><td>Web Socket API</td><td>Sass/SCSS</td></tr></table>",
+      "github": "https://github.com/m-hatch/Cryptocurrency-Trade-Ticker",
+      "link": "https://m-hatch.github.io/Cryptocurrency-Trade-Ticker/"
     },
     {
       "name": "Bachovich Music Publications",
