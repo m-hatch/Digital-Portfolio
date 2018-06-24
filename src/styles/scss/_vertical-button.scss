@@ -29,7 +29,7 @@
     position: absolute;
     top: 0;
     transform-origin: left top;
-    transform: rotate(90deg) translateX(-32%);
+    transform: rotate(90deg) translateX(-32%) translateZ(1px);
     padding: 5px;
     cursor: pointer;
   }
